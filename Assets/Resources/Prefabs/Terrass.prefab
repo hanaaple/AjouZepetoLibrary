@@ -347,9 +347,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6342056765817080516, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: -4882654095170083024, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: -4882654095170083024, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2855445207974865956, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2855445207974865956, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2855445207974865956, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
       propertyPath: m_Name
       value: center_library
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574968772779497527, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574968772779497527, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4574968772779497527, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d28c72b681715d4da2800f776fb0148, type: 3}
@@ -550,6 +590,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5e6f8e73cd9953945b8551eb47532211, type: 3}
       propertyPath: m_Name
       value: terrass
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5e6f8e73cd9953945b8551eb47532211, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 1534715467454823537, guid: 5e6f8e73cd9953945b8551eb47532211, type: 3}
       propertyPath: m_CastShadows
