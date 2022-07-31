@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 82387f72b48fa9149b79bb7c7c78f15a
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass OnlineSelfieCamera extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    GetGripObject() {\r\n        return
+    this.grip;\r\n    }\r\n}\r\nexports.default = OnlineSelfieCamera;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiT25saW5lU2VsZmllQ2FtZXJhLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiT25saW5lU2VsZmllQ2FtZXJhLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXFIO0FBR3JILGlEQUFxRDtBQUlyRCxNQUFxQixrQkFBbUIsU0FBUSxxQ0FBcUI7SUFJMUQsYUFBYTtRQUNoQixPQUFPLElBQUksQ0FBQyxJQUFJLENBQUM7SUFDckIsQ0FBQztDQUNKO0FBUEQscUNBT0MifQ==","assetPath":"Assets/Scripts/ScreenShot/OnlineSelfieCamera.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"grip","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"OnlineSelfieCamera","description":""},"isCompiled":true}'
+  typescriptHash: ba5aab220718b5a38880a525a9598d4e
+  onlyWriteTrigger: 0

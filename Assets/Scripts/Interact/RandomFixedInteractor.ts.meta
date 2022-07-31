@@ -1,0 +1,64 @@
+fileFormatVersion: 2
+guid: 0fd03009ba762e84b8b2ea3e8c94d567
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    AnimationLinker_1 = require(\"../AnimationLinker\");\r\nconst ClientStarter_1
+    = require(\"../ClientStarter\");\r\nclass RandomFixedInteractor extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        if (this.FixedPointOffset == undefined)\r\n           
+    this.FixedPointOffset = UnityEngine_1.Vector3.zero;\r\n        if (this.cameraOffset
+    == undefined)\r\n            this.cameraOffset = UnityEngine_1.Vector3.zero;\r\n       
+    this._interactButton = UnityEngine_1.GameObject.Instantiate(this.interactButtonPrefab).GetComponent($typeof(UnityEngine_UI_1.Button));\r\n       
+    AnimationLinker_1.default.instance.AddInteractor(this._interactButton.gameObject);\r\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.localCamera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera;\r\n       
+    });\r\n        this._interactButton.onClick.AddListener(() => {\r\n           
+    var aniClip = this.GetRandomAnimation();\r\n            while (AnimationLinker_1.default.instance.GetPlayingGesture(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.id)
+    == aniClip) {\r\n                if (this.animationClip.length == 1)\r\n                   
+    break;\r\n                aniClip = this.GetRandomAnimation();\r\n           
+    }\r\n            AnimationLinker_1.default.instance.PlayGesture(aniClip.name,
+    true);\r\n            console.log(aniClip);\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.position
+    = UnityEngine_1.Vector3.op_Addition(this.transform.position, this.FixedPointOffset);\r\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.rotation
+    = this.transform.rotation;\r\n            ClientStarter_1.default.instance.SendTransform(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform);\r\n           
+    this.StopAllCoroutines();\r\n            this.StartCoroutine(this.CheckPlayerMove(aniClip));\r\n       
+    });\r\n    }\r\n    Update() {\r\n        if ((this._interactButton.gameObject.activeSelf
+    || this._interactButton.gameObject.activeSelf) && this.localCamera != null) {\r\n           
+    // console.log(this.cameraOffset)\r\n            var screenPos = this.localCamera.WorldToScreenPoint(UnityEngine_1.Vector3.op_Addition(this.transform.position,
+    this.cameraOffset));\r\n            // console.log(screenPos)\r\n           
+    this._interactButton.transform.position = screenPos;\r\n            this._interactButton.transform.position
+    = screenPos;\r\n            // this.testButton.transform.LookAt(this.localCamera.transform)\r\n       
+    }\r\n    }\r\n    *CheckPlayerMove(aniClip) {\r\n        while (true) {\r\n           
+    if (ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.tryMove)
+    {\r\n                AnimationLinker_1.default.instance.StopGesture(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer);\r\n               
+    break;\r\n            }\r\n            if (AnimationLinker_1.default.instance.GetPlayingGesture(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.id)
+    != aniClip) {\r\n                break;\r\n            }\r\n            yield
+    null;\r\n        }\r\n    }\r\n    OnTriggerEnter(col) {\r\n        if (col.gameObject.layer
+    == UnityEngine_1.LayerMask.NameToLayer(\"LocalPlayer\")) {\r\n            this._interactButton.gameObject.SetActive(true);\r\n       
+    }\r\n    }\r\n    OnTriggerExit(col) {\r\n        if (col.gameObject.layer ==
+    UnityEngine_1.LayerMask.NameToLayer(\"LocalPlayer\")) {\r\n            this._interactButton.gameObject.SetActive(false);\r\n       
+    }\r\n    }\r\n    GetRandomAnimation() {\r\n        var rndClipIndex = UnityEngine_1.Mathf.Floor(UnityEngine_1.Random.Range(0,
+    this.animationClip.Length));\r\n        console.log(rndClipIndex);\r\n       
+    console.log(this.animationClip[rndClipIndex]);\r\n        return this.animationClip[rndClipIndex];\r\n   
+    }\r\n}\r\nexports.default = RandomFixedInteractor;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmFuZG9tRml4ZWRJbnRlcmFjdG9yLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUmFuZG9tRml4ZWRJbnRlcmFjdG9yLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsNkNBQTRHO0FBQzVHLG1EQUF1QztBQUN2Qyw2RUFBMkQ7QUFDM0QsaURBQXFEO0FBQ3JELHdEQUFnRDtBQUNoRCxvREFBNEM7QUFFNUMsTUFBcUIscUJBQXNCLFNBQVEscUNBQXFCO0lBV3BFLEtBQUs7UUFDRCxJQUFHLElBQUksQ0FBQyxnQkFBZ0IsSUFBSSxTQUFTO1lBQ2pDLElBQUksQ0FBQyxnQkFBZ0IsR0FBRyxxQkFBTyxDQUFDLElBQUksQ0FBQTtRQUN4QyxJQUFHLElBQUksQ0FBQyxZQUFZLElBQUksU0FBUztZQUM3QixJQUFJLENBQUMsWUFBWSxHQUFHLHFCQUFPLENBQUMsSUFBSSxDQUFBO1FBRXBDLElBQUksQ0FBQyxlQUFlLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQWEsSUFBSSxDQUFDLG9CQUFvQixDQUFDLENBQUMsWUFBWSxTQUFDLHVCQUFNLEVBQUcsQ0FBQTtRQUMzRyx5QkFBZSxDQUFDLFFBQVEsQ0FBQyxhQUFhLENBQUMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxVQUFVLENBQUMsQ0FBQTtRQUN2RSwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3ZELElBQUksQ0FBQyxXQUFXLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxNQUFNLENBQUE7UUFDN0UsQ0FBQyxDQUFDLENBQUE7UUFFRixJQUFJLENBQUMsZUFBZSxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQzFDLElBQUksT0FBTyxHQUFHLElBQUksQ0FBQyxrQkFBa0IsRUFBRSxDQUFBO1lBQ3ZDLE9BQU0seUJBQWUsQ0FBQyxRQUFRLENBQUMsaUJBQWlCLENBQUMsMkNBQWEsQ0FB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","assetPath":"Assets/Scripts/Interact/RandomFixedInteractor.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"interactButtonPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.AnimationModule","name":"animationClip","type":"UnityEngine.AnimationClip[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"cameraOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"FixedPointOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"RandomFixedInteractor","description":""},"isCompiled":true}'
+  typescriptHash: f5376325b1947f182227ffd623622ccf
+  onlyWriteTrigger: 0
