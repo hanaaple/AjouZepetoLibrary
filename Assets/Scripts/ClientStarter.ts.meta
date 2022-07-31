@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 9f2b7d74e6481704b9e1627c7b8e126d
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    ZEPETO_Multiplay_1 = require(\\\"ZEPETO.Multiplay\\\");\\r\\nconst ZEPETO_Character_Controller_1
+    = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    WaitForSecondsCash_1 = require(\\\"./WaitForSecondsCash\\\");\\r\\nconst SelfieRegistrant_1
+    = require(\\\"./ScreenShot/SelfieRegistrant\\\");\\r\\nclass ClientStarter extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    static get instance() {\\r\\n       
+    return this._instance;\\r\\n    }\\r\\n    GetRoom() {\\r\\n        return this.room;\\r\\n   
+    }\\r\\n    Awake() {\\r\\n        if (ClientStarter._instance) {\\r\\n           
+    UnityEngine_1.GameObject.Destroy(this);\\r\\n        }\\r\\n        else {\\r\\n           
+    ClientStarter._instance = this;\\r\\n            UnityEngine_1.GameObject.DontDestroyOnLoad(this.gameObject);\\r\\n       
+    }\\r\\n    }\\r\\n    Start() {\\r\\n        this.multiplay.add_RoomCreated((room)
+    => {\\r\\n            this.room = room;\\r\\n        });\\r\\n        this.multiplay.add_RoomJoined((room)
+    => {\\r\\n            room.add_OnStateChange(this.OnStateChange.bind(this));\\r\\n       
+    });\\r\\n    }\\r\\n    *SendMessageLoop(tick) {\\r\\n        const waitForSeconds
+    = WaitForSecondsCash_1.default.instance.WaitForSeconds(tick);\\r\\n        const
+    myPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer;\\r\\n       
+    while (true) {\\r\\n            yield waitForSeconds;\\r\\n            if (this.room.IsConnected)
+    {\\r\\n                if (myPlayer.character.CurrentState != ZEPETO_Character_Controller_1.CharacterState.Idle)\\r\\n                   
+    this.SendTransform(myPlayer.character.transform);\\r\\n            }\\r\\n       
+    }\\r\\n    }\\r\\n    OnStateChange(state, isFirst) {\\r\\n        if (isFirst)
+    {\\r\\n            this.StartCoroutine(this.OnUpdateSelfie(state));\\r\\n           
+    state.players.ForEach((sessionId, player) => this.OnJoinPlayer(sessionId, player));\\r\\n           
+    state.players.add_OnAdd((player, sessionId) => this.OnJoinPlayer(sessionId, player));\\r\\n           
+    state.players.add_OnRemove((player, sessionId) => this.StartCoroutine(this.OnLeavePlayer(sessionId,
+    player)));\\r\\n            // On Add Local Player\\r\\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\\r\\n                this.Debug(`[\uB85C\uCEEC \uD50C\uB808\uC774\uC5B4
+    \uC0DD\uC131] player ${ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.id}`);\\r\\n               
+    this.StartCoroutine(this.SendMessageLoop(UnityEngine_1.Time.deltaTime));\\r\\n               
+    const myPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer;\\r\\n               
+    myPlayer.character.gameObject.AddComponent($typeof(UnityEngine_1.AudioListener));\\r\\n               
+    myPlayer.character.OnChangedState.AddListener((next, cur) => {\\r\\n                   
+    console.log(\\\"\uB85C\uCEEC State \uBCC0\uACBD\\\", cur, next);\\r\\n                   
+    this.SendState(next);\\r\\n                });\\r\\n                myPlayer.character.gameObject.layer
+    =\\r\\n                    UnityEngine_1.LayerMask.NameToLayer(\\\"LocalPlayer\\\");\\r\\n           
+    });\\r\\n            // On Add Player\\r\\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedPlayer.AddListener((sessionId)
+    => {\\r\\n                const isLocal = this.room.SessionId === sessionId;\\r\\n               
+    const player = this.room.State.players.get_Item(sessionId);\\r\\n               
+    if (player == null || player == undefined)\\r\\n                    return;\\r\\n               
+    const zepetoPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.GetPlayer(sessionId);\\r\\n               
+    // AnimationSynchronizer.instance.OnAddPlayer(\\r\\n                //   sessionId,\\r\\n               
+    //   zepetoPlayer.character.ZepetoAnimator,\\r\\n                //   player.animation\\r\\n               
+    // );\\r\\n                if (!isLocal) {\\r\\n                    this.Debug(`[\uC628\uB77C\uC778
+    \uD50C\uB808\uC774\uC5B4 \uC0DD\uC131] player  ${sessionId}`);\\r\\n                   
+    player.add_OnChange((changeValues) => this.OnUpdateMultiPlayer(sessionId, player));\\r\\n                   
+    this.OnUpdateMultiPlayer(sessionId, player);\\r\\n                }\\r\\n           
+    });\\r\\n        }\\r\\n    }\\r\\n    OnJoinPlayer(sessionId, player) {\\r\\n       
+    console.log(`[OnJoinPlayer] roomSession - ${this.room.SessionId}\\\\nplayerSession
+    - ${player.sessionId}\\\\nsessionId - ${sessionId}`);\\r\\n        const spawnInfo
+    = new ZEPETO_Character_Controller_1.SpawnInfo();\\r\\n        if (this.IsZeroPosition(player.transform.position))
+    {\\r\\n            spawnInfo.position = this.spawnPoint.position;\\r\\n           
+    spawnInfo.rotation = this.spawnPoint.rotation;\\r\\n        }\\r\\n        else
+    {\\r\\n            const position = this.ParseVector3(player.transform.position);\\r\\n           
+    const rotation = this.ParseVector3(player.transform.rotation);\\r\\n           
+    spawnInfo.position = position;\\r\\n            spawnInfo.rotation = UnityEngine_1.Quaternion.Euler(rotation);\\r\\n       
+    }\\r\\n        const isLocal = this.room.SessionId === player.sessionId;\\r\\n       
+    $extension(\\\"ZEPETO.Character.Controller.ZepetoPlayersExtension\\\").CreatePlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    sessionId, player.zepetoUserId, spawnInfo, isLocal);\\r\\n    }\\r\\n    *OnUpdateSelfie(state)
+    {\\r\\n        this.Debug(`\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161`);\\r\\n       
+    this.Debug(`\uD50C\uB808\uC774\uC5B4 \uC0DD\uC131\uAE4C\uC9C0 foreach \uC2DC\uC791
+    ${state.players.Count}`);\\r\\n        for (var i = 0; i < state.players.Count;
+    i++) {\\r\\n            while (state.players.GetByIndex(i) === null)\\r\\n               
+    i++;\\r\\n            this.Debug(`${i + 1}\uBC88\uC9F8 \uC0DD\uC131\uB300\uAE30
+    foeach,  ${state.players.Count}`);\\r\\n            while (!ZEPETO_Character_Controller_1.ZepetoPlayers.instance.HasPlayer(state.players.GetByIndex(i).sessionId))
+    {\\r\\n                yield null;\\r\\n            }\\r\\n        }\\r\\n       
+    this.Debug(`${ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject}
+    \uC0DD\uC131 \uC644\uB8CC`);\\r\\n        this.Debug(`\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161`);\\r\\n       
+    this.room.State.selfiePlayer.add_OnAdd((user, sessionId) => {\\r\\n           
+    // this.Debug(`${sessionId}   ${user.sessionId}  +\uB85C \uBC14\uB01C`)\\r\\n           
+    SelfieRegistrant_1.default.instance.AddSelfieUser(user.sessionId);\\r\\n           
+    //UI On\\r\\n        });\\r\\n        this.room.State.selfiePlayer.add_OnRemove((user,
+    sessionId) => {\\r\\n            // this.Debug(`${sessionId}   ${user.sessionId} 
+    -\uB85C \uBC14\uB01C`)\\r\\n            //UI Off\\r\\n            SelfieRegistrant_1.default.instance.DeleteSelfieUser(user.sessionId);\\r\\n           
+    //\uC140\uCE74 \uC790\uC138 \uC911\uC9C0\\r\\n        });\\r\\n        this.room.State.selfieWithPlayers.add_OnAdd((user,
+    sessionId) => {\\r\\n            // this.Debug(`${sessionId}   ${user.sessionId}
+    \uB204\uAD70\uAC00 \uBC14\uB77C\uBCF4\uAE30\uB85C \uC2DC\uC791\uD568`)\\r\\n           
+    //\uBC14\uB77C\uBCF4\uAE30\\r\\n            user.withUser.add_OnAdd((withUser)
+    => {\\r\\n                SelfieRegistrant_1.default.instance.LookAt(user.sessionId,
+    withUser.sessionId);\\r\\n            });\\r\\n            //\uBC14\uB77C\uBCF4\uAE30
+    \uC885\uB8CC\\r\\n            user.withUser.add_OnRemove((withUser) => {\\r\\n               
+    SelfieRegistrant_1.default.instance.StopLookAt(withUser.sessionId);\\r\\n           
+    });\\r\\n        });\\r\\n        this.room.State.selfieWithPlayers.add_OnRemove((user,
+    sessionId) => {\\r\\n            // this.Debug(`${sessionId}   ${user.sessionId} 
+    \uBAA8\uB4E0 \uC774\uAC00 \uBC14\uB77C\uBCF4\uAE30 \uBA48\uCDA4`)\\r\\n           
+    //\uBC14\uB77C\uBCF4\uAE30 \uC885\uB8CC\\r\\n            user.withUser.ForEach((withSessionId)
+    => {\\r\\n                SelfieRegistrant_1.default.instance.StopLookAt(withSessionId);\\r\\n           
+    });\\r\\n        });\\r\\n        this.Debug(`\uD50C\uB808\uC774\uC5B4 \uC140\uCE74
+    foreach \uC218 - ${this.room.State.selfiePlayer.Count}`);\\r\\n        this.room.State.selfiePlayer.ForEach((sessionId,
+    user) => {\\r\\n            this.Debug(\\\"\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\\\");\\r\\n           
+    this.Debug(\\\"\uAE30\uC874\uC758 \uD50C\uB808\uC774\uC5B4 Foreach \uB3CC\uB9AC\uAE30\\\");\\r\\n           
+    // this.Debug(sessionId)\\r\\n            // this.Debug(user.sessionId)\\r\\n           
+    this.Debug(\\\"\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\\\");\\r\\n           
+    SelfieRegistrant_1.default.instance.AddSelfieUser(user.sessionId);\\r\\n           
+    //\uC774\uBBF8 UI\uB97C \uB204\uB978 \uD50C\uB808\uC774\uC5B4 === selfieWithPlayer\\r\\n       
+    });\\r\\n        this.Debug(`\uD50C\uB808\uC774\uC5B4 \uC140\uCE74 \uAC19\uC774
+    \uCC0D\uAE30 foreach \uC218 - ${this.room.State.selfieWithPlayers.Count}`);\\r\\n       
+    this.room.State.selfieWithPlayers.ForEach((sessionId, user) => {\\r\\n           
+    this.Debug(\\\"\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\\\");\\r\\n           
+    this.Debug(\\\"\uAE30\uC874\uC758 \uD50C\uB808\uC774\uC5B4 \uAC19\uC774 \uCC0D\uAE30
+    Foreach \uB3CC\uB9AC\uAE30\\\");\\r\\n            // this.Debug(user.sessionId)\\r\\n           
+    this.Debug(\\\"\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\u3161\\\");\\r\\n           
+    // \uAC01 \uD50C\uB808\uC774\uC5B4 ui\uC5D0 \uB204\uB974\uBA74 \uAEBC\uC9C0\uB3C4\uB85D
+    \uC138\uD305\\r\\n            user.withUser.ForEach((sessionId, withUser) =>
+    {\\r\\n                SelfieRegistrant_1.default.instance.SetTakeWithUI(true,
+    user.sessionId, withUser.sessionId);\\r\\n                SelfieRegistrant_1.default.instance.LookAt(user.sessionId,
+    withUser.sessionId);\\r\\n                //\uCE74\uBA54\uB77C \uC704\uCE58 \uC870\uC815\\r\\n           
+    });\\r\\n        });\\r\\n        this.Debug(\\\"\uC140\uCE74 \uAD00\uB828 \uC138\uD305
+    \uC885\uB8CC\\\");\\r\\n    }\\r\\n    *OnLeavePlayer(sessionId, player) {\\r\\n       
+    while (SelfieRegistrant_1.default.instance.HasPlayer(player.sessionId)) {\\r\\n           
+    this.Debug(SelfieRegistrant_1.default.instance.HasPlayer(player.sessionId));\\r\\n           
+    yield null;\\r\\n        }\\r\\n        console.log(`[OnRemove] players - sessionId
+    : ${sessionId}`);\\r\\n        // AnimationSynchronizer.instance.OnRemovePlayer(sessionId);\\r\\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.RemovePlayer(sessionId);\\r\\n   
+    }\\r\\n    OnUpdateMultiPlayer(sessionId, player) {\\r\\n        const zepetoPlayer
+    = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.GetPlayer(sessionId);\\r\\n       
+    // const isAnimate =\\r\\n        //   player.animation !=\\r\\n        //  
+    AnimationSynchronizer.instance.GetPlayerAnimation(sessionId);\\r\\n        const
+    positionSchema = this.ParseVector3(player.transform.position);\\r\\n        if
+    (UnityEngine_1.Vector3.Distance(zepetoPlayer.character.transform.position, positionSchema)
+    > 2) {\\r\\n            zepetoPlayer.character.transform.position = positionSchema;\\r\\n           
+    // zepetoPlayer.character.transform.eulerAngles = this.ParseVector3(player.transform.rotation);\\r\\n       
+    }\\r\\n        zepetoPlayer.character.MoveToPosition(positionSchema);\\r\\n       
+    //\uC560\uB2C8\uBA54\uC774\uC158\uC774 \uBCC0\uACBD\uB418\uC5C8\uB294\uB370 Jump\uC778
+    \uACBD\uC6B0\uAC00 \uC788\uC74C \uADF8\uB7EC\uBA74 \uC560\uB2C8\uBA54\uC774\uC158
+    \uBCC0\uACBD\uC2DC \uC810\uD504\uAC00 \uB3D9\uC2DC\uC5D0 \uBC1C\uC0DD\uD568\\r\\n       
+    if (\\r\\n        // !isAnimate &&\\r\\n        player.state === ZEPETO_Character_Controller_1.CharacterState.JumpIdle
+    ||\\r\\n            player.state === ZEPETO_Character_Controller_1.CharacterState.JumpMove)
+    {\\r\\n            zepetoPlayer.character.Jump();\\r\\n        }\\r\\n       
+    // \uD604\uC7AC \uC560\uB2C8\uBA54\uC774\uC158 \uC0C1\uD0DC\uAC00 \uB2E4\uB978
+    \uACBD\uC6B0\\r\\n        // \uC5EC\uAE30\uC11C \uBB38\uC81C \uC0DD\uAE30\uB294\uAC70\uB85C
+    \uC608\uC0C1\\r\\n        // console.log(\\\"\uC11C\uBC84 \uD50C\uB808\uC774\uC5B4
+    \uC5C5\uB370\uC774\uD2B8\\\")\\r\\n        // \uBB38\uC81C\uD574\uACB0\uB85C
+    \uC608\uC0C1   \uBB38\uC81C 1 - \uC810\uD504\uD55C\uB2E4 \uC65C...?? - \uC774\uC720
+    : \uC810\uD504 \uB204\uB974\uBA74 \uC2A4\uD14C\uC774\uD2B8\uAC00 Jump\uAC00 \uB41C\uB2E4.
+    \uADF8\uB9AC\uACE0 \uBC84\uD2BC\uC744 \uB204\uB974\uBA74 State\uAC00 Jump\uC778
+    \uC0C1\uD0DC\uB85C \uC5EC\uAE30\uAC00 \uB2E4\uC2DC \uC791\uB3D9\uD55C\uB2E4.\\r\\n       
+    // \uBB38\uC81C 2 - Local\uB9D0\uACE0 \uB2E4\uB978 Player\uC5D0 \uB300\uD574\uC11C\uB9CC
+    \uC560\uAC00 \uC560\uB2C8\uBA54\uC774\uC158 \uBC14\uAFC0\uB54C \uC7A0\uC2DC \uD314\uC744
+    \uD540\uB2E4 - \uC774\uAC74 \uC9C4\uC9DC \uBAA8\uB974\uACA0\uB294\uB370 \uBB34\uC5B8\uAC00\uB97C
+    \uBC14\uAFB8\uC790\uB9C8\uC790 \uD760..\\r\\n        // \uBB38\uC81C 3 - \uD074\uB77C\uC774\uC5B8\uD2B8
+    \uC2DC\uC791\uD560 \uB54C \uC774\uBBF8 \uC811\uC18D\uD574\uC788\uB294 \uD50C\uB808\uC774\uC5B4\uB4E4
+    \uC0C1\uD0DC \uCCB4\uD06C\uD574\uC11C \uC560\uB2C8\uBA54\uC774\uC158 \uBC14\uAFD4\uC918\uC57C\uD55C\uB2E4.\\r\\n       
+    // \uD574\uACB0\uBC29\uBC95 1 - \uC560\uB2C8\uBA54\uC774\uC158 \uCCB4\uD06C\uB97C
+    \uB9E4\uBC88 \uD55C\uB2E4\\r\\n        // \uD574\uACB0\uBC29\uBC95 2 - \uC2DC\uC791\uD560
+    \uB54C \uCCB4\uD06C\uD55C\uB2E4  - AnimationManager\uAC00 \uBE48 \uACBD\uC6B0
+    (\uAE30\uBCF8)\\r\\n        //\uC560\uB2C8\uBA54\uC774\uC158\uC774 \uBCC0\uACBD\uB41C
+    \uACBD\uC6B0\\r\\n        // if (isAnimate) {\\r\\n        //   console.log(\\\"\uC11C\uBC84
+    - \uC560\uB2C8\uBA54\uC774\uC158 \uC138\uD305\\\", player.state);\\r\\n       
+    //   AnimationSynchronizer.instance.SetMoveAnimation(\\r\\n        //     zepetoPlayer.character.ZepetoAnimator,\\r\\n       
+    //     sessionId,\\r\\n        //     player.animation,\\r\\n        //     player.interactor\\r\\n       
+    //   );\\r\\n        // }\\r\\n        // //\uBB38\uC81C\uB294 \uC81C\uC2A4\uCC98
+    \uC911\uC5D0 \uB2E4\uC2DC \uC81C\uC2A4\uCC98\uB97C \uB204\uB974\uBA74 \uBB34\uC2DC\uB41C\uB2E4.\\r\\n       
+    // if (player.state == CharacterState.Gesture) {\\r\\n        //   if (!AnimationSynchronizer.instance.GetIsGesturing(sessionId))
+    {\\r\\n        //     console.log(\\\"\uC11C\uBC84 - \uC81C\uC2A4\uCC98 \uC138\uD305\\\",
+    player.state);\\r\\n        //     AnimationSynchronizer.instance.GestureHandler(\\r\\n       
+    //       zepetoPlayer,\\r\\n        //       player.gesture,\\r\\n        //      
+    player.isInfinite\\r\\n        //     );\\r\\n        //     zepetoPlayer.character.transform.position
+    = positionSchema;\\r\\n        //     zepetoPlayer.character.transform.eulerAngles
+    = this.ParseVector3(\\r\\n        //       player.transform.rotation\\r\\n       
+    //     );\\r\\n        //   } else if (\\r\\n        //     AnimationSynchronizer.instance.GetPlayingGesture(sessionId).name
+    !=\\r\\n        //     player.gesture\\r\\n        //   ) {\\r\\n        //    
+    console.log(\\\"\uC11C\uBC84 - \uC81C\uC2A4\uCC98 \uC138\uD305\\\", player.state);\\r\\n       
+    //     zepetoPlayer.character.transform.position = positionSchema;\\r\\n       
+    //     zepetoPlayer.character.transform.eulerAngles = this.ParseVector3(\\r\\n       
+    //       player.transform.rotation\\r\\n        //     );\\r\\n        //    
+    AnimationSynchronizer.instance.GestureHandler(\\r\\n        //       zepetoPlayer,\\r\\n       
+    //       player.gesture,\\r\\n        //       player.isInfinite\\r\\n       
+    //     );\\r\\n        //   }\\r\\n        // } else if (\\r\\n        //   player.state
+    != CharacterState.Gesture &&\\r\\n        //   AnimationSynchronizer.instance.GetIsGesturing(sessionId)\\r\\n       
+    // ) {\\r\\n        //   AnimationSynchronizer.instance.GestureHandler(zepetoPlayer,
+    \\\"\\\");\\r\\n        // }\\r\\n    }\\r\\n    SendTransform(transform) {\\r\\n       
+    const data = new ZEPETO_Multiplay_1.RoomData();\\r\\n        const pos = new
+    ZEPETO_Multiplay_1.RoomData();\\r\\n        pos.Add(\\\"x\\\", transform.localPosition.x);\\r\\n       
+    pos.Add(\\\"y\\\", transform.localPosition.y);\\r\\n        pos.Add(\\\"z\\\",
+    transform.localPosition.z);\\r\\n        data.Add(\\\"position\\\", pos.GetObject());\\r\\n       
+    const rot = new ZEPETO_Multiplay_1.RoomData();\\r\\n        rot.Add(\\\"x\\\",
+    transform.localEulerAngles.x);\\r\\n        rot.Add(\\\"y\\\", transform.localEulerAngles.y);\\r\\n       
+    rot.Add(\\\"z\\\", transform.localEulerAngles.z);\\r\\n        data.Add(\\\"rotation\\\",
+    rot.GetObject());\\r\\n        this.room.Send(\\\"onChangedTransform\\\", data.GetObject());\\r\\n   
+    }\\r\\n    SendCameraTransform(transform) {\\r\\n        const data = new ZEPETO_Multiplay_1.RoomData();\\r\\n       
+    const pos = new ZEPETO_Multiplay_1.RoomData();\\r\\n        pos.Add(\\\"x\\\",
+    transform.localPosition.x);\\r\\n        pos.Add(\\\"y\\\", transform.localPosition.y);\\r\\n       
+    pos.Add(\\\"z\\\", transform.localPosition.z);\\r\\n        data.Add(\\\"position\\\",
+    pos.GetObject());\\r\\n        this.room.Send(\\\"onChangedCameraTransform\\\",
+    data.GetObject());\\r\\n    }\\r\\n    SendState(state) {\\r\\n        const
+    data = new ZEPETO_Multiplay_1.RoomData();\\r\\n        data.Add(\\\"state\\\",
+    state);\\r\\n        this.room.Send(\\\"onChangedState\\\", data.GetObject());\\r\\n   
+    }\\r\\n    SendAnimation(name, interactor) {\\r\\n        const data = new ZEPETO_Multiplay_1.RoomData();\\r\\n       
+    data.Add(\\\"animation\\\", name);\\r\\n        data.Add(\\\"interactor\\\",
+    interactor);\\r\\n        this.room.Send(\\\"onChangedAnimation\\\", data.GetObject());\\r\\n   
+    }\\r\\n    SendGesture(name, isInfinite = false) {\\r\\n        const data =
+    new ZEPETO_Multiplay_1.RoomData();\\r\\n        data.Add(\\\"gesture\\\", name);\\r\\n       
+    data.Add(\\\"isInfinite\\\", isInfinite);\\r\\n        this.room.Send(\\\"onChangedGesture\\\",
+    data.GetObject());\\r\\n    }\\r\\n    Debug(obj) {\\r\\n        const data =
+    new ZEPETO_Multiplay_1.RoomData();\\r\\n        data.Add(\\\"sentence\\\", obj);\\r\\n       
+    this.room.Send(\\\"DebugUpdate\\\", data.GetObject());\\r\\n    }\\r\\n    ParseVector3(vector3)
+    {\\r\\n        return new UnityEngine_1.Vector3(vector3.x, vector3.y, vector3.z);\\r\\n   
+    }\\r\\n    IsZeroPosition(pos) {\\r\\n        return pos.x == null || pos.y ==
+    null || pos.z == null;\\r\\n    }\\r\\n}\\r\\nexports.default = ClientStarter;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2xpZW50U3RhcnRlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNsaWVudFN0YXJ0ZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBc0Q7QUFDdEQsdURBQWtEO0FBU2xELDZFQUlxQztBQUVyQyw2Q0FRcUI7QUFDckIsNkRBQXNEO0FBQ3RELG9FQUE2RDtBQUU3RCxNQUFxQixhQUFjLFNBQVEscUNBQXFCO0lBVXZELE1BQU0sS0FBSyxRQUFRO1FBQ3hCLE9BQU8sSUFBSSxDQUFDLFNBQVMsQ0FBQztJQUN4QixDQUFDO0lBQ00sT0FBTztRQUNaLE9BQU8sSUFBSSxDQUFDLElBQUksQ0FBQztJQUNuQixDQUFDO0lBRUQsS0FBSztRQUNILElBQUksYUFBYSxDQUFDLFNBQVMsRUFBRTtZQUMzQix3QkFBVSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQztTQUMxQjthQUFNO1lBQ0wsYUFBYSxDQUFDLFNBQVMsR0FBRyxJQUFJLENBQUM7WUFDL0Isd0JBQVUsQ0FBQyxpQkFBaUIsQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLENBQUM7U0FDL0M7SUFDSCxDQUFDO0lBRUQsS0FBSztRQUNILElBQUksQ0FBQyxTQUFTLGlCQUFnQixDQUFDLElBQVUsRUFBRSxFQUFFO1lBQzNDLElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO1FBQ25CLENBQUMsRUFBQztRQUVGLElBQUksQ0FBQyxTQUFTLGdCQUFlLENBQUMsSUFBVSxFQUFFLEVBQUU7WUFDMUMsSUFBSSxtQkFBa0IsSUFBSSxDQUFDLGFBQWEsYUFBQztRQUMzQyxDQUFDLEVBQUM7SUFDSixDQUFDO0lBRU8sQ0FBQyxlQUFlLENBQUMsSUFBWTtRQUNuQyxNQUFNLGNBQWMsR0FBRyw0QkFBa0IsQ0FBQyxRQUFRLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ3hFLE1BQU0sUUFBUSxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENB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\",\"assetPath\":\"Assets/Scripts/ClientStarter.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"ZEPETO.World\",\"name\":\"multiplay\",\"type\":\"ZEPETO.World.ZepetoWorldMultiplay\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"SerializeField\",\"args\":[]}]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"spawnPoint\",\"type\":\"UnityEngine.Transform\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"SerializeField\",\"args\":[]}]}],\"name\":\"ClientStarter\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: f064db5b2b5f48e1a21a2038cdf049c5
+  onlyWriteTrigger: 0

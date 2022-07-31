@@ -1,0 +1,9 @@
+{
+"State" : {"players" : {"map" : "Player"},"selfieWithPlayers" : {"map" : "SelfieWithUser"},"selfiePlayer" : {"map" : "SelfieUser"}},
+"Player" : {"sessionId" : "string","zepetoHash" : "string","zepetoUserId" : "string","transform" : "Transform","state" : "number","animation" : "string","gesture" : "string","interactor" : "string","isInfinite" : "boolean"},
+"Transform" : {"position" : "Vector3","rotation" : "Vector3"},
+"Vector3" : {"x" : "number","y" : "number","z" : "number"},
+"SelfieWithUser" : {"sessionId" : "string","withUser" : {"map" : "User"}},
+"SelfieUser" : {"sessionId" : "string","cameraTransform" : "Transform"},
+"User" : {"sessionId" : "string"}
+}
