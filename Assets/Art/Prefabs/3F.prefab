@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2960111864881005624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,6 +140,10 @@ PrefabInstance:
       value: 3floor
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1b9697f966faf63419628d7df17aa43b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b9697f966faf63419628d7df17aa43b, type: 3}
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
@@ -221,6 +225,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b5daa6ba251b907468b163bb6cf2f41a, type: 3}
       propertyPath: m_Name
       value: celing_3f
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5daa6ba251b907468b163bb6cf2f41a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b5daa6ba251b907468b163bb6cf2f41a, type: 3}
       propertyPath: m_TagString

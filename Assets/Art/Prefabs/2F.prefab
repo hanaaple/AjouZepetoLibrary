@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 661571615039118097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,6 +140,10 @@ PrefabInstance:
       value: celing_2f
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b4122f87b869bdc43980dd251cb93018, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b4122f87b869bdc43980dd251cb93018, type: 3}
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
@@ -233,6 +237,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bb15fb0f85531fa4aa2d6c9f318b6dff, type: 3}
       propertyPath: m_Name
       value: 2floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bb15fb0f85531fa4aa2d6c9f318b6dff, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bb15fb0f85531fa4aa2d6c9f318b6dff, type: 3}
       propertyPath: m_TagString

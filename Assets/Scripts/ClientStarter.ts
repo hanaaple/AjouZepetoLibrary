@@ -134,10 +134,6 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
     );
     const spawnInfo = new SpawnInfo();
 
-    console.log(player.transform);
-    console.log(player.transform.position);
-    console.log(player.transform.rotation);
-
     if (this.IsZeroPosition(player.transform.position)) {
       spawnInfo.position = this.spawnPoint.position;
       spawnInfo.rotation = this.spawnPoint.rotation;
@@ -407,6 +403,6 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
     return new Vector3(vector3.x, vector3.y, vector3.z);
   }
   private IsZeroPosition(pos: Vector3Schema) {
-    return pos.x == 0 && pos.y == 0 && pos.z == 0;
+    return pos.x == null || pos.y == null || pos.z == null;
   }
 }
