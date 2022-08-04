@@ -127,9 +127,7 @@ export default class CaptureController extends ZepetoScriptBehaviour {
       (result: boolean) => {
         console.log(`스크린샷 저장 결과 : ${result}`);
         this._uiController.StartCoroutine(
-          this._uiController.ShowToastMessage(
-            this._uiController.TOAST_MESSAGE.screenShotSaveCompleted
-          )
+          this._uiController.ShowToastMessage("SAVED")
         );
       }
     );
@@ -143,9 +141,7 @@ export default class CaptureController extends ZepetoScriptBehaviour {
 
   CreateFeedScreenShot() {
     this._uiController.StartCoroutine(
-      this._uiController.ShowToastMessage(
-        this._uiController.TOAST_MESSAGE.feedUploading
-      )
+      this._uiController.ShowToastMessage("Uploading")
     );
     ZepetoWorldContent.CreateFeed(
       this.renderTexture,
@@ -163,9 +159,7 @@ export default class CaptureController extends ZepetoScriptBehaviour {
     WorldVideoRecorder.SaveToCameraRoll((result: boolean) => {
       console.log(`동영상 녹화 저장 결과 : ${result}`);
       this._uiController.StartCoroutine(
-        this._uiController.ShowToastMessage(
-          this._uiController.TOAST_MESSAGE.screenShotSaveCompleted
-        )
+        this._uiController.ShowToastMessage("Save")
       );
     });
   }
@@ -181,9 +175,7 @@ export default class CaptureController extends ZepetoScriptBehaviour {
       this._uiController.ShowCreateFeedResult(result);
       console.log(`동영상 녹화 피드 생성 결과 : ${result}`);
       this._uiController.StartCoroutine(
-        this._uiController.ShowToastMessage(
-          this._uiController.TOAST_MESSAGE.feedUploading
-        )
+        this._uiController.ShowToastMessage("UPLOADING")
       );
     });
   }

@@ -39,7 +39,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2389584887220260789}
-  - component: {fileID: -9002505929751920507}
+  - component: {fileID: -7454779870281387020}
+  - component: {fileID: -7702079562291785050}
   m_Layer: 0
   m_Name: SelfieCamera
   m_TagString: Untagged
@@ -62,7 +63,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-9002505929751920507
+--- !u!114 &-7454779870281387020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76,12 +77,79 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   script:
     keys:
+    - rightOffset
+    - distance
+    - height
+    - xMouseSensitivity
+    - yMouseSensitivity
+    - yMinLimit
+    - yMaxLimit
+    - smoothCameraRotation
     - grip
     unityValues:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 2938187932907013331}
     values:
+    - '{"type":"System.Single, mscorlib","value":"0.25"}'
+    - '{"type":"System.Single, mscorlib","value":"0.7"}'
+    - '{"type":"System.Single, mscorlib","value":"0.893"}'
+    - '{"type":"System.Single, mscorlib","value":"12"}'
+    - '{"type":"System.Single, mscorlib","value":"12"}'
+    - '{"type":"System.Single, mscorlib","value":"0"}'
+    - '{"type":"System.Single, mscorlib","value":"40"}'
+    - '{"type":"System.Single, mscorlib","value":"10"}'
     - 
     unityArrayValues: []
     arrayValues: []
-    script: {fileID: 4458252877524076426, guid: 82387f72b48fa9149b79bb7c7c78f15a, type: 3}
+    script: {fileID: 4458252877524076426, guid: bb09b9b87bc78f44e876296a38bec96e, type: 3}
     isExpaned: 0
+--- !u!20 &-7702079562291785050
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4403027000417006141}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
