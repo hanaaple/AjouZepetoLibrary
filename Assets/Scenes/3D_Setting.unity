@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3906756, g: 0.28672254, b: 0.394916, a: 1}
+  m_IndirectSpecularColor: {r: 0.3700604, g: 0.23932147, b: 0.3883043, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -182,8 +182,73 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ajou_Central_Library
       objectReference: {fileID: 0}
+    - target: {fileID: 6819014374879330470, guid: e3e1cea89fb510b44a4d1784e4af8401, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3e1cea89fb510b44a4d1784e4af8401, type: 3}
+--- !u!1001 &662183698
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2172218471669103948, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819014374879330470, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_Name
+      value: Ajou_Central_Library_halloween
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
 --- !u!1 &1528798637
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,13 +335,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528798637}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.37362257, y: -0.0109184785, z: 0.20649573, w: 0.90423805}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 42.859, y: 10.577, z: 29.889}
 --- !u!1 &1971894799
 GameObject:
   m_ObjectHideFlags: 0
