@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1468019025760822214}
   - component: {fileID: 2589754589321505891}
   - component: {fileID: 293964715936372905}
+  - component: {fileID: 450450046285616157}
   m_Layer: 0
   m_Name: Screen
   m_TagString: Untagged
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &450450046285616157
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2239594316354648444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.30739117, y: 3.244213, z: 5.19458}
+  m_Center: {x: 0.000000014901161, y: 1.6128798, z: 0}

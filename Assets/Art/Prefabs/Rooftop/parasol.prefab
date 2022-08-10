@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3751067022027653089}
   - component: {fileID: 261679371086786628}
   - component: {fileID: 2613595530210313358}
+  - component: {fileID: 8460753809357723787}
+  - component: {fileID: 6024168062234249772}
   m_Layer: 0
   m_Name: parasol
   m_TagString: Untagged
@@ -81,3 +83,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8460753809357723787
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559234064159319387}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5763304, y: 0.9053495, z: 2.5763283}
+  m_Center: {x: 0, y: 2.1506472, z: 0}
+--- !u!65 &6024168062234249772
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559234064159319387}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.55504745, y: 1.704675, z: 0.5366705}
+  m_Center: {x: 0.000000029802322, y: 0.8322197, z: 0.009187669}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5917148327971338039}
   - component: {fileID: 7327977373440686226}
   - component: {fileID: 4780223358528179288}
+  - component: {fileID: 1951807698672389197}
   m_Layer: 0
   m_Name: beanpack2
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1951807698672389197
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6437402679549848973}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 715726043327019765, guid: 09471293c796e374d9af689d9ba4720e, type: 3}
