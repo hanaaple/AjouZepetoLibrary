@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 767895284281130770}
   - component: {fileID: 2765054334675961022}
   - component: {fileID: 6970779979539092844}
+  - component: {fileID: 2749928376765005303}
   m_Layer: 0
   m_Name: cnlounge_desk2
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2749928376765005303
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459062019480862553}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2413771, y: 0.5598914, z: 0.80740744}
+  m_Center: {x: 0.000000029802322, y: 0.2799457, z: 0}
 --- !u!1 &3647354850907671818
 GameObject:
   m_ObjectHideFlags: 0

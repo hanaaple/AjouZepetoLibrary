@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4228524219766952136}
   - component: {fileID: 5678932210881482907}
   - component: {fileID: 4721473471037509862}
+  - component: {fileID: 5114091187811878024}
   m_Layer: 0
   m_Name: gate_desk
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5114091187811878024
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167470945825822914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7418227605206454214, guid: 7f005443e0e0483459cb0a2de99f04a4, type: 3}
 --- !u!1 &1134740161005525366
 GameObject:
   m_ObjectHideFlags: 0

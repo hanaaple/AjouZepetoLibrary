@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1382630707650639637}
   - component: {fileID: 3723775080579417932}
   - component: {fileID: 7963573938384925034}
+  - component: {fileID: 8238407916651950650}
   m_Layer: 0
   m_Name: multimedia_dvd_monitor
   m_TagString: Untagged
@@ -112,3 +113,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8238407916651950650
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431227301037836997}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6280377, y: 0.40341994, z: 0.06709957}
+  m_Center: {x: 0, y: 0.20170997, z: 0.00000029802322}

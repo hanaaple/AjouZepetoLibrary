@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 507015109403152995}
   - component: {fileID: 5556026795497357039}
   - component: {fileID: 68907149270962618}
+  - component: {fileID: 3940556011340806837}
   m_Layer: 0
   m_Name: newbookarchive_chair
   m_TagString: Untagged
@@ -112,3 +113,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3940556011340806837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517369546618037077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.31620505, y: 0.32839215, z: 0.30903542}
+  m_Center: {x: 0, y: 0.16419607, z: 0}

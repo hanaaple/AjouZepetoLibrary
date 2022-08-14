@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3158378934009859480}
   - component: {fileID: 6934661123127020599}
   - component: {fileID: 5014227862588708548}
+  - component: {fileID: 2817947431255325289}
   m_Layer: 0
   m_Name: newbookarchive_sofa1
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2817947431255325289
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3425001078883087272}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1124348347296615692, guid: ee1eb994b4d84fc478599b4a4476c39a, type: 3}
 --- !u!1 &5879103178960743709
 GameObject:
   m_ObjectHideFlags: 0

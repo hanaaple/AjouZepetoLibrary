@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1373639039759803213}
   - component: {fileID: 7548100422640403691}
   - component: {fileID: 925606186624175089}
+  - component: {fileID: 7012932229804971610}
   m_Layer: 0
   m_Name: newbookarchive_desk
   m_TagString: Untagged
@@ -112,3 +113,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7012932229804971610
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6054827533691183783}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5414262, y: 0.4945762, z: 0.88048244}
+  m_Center: {x: 0, y: 0.2472881, z: 0}

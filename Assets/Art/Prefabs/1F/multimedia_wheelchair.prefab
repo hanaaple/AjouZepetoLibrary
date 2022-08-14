@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 7565235771863712202}
   - component: {fileID: 2726418824705300531}
   - component: {fileID: 769115558902853107}
+  - component: {fileID: 2608719517574023383}
   m_Layer: 0
   m_Name: multimedia_wheelchair
   m_TagString: Untagged
@@ -112,3 +113,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2608719517574023383
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646592135444639836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6450448, y: 0.3116255, z: 0.68326306}
+  m_Center: {x: 0, y: 0.15581276, z: -0.033698678}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 276470692378506350}
   - component: {fileID: 1881700021869812779}
   - component: {fileID: 2108255454825948225}
+  - component: {fileID: 6785116980867832537}
   m_Layer: 0
   m_Name: loan_desk
   m_TagString: Untagged
@@ -81,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6785116980867832537
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950860974178502204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5914168483237157301, guid: 6af49c3aaf2e8224baf1991424178f9e, type: 3}
 --- !u!1 &2499929091181233726
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1497143918395075753}
   - component: {fileID: 7356615030376473047}
   - component: {fileID: 1956393452966103719}
+  - component: {fileID: 9124612201316423165}
   m_Layer: 0
   m_Name: hall_chair
   m_TagString: Untagged
@@ -112,3 +113,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9124612201316423165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5373578462688794928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.41600993, y: 0.3262443, z: 0.45636222}
+  m_Center: {x: -0.000000074505806, y: 0.16312215, z: -0.008796588}
