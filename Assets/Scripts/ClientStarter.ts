@@ -287,7 +287,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
       if (player.state === CharacterState.MoveTurn) return;
       zepetoPlayer.character.StopMoving();
     } else {
-      zepetoPlayer.character.MoveContinuously(moveDir);
+      zepetoPlayer.character.MoveToPosition(position);
     }
 
     if (player.state === CharacterState.Jump) {
