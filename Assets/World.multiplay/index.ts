@@ -39,13 +39,24 @@ export default class extends Sandbox {
     this.onMessage("onChangedState", (client, message) => {
       const player = this.state.players.get(client.sessionId);
       player.state = message.state;
-      player.subState = message.subState;
+    });
+
+    this.onMessage("onChangedAnimation", (client, message) => {
+      const player = this.state.players.get(client.sessionId);
+      player.animation = message.animation;
+      player.interactor = message.interactor;
+      //서버에 스키마에 Player Animation 넣어지고 State가 바뀜 -> OnStateChange
     });
 
     this.onMessage("DebugUpdate", (client, message) => {
       console.log("[Debug]: " + message.sentence);
     });
 
+    this.onMessage("onChangedGesture", (client, message) => {
+      const player = this.state.players.get(client.sessionId);
+      player.gesture = message.gesture;
+      player.isInfinite = message.isInfinite;
+    });
     //client - 찍는 플레이어
     this.onMessage("onSelfieMode", (client, message) => {
       const user = new SelfieUser();

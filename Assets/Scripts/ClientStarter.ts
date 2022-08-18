@@ -9,7 +9,6 @@ import {
   Vector3 as Vector3Schema,
 } from "ZEPETO.Multiplay.Schema";
 import {
-  CharacterJumpState,
   CharacterState,
   SpawnInfo,
   ZepetoPlayers,
@@ -69,12 +68,9 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
     while (true) {
       yield waitForSeconds;
 
-      if (this.room != null && this.room.IsConnected) {
-        if (ZepetoPlayers.instance.HasPlayer(this.room.SessionId)) {
-          if (myPlayer.character.CurrentState != CharacterState.Idle) {
-            this.SendTransform(myPlayer.character.transform);
-          }
-        }
+      if (this.room.IsConnected) {
+        if (myPlayer.character.CurrentState != CharacterState.Idle)
+          this.SendTransform(myPlayer.character.transform);
       }
     }
   }
@@ -109,7 +105,6 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
         });
         myPlayer.character.gameObject.layer =
           LayerMask.NameToLayer("LocalPlayer");
-        this.SendTransform(myPlayer.character.transform);
       });
 
       // On Add Player
@@ -275,29 +270,25 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
     //   player.animation !=
     //   AnimationSynchronizer.instance.GetPlayerAnimation(sessionId);
 
-    const position = this.ParseVector3(player.transform.position);
-
-    var moveDir = Vector3.op_Subtraction(
-      position,
-      zepetoPlayer.character.transform.position
-    );
-    moveDir = new Vector3(moveDir.x, 0, moveDir.z);
-
-    if (moveDir.magnitude < 0.05) {
-      if (player.state === CharacterState.MoveTurn) return;
-      zepetoPlayer.character.StopMoving();
-    } else {
-      zepetoPlayer.character.MoveToPosition(position);
+    const positionSchema = this.ParseVector3(player.transform.position);
+    if (
+      Vector3.Distance(
+        zepetoPlayer.character.transform.position,
+        positionSchema
+      ) > 2
+    ) {
+      zepetoPlayer.character.transform.position = positionSchema;
+      // zepetoPlayer.character.transform.eulerAngles = this.ParseVector3(player.transform.rotation);
     }
+    zepetoPlayer.character.MoveToPosition(positionSchema);
 
-    if (player.state === CharacterState.Jump) {
-      if (zepetoPlayer.character.CurrentState !== CharacterState.Jump) {
-        zepetoPlayer.character.Jump();
-      }
-
-      if (player.subState === CharacterJumpState.JumpDouble) {
-        zepetoPlayer.character.DoubleJump();
-      }
+    //애니메이션이 변경되었는데 Jump인 경우가 있음 그러면 애니메이션 변경시 점프가 동시에 발생함
+    if (
+      // !isAnimate &&
+      player.state === CharacterState.JumpIdle ||
+      player.state === CharacterState.JumpMove
+    ) {
+      zepetoPlayer.character.Jump();
     }
     // 현재 애니메이션 상태가 다른 경우
     // 여기서 문제 생기는거로 예상
@@ -387,13 +378,6 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
   private SendState(state: CharacterState) {
     const data = new RoomData();
     data.Add("state", state);
-    if (state === CharacterState.Jump) {
-      data.Add(
-        "subState",
-        ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.MotionV2
-          .CurrentJumpState
-      );
-    }
     this.room.Send("onChangedState", data.GetObject());
   }
 

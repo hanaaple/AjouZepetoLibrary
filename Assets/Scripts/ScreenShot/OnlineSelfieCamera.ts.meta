@@ -19,9 +19,9 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
-    OnlineSelfieCamera extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    GetGripObject()
-    {\r\n        return this.grip;\r\n    }\r\n}\r\nexports.default = OnlineSelfieCamera;\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiT25saW5lU2VsZmllQ2FtZXJhLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiT25saW5lU2VsZmllQ2FtZXJhLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBR0EsaURBQXFEO0FBSXJELE1BQXFCLGtCQUFtQixTQUFRLHFDQUFxQjtJQUkxRCxhQUFhO1FBQ2hCLE9BQU8sSUFBSSxDQUFDLElBQUksQ0FBQztJQUNyQixDQUFDO0NBQ0o7QUFQRCxxQ0FPQyJ9","assetPath":"Assets/Scripts/ScreenShot/OnlineSelfieCamera.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"grip","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"OnlineSelfieCamera","description":""},"isCompiled":true}'
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass OnlineSelfieCamera extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    GetGripObject() {\r\n        return
+    this.grip;\r\n    }\r\n}\r\nexports.default = OnlineSelfieCamera;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiT25saW5lU2VsZmllQ2FtZXJhLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiT25saW5lU2VsZmllQ2FtZXJhLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXFIO0FBR3JILGlEQUFxRDtBQUlyRCxNQUFxQixrQkFBbUIsU0FBUSxxQ0FBcUI7SUFJMUQsYUFBYTtRQUNoQixPQUFPLElBQUksQ0FBQyxJQUFJLENBQUM7SUFDckIsQ0FBQztDQUNKO0FBUEQscUNBT0MifQ==","assetPath":"Assets/Scripts/ScreenShot/OnlineSelfieCamera.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"grip","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"OnlineSelfieCamera","description":""},"isCompiled":true}'
   typescriptHash: ba5aab220718b5a38880a525a9598d4e
   onlyWriteTrigger: 0

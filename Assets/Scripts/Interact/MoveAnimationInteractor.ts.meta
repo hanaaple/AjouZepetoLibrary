@@ -1,0 +1,50 @@
+fileFormatVersion: 2
+guid: 934b4779512e37844a0484fcd0d1c2f9
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst ZEPETO_Character_Controller_1
+    = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst ZEPETO_Script_1 =
+    require(\\\"ZEPETO.Script\\\");\\r\\nconst AnimationSynchronizer_1 = require(\\\"../AnimationSynchronizer\\\");\\r\\nclass
+    MoveAnimationInteractor extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n   
+    Start() {\\r\\n        if (this.posOffset == undefined)\\r\\n            this.posOffset
+    = UnityEngine_1.Vector3.zero;\\r\\n        if (this.rotOffset == undefined)\\r\\n           
+    this.rotOffset = UnityEngine_1.Vector3.zero;\\r\\n        this._interactButton
+    = UnityEngine_1.GameObject.Instantiate(this.interactButton.gameObject, this.interactButton.transform.parent).GetComponent($typeof(UnityEngine_UI_1.Button));\\r\\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\\r\\n            this.localCamera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera;\\r\\n       
+    });\\r\\n        this._interactButton.onClick.AddListener(() => {\\r\\n           
+    // if(AnimationSynchronizer.instance.isAlreadyAnimating(this.animationClipName)){\\r\\n           
+    // }\\r\\n            AnimationSynchronizer_1.default.instance.SendAnimationToServer(this.animationClipName,
+    this.gameObject.name);\\r\\n        });\\r\\n    }\\r\\n    Update() {\\r\\n       
+    if (this._interactButton.gameObject.activeSelf &&\\r\\n            this.localCamera
+    != null) {\\r\\n            var screenPos = this.localCamera.WorldToScreenPoint(UnityEngine_1.Vector3.op_Addition(this.transform.position,
+    this.cameraOffset));\\r\\n            this._interactButton.transform.position
+    = screenPos;\\r\\n        }\\r\\n    }\\r\\n    OnTriggerEnter(col) {\\r\\n       
+    if (col.gameObject.layer === UnityEngine_1.LayerMask.NameToLayer(\\\"LocalPlayer\\\"))
+    {\\r\\n            this._interactButton.gameObject.SetActive(true);\\r\\n       
+    }\\r\\n    }\\r\\n    OnTriggerExit(col) {\\r\\n        if (col.gameObject.layer
+    === UnityEngine_1.LayerMask.NameToLayer(\\\"LocalPlayer\\\")) {\\r\\n           
+    this._interactButton.gameObject.SetActive(false);\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default
+    = MoveAnimationInteractor;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92ZUFuaW1hdGlvbkludGVyYWN0b3IuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJNb3ZlQW5pbWF0aW9uSW50ZXJhY3Rvci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUErRTtBQUMvRSxtREFBd0M7QUFDeEMsNkVBQTREO0FBQzVELGlEQUFzRDtBQUN0RCxvRUFBNkQ7QUFFN0QsTUFBcUIsdUJBQXdCLFNBQVEscUNBQXFCO0lBYXhFLEtBQUs7UUFDSCxJQUFJLElBQUksQ0FBQyxTQUFTLElBQUksU0FBUztZQUFFLElBQUksQ0FBQyxTQUFTLEdBQUcscUJBQU8sQ0FBQyxJQUFJLENBQUM7UUFDL0QsSUFBSSxJQUFJLENBQUMsU0FBUyxJQUFJLFNBQVM7WUFBRSxJQUFJLENBQUMsU0FBUyxHQUFHLHFCQUFPLENBQUMsSUFBSSxDQUFDO1FBQy9ELElBQUksQ0FBQyxlQUFlLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQzNDLElBQUksQ0FBQyxjQUFjLENBQUMsVUFBVSxFQUM5QixJQUFJLENBQUMsY0FBYyxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQ3JDLENBQUMsWUFBWSxTQUFDLHVCQUFNLEVBQUcsQ0FBQztRQUN6QiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3pELElBQUksQ0FBQyxXQUFXLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxNQUFNLENBQUM7UUFDNUUsQ0FBQyxDQUFDLENBQUM7UUFDSCxJQUFJLENBQUMsZUFBZSxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQzVDLGlGQUFpRjtZQUVqRixJQUFJO1lBQ0osK0JBQXFCLENBQUMsUUFBUSxDQUFDLHFCQUFxQixDQUNsRCxJQUFJLENBQUMsaUJBQWlCLEVBQ3RCLElBQUksQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUNyQixDQUFDO1FBQ0osQ0FBQyxDQUFDLENBQUM7SUFDTCxDQUFDO0lBRUQsTUFBTTtRQUNKLElBQ0UsSUFBSSxDQUFDLGVBQWUsQ0FBQyxVQUFVLENBQUMsVUFBVTtZQUMxQyxJQUFJLENBQUMsV0FBVyxJQUFJLElBQUksRUFDeEI7WUFDQSxJQUFJLFNBQVMsR0FBRyxJQUFJLENBQUMsV0FBVyxDQUFDLGtCQUFrQixDQUNqRCxxQkFBTyxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxJQUFJLENBQUMsWUFBWSxDQUFDLENBQ2hFLENBQUM7WUFDRixJQUFJLENBQUMsZUFBZSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsU0FBUyxDQUFDO1NBQ3JEO0lBQ0gsQ0FBQztJQUVELGNBQWMsQ0FBQyxHQUFhO1FBQzFCLElBQUksR0FBRyxDQUFDLFVBQVUsQ0FBQyxLQUFLLEtBQUssdUJBQVMsQ0FBQyxXQUFXLENBQUMsYUFBYSxDQUFDLEVBQUU7WUFDakUsSUFBSSxDQUFDLGVBQWUsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1NBQ2pEO0lBQ0gsQ0FBQztJQUVELGFBQWEsQ0FBQyxHQUFhO1FBQ3pCLElBQUksR0FBRyxDQUFDLFVBQVUsQ0FBQyxLQUFLLEtBQUssdUJBQVMsQ0FBQyxXQUFXLENBQUMsYUFBYSxDQUFDLEVBQUU7WUFDakUsSUFBSSxDQUFDLGVBQWUsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1NBQ2xEO0lBQ0gsQ0FBQztDQUNGO0FBekRELDBDQXlEQyJ9\",\"assetPath\":\"Assets/Scripts/Interact/MoveAnimationInteractor.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"interactButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"animationClipName\",\"type\":\"System.String\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"Header\",\"args\":[\"\\\"\uC560\uB2C8\uBA54\uC774\uC158
+    \uC774\uB984\uC744 \uB123\uC73C\uC138\uC694. ex) idle_cup\uC778 \uACBD\uC6B0
+    cup\\\"\"]}]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"cameraOffset\",\"type\":\"UnityEngine.Vector3\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"prefab\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"posOffset\",\"type\":\"UnityEngine.Vector3\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"rotOffset\",\"type\":\"UnityEngine.Vector3\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"MoveAnimationInteractor\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 9276e56e39f12400998d2357b0d414e2
+  onlyWriteTrigger: 0
