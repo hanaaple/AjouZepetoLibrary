@@ -1,15 +1,8 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Art/Modelings/garland_lights.fbm.meta
 guid: e0c2f25983ffc1d4abd987fb6c877b51
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
-========
-guid: 2ea97d49b78b07a46b61bc0ddb8f09a0
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 2100000
->>>>>>>> 8d8711c0fb020484dbb5b4c4cff87468833faca7:Assets/Art/Materials/Lights.mat.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

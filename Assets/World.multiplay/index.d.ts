@@ -773,8 +773,8 @@ declare module "ZEPETO.Multiplay" {
 
 declare module 'ZEPETO.Multiplay.DataStorage' {    
     interface DataStorage {
-        set<T>(key: string, value: T) : Promise<boolean>;
-        get<T>(key: string): Promise<T>;
+        set(key: string, value: string | number | bigint | boolean): Promise<boolean>;
+        get(key: string): Promise<string | number | bigint | boolean>;
         remove(key: string): Promise<boolean>;
     }
 }
