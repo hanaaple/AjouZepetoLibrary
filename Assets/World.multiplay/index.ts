@@ -62,14 +62,12 @@ export default class extends Sandbox {
       const user = new SelfieUser();
       user.sessionId = client.sessionId;
       this.state.selfiePlayer.set(client.sessionId, user);
-      console.log("ㅎㅇ", user.sessionId);
     });
 
     //client - 찍는 플레이어, message
     this.onMessage("offSelfieMode", (client, message) => {
       if (this.state.selfiePlayer.has(client.sessionId))
         this.state.selfiePlayer.delete(client.sessionId);
-      console.log("ㅂㅇ", client.sessionId);
       if (this.state.selfieWithPlayers.has(client.sessionId)) {
         console.log(
           `${client.sessionId} offMode - 같이 찍는 (주체)플레이어 삭제`
@@ -86,8 +84,6 @@ export default class extends Sandbox {
         withPlayer = this.state.selfieWithPlayers.get(message.sessionId);
       else {
         withPlayer = new SelfieWithUser();
-        // console.log(withPlayer.withUser)
-        // withPlayer.withUser = new MapSchema<User>()
       }
       withPlayer.sessionId = message.sessionId;
       const withUser = new User();
@@ -112,7 +108,6 @@ export default class extends Sandbox {
         console.log(`${message.sessionId} - 누른 경우에서 삭제`);
         this.state.selfieWithPlayers.delete(message.sessionId);
       }
-      console.log("ㅂㅇ찍기", client.sessionId);
     });
 
     this.onMessage("onChangedCameraTransform", (client, message) => {
