@@ -94,12 +94,12 @@ export default class UiController extends ZepetoScriptBehaviour {
   public quickContentButtons: Button[];
   // private quickMessages : string[]
 
-  // TOAST_MESSAGE = {
-  //   UPLOADING: "Uploading...",
-  //   COMPLETE: "Done",
-  //   FAILED: "Failed",
-  //   SAVED: "Saved!",
-  // };
+  TOAST_MESSAGE = {
+    feedUploading: "Uploading...",
+    feedCompleted: "Done",
+    feedFailed: "Failed",
+    screenShotSaveCompleted: "Saved!",
+  };
 
   private isUIOpen: boolean = false;
 
@@ -357,9 +357,11 @@ export default class UiController extends ZepetoScriptBehaviour {
   public ShowCreateFeedResult(result: Boolean) {
     if (result) {
       // this.createFeedButton.gameObject.SetActive(false);
-      this.StartCoroutine(this.ShowToastMessage("Complete"));
+      this.StartCoroutine(
+        this.ShowToastMessage(this.TOAST_MESSAGE.feedCompleted)
+      );
     } else {
-      this.StartCoroutine(this.ShowToastMessage("FAILED"));
+      this.StartCoroutine(this.ShowToastMessage(this.TOAST_MESSAGE.feedFailed));
     }
   }
 

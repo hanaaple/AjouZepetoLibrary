@@ -212,6 +212,14 @@ PrefabInstance:
       propertyPath: script.unityValues.Array.data[0]
       value: 
       objectReference: {fileID: 2049359557}
+    - target: {fileID: 4279660504495840240, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279660504495840240, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.056
+      objectReference: {fileID: 0}
     - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_RootOrder
       value: 3
