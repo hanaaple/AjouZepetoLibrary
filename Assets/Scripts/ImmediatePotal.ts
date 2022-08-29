@@ -32,6 +32,7 @@ export default class ImmediatePotal extends ZepetoScriptBehaviour {
       if (this.audioManger != null && this.audioClip != null) {
         this.audioManger.PlayOneShot(this.audioClip);
       }
+      console.log(this._connectedPotal.loadPos.position);
       zepetoCharacter.Teleport(
         this._connectedPotal.loadPos.position,
         this._connectedPotal.loadPos.rotation

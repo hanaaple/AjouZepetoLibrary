@@ -1,4 +1,4 @@
-import { Camera, GameObject, Transform, Vector3 } from "UnityEngine";
+import { Camera, Canvas, GameObject, Transform, Vector3 } from "UnityEngine";
 import { Button } from "UnityEngine.UI";
 import { ZepetoPlayer, ZepetoPlayers } from "ZEPETO.Character.Controller";
 import { RoomData } from "ZEPETO.Multiplay";
@@ -18,6 +18,9 @@ export default class SelfieRegistrant extends ZepetoScriptBehaviour {
   public static get instance(): SelfieRegistrant {
     return this._instance;
   }
+
+  @SerializeField()
+  private interactPanel: Transform;
 
   @SerializeField()
   private takeWithButtonPrefab: GameObject;
@@ -75,7 +78,11 @@ export default class SelfieRegistrant extends ZepetoScriptBehaviour {
     const onlinePlayer =
       player.character.ZepetoAnimator.gameObject.GetComponent<OnlineWithPlayer>();
 
-    onlinePlayer.Initialize(this.cameraPrefab, this.takeWithButtonPrefab);
+    onlinePlayer.Initialize(
+      this.cameraPrefab,
+      this.takeWithButtonPrefab,
+      this.interactPanel.transform
+    );
     onlinePlayer.SetSelfieStick(player, this.selfieStickPrefab);
 
     const takeUserProps = new TakeUserProps();
