@@ -9,6 +9,7 @@ import {
   Vector3 as Vector3Schema,
 } from "ZEPETO.Multiplay.Schema";
 import {
+  CharacterJumpState,
   CharacterState,
   SpawnInfo,
   ZepetoPlayers,
@@ -68,9 +69,12 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
     while (true) {
       yield waitForSeconds;
 
-      if (this.room.IsConnected) {
-        if (myPlayer.character.CurrentState != CharacterState.Idle)
-          this.SendTransform(myPlayer.character.transform);
+      if (this.room != null && this.room.IsConnected) {
+        if (ZepetoPlayers.instance.HasPlayer(this.room.SessionId)) {
+          if (myPlayer.character.CurrentState != CharacterState.Idle) {
+            this.SendTransform(myPlayer.character.transform);
+          }
+        }
       }
     }
   }
@@ -105,6 +109,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
         });
         myPlayer.character.gameObject.layer =
           LayerMask.NameToLayer("LocalPlayer");
+        this.SendTransform(myPlayer.character.transform);
       });
 
       // On Add Player
@@ -112,17 +117,11 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
         const isLocal = this.room.SessionId === sessionId;
         const player: Player = this.room.State.players.get_Item(sessionId);
         if (player == null || player == undefined) return;
-        const zepetoPlayer = ZepetoPlayers.instance.GetPlayer(sessionId);
-        // AnimationSynchronizer.instance.OnAddPlayer(
-        //   sessionId,
-        //   zepetoPlayer.character.ZepetoAnimator,
-        //   player.animation
-        // );
+
         if (!isLocal) {
           this.Debug(`[온라인 플레이어 생성] player  ${sessionId}`);
           player.OnChange += (changeValues) =>
             this.OnUpdateMultiPlayer(sessionId, player);
-          this.OnUpdateMultiPlayer(sessionId, player);
         }
       });
     }
@@ -260,92 +259,44 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
       yield null;
     }
     console.log(`[OnRemove] players - sessionId : ${sessionId}`);
-    // AnimationSynchronizer.instance.OnRemovePlayer(sessionId);
     ZepetoPlayers.instance.RemovePlayer(sessionId);
   }
 
   private OnUpdateMultiPlayer(sessionId: string, player: Player) {
     const zepetoPlayer = ZepetoPlayers.instance.GetPlayer(sessionId);
-    // const isAnimate =
-    //   player.animation !=
-    //   AnimationSynchronizer.instance.GetPlayerAnimation(sessionId);
 
-    const positionSchema = this.ParseVector3(player.transform.position);
-    if (
-      Vector3.Distance(
-        zepetoPlayer.character.transform.position,
-        positionSchema
-      ) > 2
-    ) {
-      zepetoPlayer.character.transform.position = positionSchema;
-      // zepetoPlayer.character.transform.eulerAngles = this.ParseVector3(player.transform.rotation);
+    const position = this.ParseVector3(player.transform.position);
+
+    var moveDir = Vector3.op_Subtraction(
+      position,
+      zepetoPlayer.character.transform.position
+    );
+    const rot = this.ParseVector3(player.transform.rotation);
+    if (moveDir.magnitude > 5) {
+      zepetoPlayer.character.Teleport(
+        position,
+        Quaternion.Euler(rot.x, rot.y, rot.z)
+      );
+    } else {
+      moveDir = new Vector3(moveDir.x, 0, moveDir.z);
+
+      if (moveDir.magnitude < 0.05) {
+        if (player.state === CharacterState.MoveTurn) return;
+        zepetoPlayer.character.StopMoving();
+      } else {
+        zepetoPlayer.character.MoveToPosition(position);
+      }
     }
-    zepetoPlayer.character.MoveToPosition(positionSchema);
 
-    //애니메이션이 변경되었는데 Jump인 경우가 있음 그러면 애니메이션 변경시 점프가 동시에 발생함
-    if (
-      // !isAnimate &&
-      player.state === CharacterState.JumpIdle ||
-      player.state === CharacterState.JumpMove
-    ) {
-      zepetoPlayer.character.Jump();
+    if (player.state === CharacterState.Jump) {
+      if (zepetoPlayer.character.CurrentState !== CharacterState.Jump) {
+        zepetoPlayer.character.Jump();
+      }
+
+      if (player.subState === CharacterJumpState.JumpDouble) {
+        zepetoPlayer.character.DoubleJump();
+      }
     }
-    // 현재 애니메이션 상태가 다른 경우
-    // 여기서 문제 생기는거로 예상
-    // console.log("서버 플레이어 업데이트")
-
-    // 문제해결로 예상   문제 1 - 점프한다 왜...?? - 이유 : 점프 누르면 스테이트가 Jump가 된다. 그리고 버튼을 누르면 State가 Jump인 상태로 여기가 다시 작동한다.
-
-    // 문제 2 - Local말고 다른 Player에 대해서만 애가 애니메이션 바꿀때 잠시 팔을 핀다 - 이건 진짜 모르겠는데 무언가를 바꾸자마자 흠..
-    // 문제 3 - 클라이언트 시작할 때 이미 접속해있는 플레이어들 상태 체크해서 애니메이션 바꿔줘야한다.
-
-    // 해결방법 1 - 애니메이션 체크를 매번 한다
-    // 해결방법 2 - 시작할 때 체크한다  - AnimationManager가 빈 경우 (기본)
-    //애니메이션이 변경된 경우
-    // if (isAnimate) {
-    //   console.log("서버 - 애니메이션 세팅", player.state);
-    //   AnimationSynchronizer.instance.SetMoveAnimation(
-    //     zepetoPlayer.character.ZepetoAnimator,
-    //     sessionId,
-    //     player.animation,
-    //     player.interactor
-    //   );
-    // }
-
-    // //문제는 제스처 중에 다시 제스처를 누르면 무시된다.
-    // if (player.state == CharacterState.Gesture) {
-    //   if (!AnimationSynchronizer.instance.GetIsGesturing(sessionId)) {
-    //     console.log("서버 - 제스처 세팅", player.state);
-    //     AnimationSynchronizer.instance.GestureHandler(
-    //       zepetoPlayer,
-    //       player.gesture,
-    //       player.isInfinite
-    //     );
-    //     zepetoPlayer.character.transform.position = positionSchema;
-    //     zepetoPlayer.character.transform.eulerAngles = this.ParseVector3(
-    //       player.transform.rotation
-    //     );
-    //   } else if (
-    //     AnimationSynchronizer.instance.GetPlayingGesture(sessionId).name !=
-    //     player.gesture
-    //   ) {
-    //     console.log("서버 - 제스처 세팅", player.state);
-    //     zepetoPlayer.character.transform.position = positionSchema;
-    //     zepetoPlayer.character.transform.eulerAngles = this.ParseVector3(
-    //       player.transform.rotation
-    //     );
-    //     AnimationSynchronizer.instance.GestureHandler(
-    //       zepetoPlayer,
-    //       player.gesture,
-    //       player.isInfinite
-    //     );
-    //   }
-    // } else if (
-    //   player.state != CharacterState.Gesture &&
-    //   AnimationSynchronizer.instance.GetIsGesturing(sessionId)
-    // ) {
-    //   AnimationSynchronizer.instance.GestureHandler(zepetoPlayer, "");
-    // }
   }
 
   public SendTransform(transform: Transform) {
@@ -378,6 +329,13 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
   private SendState(state: CharacterState) {
     const data = new RoomData();
     data.Add("state", state);
+    if (state === CharacterState.Jump) {
+      data.Add(
+        "subState",
+        ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.MotionV2
+          .CurrentJumpState
+      );
+    }
     this.room.Send("onChangedState", data.GetObject());
   }
 
