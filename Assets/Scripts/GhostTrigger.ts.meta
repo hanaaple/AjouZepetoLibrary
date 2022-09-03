@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: 8c5cd659f593c5644adcf527973155e5
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass GhostTrigger extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    OnTriggerEnter(col) {\r\n        const player = col.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n       
+    this.AddMaterial(this.ghostMaterial, player.transform);\r\n        player.Teleport(this.spawnPoint.position,
+    this.spawnPoint.rotation);\r\n    }\r\n    AddMaterial(material, trans) {\r\n       
+    if (!material)\r\n            return;\r\n        const mesh = trans.GetComponentsInChildren($typeof(UnityEngine_1.SkinnedMeshRenderer));\r\n       
+    mesh.forEach((item) => {\r\n            let mats = new Array(item.materials.length);\r\n           
+    for (let idx = 0; idx < item.materials.length; idx++) {\r\n                if
+    (item.materials[idx].name == \"eyelash(Clone)\") {\r\n                    continue;\r\n               
+    }\r\n                mats[idx] = material;\r\n            }\r\n            item.materials
+    = mats;\r\n        });\r\n    }\r\n}\r\nexports.default = GhostTrigger;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2hvc3RUcmlnZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR2hvc3RUcmlnZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBS3FCO0FBQ3JCLDZFQUE4RDtBQUM5RCxpREFBc0Q7QUFFdEQsTUFBcUIsWUFBYSxTQUFRLHFDQUFxQjtJQU83RCxjQUFjLENBQUMsR0FBYTtRQUMxQixNQUFNLE1BQU0sR0FBRyxHQUFHLENBQUMsWUFBWSxTQUFDLDZDQUFlLEVBQUcsQ0FBQztRQUNuRCxJQUFJLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxhQUFhLEVBQUUsTUFBTSxDQUFDLFNBQVMsQ0FBQyxDQUFDO1FBQ3ZELE1BQU0sQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLFVBQVUsQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUN0RSxDQUFDO0lBRU0sV0FBVyxDQUFDLFFBQWtCLEVBQUUsS0FBZ0I7UUFDckQsSUFBSSxDQUFDLFFBQVE7WUFBRSxPQUFPO1FBQ3RCLE1BQU0sSUFBSSxHQUFHLEtBQUssQ0FBQyx1QkFBdUIsU0FBQyxpQ0FBbUIsRUFBRyxDQUFDO1FBQ2xFLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQyxJQUF5QixFQUFFLEVBQUU7WUFDekMsSUFBSSxJQUFJLEdBQWUsSUFBSSxLQUFLLENBQVcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsQ0FBQztZQUNsRSxLQUFLLElBQUksR0FBRyxHQUFHLENBQUMsRUFBRSxHQUFHLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLEVBQUUsR0FBRyxFQUFFLEVBQUU7Z0JBQ3BELElBQUksSUFBSSxDQUFDLFNBQVMsQ0FBQyxHQUFHLENBQUMsQ0FBQyxJQUFJLElBQUksZ0JBQWdCLEVBQUU7b0JBQ2hELFNBQVM7aUJBQ1Y7Z0JBQ0QsSUFBSSxDQUFDLEdBQUcsQ0FBQyxHQUFHLFFBQVEsQ0FBQzthQUN0QjtZQUNELElBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDO1FBQ3hCLENBQUMsQ0FBQyxDQUFDO0lBQ0wsQ0FBQztDQUNGO0FBM0JELCtCQTJCQyJ9","assetPath":"Assets/Scripts/GhostTrigger.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"spawnPoint","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"ghostMaterial","type":"UnityEngine.Material","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"GhostTrigger","description":""},"isCompiled":true}'
+  typescriptHash: 02c97b21f31059450524c2cfc3f69a49
+  onlyWriteTrigger: 0
