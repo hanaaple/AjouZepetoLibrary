@@ -1,0 +1,48 @@
+fileFormatVersion: 2
+guid: 4c3b2dc3e2c4ab441a4ac4c210a96032
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    PlayerUiController_1 = require(\"./PlayerUiController\");\r\nclass TakeInteractor
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Initialize(takeButtonPrefab,
+    canvasRoot, bookPrefab, targetObj) {\r\n        const button = UnityEngine_1.GameObject.Instantiate(takeButtonPrefab,
+    canvasRoot);\r\n        button.SetActive(false);\r\n        this.interactButton
+    = button.GetComponent($typeof(UnityEngine_UI_1.Button));\r\n        this.interactButton.onClick.AddListener(()
+    => {\r\n            //   if (!PlayerUiController.instance.IsTaking()) {\r\n           
+    const book = UnityEngine_1.GameObject.Instantiate(bookPrefab);\r\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character\r\n               
+    .GetComponentsInChildren($typeof(UnityEngine_1.Transform)).forEach((characterObj)
+    => {\r\n                if (characterObj.name == targetObj) {\r\n                   
+    book.transform.parent = characterObj;\r\n                    book.transform.localPosition
+    = UnityEngine_1.Vector3.zero;\r\n                    book.transform.localRotation
+    = UnityEngine_1.Quaternion.Euler(UnityEngine_1.Vector3.zero);\r\n               
+    }\r\n            });\r\n            PlayerUiController_1.default.instance.EnableUnHand(book);\r\n           
+    // }\r\n        });\r\n    }\r\n    OnTriggerEnter(col) {\r\n        if (!col.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter)))
+    {\r\n            return;\r\n        }\r\n        if (this.interactButton) {\r\n           
+    this.interactButton.gameObject.SetActive(true);\r\n            this.isInteractable
+    = true;\r\n        }\r\n    }\r\n    OnTriggerExit(col) {\r\n        if (!col.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter)))
+    {\r\n            return;\r\n        }\r\n        if (this.interactButton) {\r\n           
+    this.interactButton.gameObject.SetActive(false);\r\n            this.isInteractable
+    = false;\r\n        }\r\n    }\r\n}\r\nexports.default = TakeInteractor;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGFrZUludGVyYWN0b3IuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUYWtlSW50ZXJhY3Rvci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQU1xQjtBQUNyQixtREFBd0M7QUFDeEMsNkVBQTZFO0FBQzdFLGlEQUFzRDtBQUN0RCw2REFBc0Q7QUFFdEQsTUFBcUIsY0FBZSxTQUFRLHFDQUFxQjtJQVMvRCxVQUFVLENBQ1IsZ0JBQTRCLEVBQzVCLFVBQXFCLEVBQ3JCLFVBQXNCLEVBQ3RCLFNBQWlCO1FBRWpCLE1BQU0sTUFBTSxHQUFHLHdCQUFVLENBQUMsV0FBVyxDQUNuQyxnQkFBZ0IsRUFDaEIsVUFBVSxDQUNYLENBQUM7UUFDRixNQUFNLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQ3hCLElBQUksQ0FBQyxjQUFjLEdBQUcsTUFBTSxDQUFDLFlBQVksU0FBQyx1QkFBTSxFQUFHLENBQUM7UUFDcEQsSUFBSSxDQUFDLGNBQWMsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUMzQyxtREFBbUQ7WUFDbkQsTUFBTSxJQUFJLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQWEsVUFBVSxDQUFDLENBQUM7WUFDNUQsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTO2lCQUN0RCx1QkFBdUIsU0FBQyx1QkFBUyxHQUNqQyxPQUFPLENBQUMsQ0FBQyxZQUFZLEVBQUUsRUFBRTtnQkFDeEIsSUFBSSxZQUFZLENBQUMsSUFBSSxJQUFJLFNBQVMsRUFBRTtvQkFDbEMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLEdBQUcsWUFBWSxDQUFDO29CQUNyQyxJQUFJLENBQUMsU0FBUyxDQUFDLGFBQWEsR0FBRyxxQkFBTyxDQUFDLElBQUksQ0FBQztvQkFDNUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxhQUFhLEdBQUcsd0JBQVUsQ0FBQyxLQUFLLENBQUMscUJBQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQztpQkFDL0Q7WUFDSCxDQUFDLENBQUMsQ0FBQztZQUNMLDRCQUFrQixDQUFDLFFBQVEsQ0FBQyxZQUFZLENBQUMsSUFBSSxDQUFDLENBQUM7WUFDL0MsSUFBSTtRQUNOLENBQUMsQ0FBQyxDQUFDO0lBQ0wsQ0FBQztJQUVELGNBQWMsQ0FBQyxHQUFhO1FBQzFCLElBQUksQ0FBQyxHQUFHLENBQUMsWUFBWSxTQUFDLDZDQUFlLEVBQUcsRUFBRTtZQUN4QyxPQUFPO1NBQ1I7UUFFRCxJQUFJLElBQUksQ0FBQyxjQUFjLEVBQUU7WUFDdkIsSUFBSSxDQUFDLGNBQWMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1lBQy9DLElBQUksQ0FBQyxjQUFjLEdBQUcsSUFBSSxDQUFDO1NBQzVCO0lBQ0gsQ0FBQztJQUVELGFBQWEsQ0FBQyxHQUFhO1FBQ3pCLElBQUksQ0FBQyxHQUFHLENBQUMsWUFBWSxTQUFDLDZDQUFlLEVBQUcsRUFBRTtZQUN4QyxPQUFPO1NBQ1I7UUFFRCxJQUFJLElBQUksQ0FBQyxjQUFjLEVBQUU7WUFDdkIsSUFBSSxDQUFDLGNBQWMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1lBQ2hELElBQUksQ0FBQyxjQUFjLEdBQUcsS0FBSyxDQUFDO1NBQzdCO0lBQ0gsQ0FBQztDQUNGO0FBM0RELGlDQTJEQyJ9","assetPath":"Assets/Scripts/TakeInteractor.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"cameraOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"TakeInteractor","description":""},"isCompiled":true}'
+  typescriptHash: 1f4d28d559a124c2923f567a622cda87
+  onlyWriteTrigger: 0
