@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 402533875962736382}
   - component: {fileID: 732841589071991399}
   - component: {fileID: 4992153579512177459}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Central_library
   m_TagString: Wall
   m_Icon: {fileID: 0}
