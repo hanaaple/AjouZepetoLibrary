@@ -1,14 +1,14 @@
-import { Camera, GameObject, Sprite, Transform, Vector3 } from "UnityEngine";
+import { Camera, GameObject, Vector3 } from "UnityEngine";
 import { Button } from "UnityEngine.UI";
 import { ZepetoPlayers } from "ZEPETO.Character.Controller";
 import { ZepetoScriptBehaviour } from "ZEPETO.Script";
 import ReturnInteractor from "./ReturnInteractor";
 import TakeInteractor from "./TakeInteractor";
 
-export default class PlayerUiController extends ZepetoScriptBehaviour {
-  private static _instance: PlayerUiController;
+export default class LoanBookQuest extends ZepetoScriptBehaviour {
+  private static _instance: LoanBookQuest;
 
-  public static get instance(): PlayerUiController {
+  public static get instance(): LoanBookQuest {
     return this._instance;
   }
 
@@ -21,7 +21,7 @@ export default class PlayerUiController extends ZepetoScriptBehaviour {
   private _returnInteractors: ReturnInteractor[];
 
   @SerializeField()
-  private interactButton: Button;
+  private takeOffButton: Button;
 
   @SerializeField()
   private takeButtonPrefab: GameObject;
@@ -32,12 +32,18 @@ export default class PlayerUiController extends ZepetoScriptBehaviour {
   @SerializeField()
   private returnButtonPrefab: GameObject;
 
+  @SerializeField()
+  private posOffset: Vector3;
+
+  @SerializeField()
+  private rotOffset: Vector3;
+
   private interactObj: GameObject;
 
   private rightHandBone: string = "hand_R";
 
   Awake() {
-    PlayerUiController._instance = this;
+    LoanBookQuest._instance = this;
   }
   Start() {
     this._takeInteractors = new Array<TakeInteractor>(
@@ -57,26 +63,28 @@ export default class PlayerUiController extends ZepetoScriptBehaviour {
     ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
       this.localCamera = ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera;
 
-      this.interactButton.onClick.AddListener(() => {
+      this.takeOffButton.onClick.AddListener(() => {
         if (this.interactObj) {
           GameObject.Destroy(this.interactObj);
           this.interactObj = null;
         }
-        this.interactButton.gameObject.SetActive(false);
+        this.takeOffButton.gameObject.SetActive(false);
       });
       this._takeInteractors.forEach((item) => {
         item.Initialize(
           this.takeButtonPrefab,
-          this.interactButton.transform.parent,
+          this.takeOffButton.transform.parent,
           this.bookPrefab,
-          this.rightHandBone
+          this.rightHandBone,
+          this.posOffset,
+          this.rotOffset
         );
       });
 
       this._returnInteractors.forEach((item) => {
         item.Initialize(
           this.returnButtonPrefab,
-          this.interactButton.transform.parent
+          this.takeOffButton.transform.parent
         );
       });
     });
@@ -114,7 +122,7 @@ export default class PlayerUiController extends ZepetoScriptBehaviour {
       this.interactObj = null;
     }
     this.interactObj = book;
-    this.interactButton.gameObject.SetActive(true);
+    this.takeOffButton.gameObject.SetActive(true);
   }
 
   ReturnBook() {
@@ -122,6 +130,6 @@ export default class PlayerUiController extends ZepetoScriptBehaviour {
       GameObject.Destroy(this.interactObj);
       this.interactObj = null;
     }
-    this.interactButton.gameObject.SetActive(false);
+    this.takeOffButton.gameObject.SetActive(false);
   }
 }

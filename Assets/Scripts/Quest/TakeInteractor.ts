@@ -8,9 +8,9 @@ import {
 import { Button } from "UnityEngine.UI";
 import { ZepetoCharacter, ZepetoPlayers } from "ZEPETO.Character.Controller";
 import { ZepetoScriptBehaviour } from "ZEPETO.Script";
-import PlayerUiController from "./PlayerUiController";
+import LoanBookQuest from "./LoanBookQuest";
 
-export default class ReturnInteractor extends ZepetoScriptBehaviour {
+export default class TakeInteractor extends ZepetoScriptBehaviour {
   public cameraOffset: Vector3;
 
   @NonSerialized()
@@ -19,10 +19,14 @@ export default class ReturnInteractor extends ZepetoScriptBehaviour {
   @NonSerialized()
   public isInteractable: bool;
 
-  @SerializeField()
-  private book: GameObject;
-
-  Initialize(takeButtonPrefab: GameObject, canvasRoot: Transform) {
+  Initialize(
+    takeButtonPrefab: GameObject,
+    canvasRoot: Transform,
+    bookPrefab: GameObject,
+    targetObj: string,
+    posOffset: Vector3,
+    rotOffset: Vector3
+  ) {
     const button = GameObject.Instantiate<GameObject>(
       takeButtonPrefab,
       canvasRoot
@@ -30,21 +34,24 @@ export default class ReturnInteractor extends ZepetoScriptBehaviour {
     button.SetActive(false);
     this.interactButton = button.GetComponent<Button>();
     this.interactButton.onClick.AddListener(() => {
-      this.interactButton.gameObject.SetActive(false);
-      this.isInteractable = false;
-      this.book.SetActive(true);
-      PlayerUiController.instance.ReturnBook();
+      //   if (!PlayerUiController.instance.IsTaking()) {
+      const book = GameObject.Instantiate<GameObject>(bookPrefab);
+      ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character
+        .GetComponentsInChildren<Transform>()
+        .forEach((characterObj) => {
+          if (characterObj.name == targetObj) {
+            book.transform.parent = characterObj;
+            book.transform.localPosition = posOffset;
+            book.transform.localRotation = Quaternion.Euler(rotOffset);
+          }
+        });
+      LoanBookQuest.instance.EnableUnHand(book);
+      // }
     });
   }
 
   OnTriggerEnter(col: Collider) {
-    if (
-      !(
-        col.GetComponent<ZepetoCharacter>() &&
-        PlayerUiController.instance.IsTaking() &&
-        !this.book.activeSelf
-      )
-    ) {
+    if (!col.GetComponent<ZepetoCharacter>()) {
       return;
     }
 
@@ -55,7 +62,7 @@ export default class ReturnInteractor extends ZepetoScriptBehaviour {
   }
 
   OnTriggerExit(col: Collider) {
-    if (!(col.GetComponent<ZepetoCharacter>() && !this.book.activeSelf)) {
+    if (!col.GetComponent<ZepetoCharacter>()) {
       return;
     }
 

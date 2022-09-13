@@ -1,0 +1,44 @@
+fileFormatVersion: 2
+guid: a4af0ba27006e954cbc9be8166f1a4dc
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    LoanBookQuest_1 = require(\"./LoanBookQuest\");\r\nconst MissionController_1
+    = require(\"./MissionController\");\r\nclass ReturnInteractor extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Initialize(takeButtonPrefab, canvasRoot) {\r\n        const button =
+    UnityEngine_1.GameObject.Instantiate(takeButtonPrefab, canvasRoot);\r\n       
+    button.SetActive(false);\r\n        this.interactButton = button.GetComponent($typeof(UnityEngine_UI_1.Button));\r\n       
+    this.interactButton.onClick.AddListener(() => {\r\n            this.interactButton.gameObject.SetActive(false);\r\n           
+    this.isInteractable = false;\r\n            this.book.SetActive(true);\r\n           
+    LoanBookQuest_1.default.instance.ReturnBook();\r\n            MissionController_1.default.instance.MissionClear(MissionController_1.MissionType.BOOKLOAN);\r\n       
+    });\r\n    }\r\n    OnTriggerEnter(col) {\r\n        if (!(col.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter))
+    &&\r\n            LoanBookQuest_1.default.instance.IsTaking() &&\r\n           
+    !this.book.activeSelf)) {\r\n            return;\r\n        }\r\n        if (this.interactButton)
+    {\r\n            this.interactButton.gameObject.SetActive(true);\r\n           
+    this.isInteractable = true;\r\n        }\r\n    }\r\n    OnTriggerExit(col) {\r\n       
+    if (!(col.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter))
+    && !this.book.activeSelf)) {\r\n            return;\r\n        }\r\n        if
+    (this.interactButton) {\r\n            this.interactButton.gameObject.SetActive(false);\r\n           
+    this.isInteractable = false;\r\n        }\r\n    }\r\n}\r\nexports.default =
+    ReturnInteractor;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmV0dXJuSW50ZXJhY3Rvci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlJldHVybkludGVyYWN0b3IudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBdUU7QUFDdkUsbURBQXdDO0FBQ3hDLDZFQUE4RDtBQUM5RCxpREFBc0Q7QUFDdEQsbURBQTRDO0FBQzVDLDJEQUFxRTtBQUVyRSxNQUFxQixnQkFBaUIsU0FBUSxxQ0FBcUI7SUFZakUsVUFBVSxDQUFDLGdCQUE0QixFQUFFLFVBQXFCO1FBQzVELE1BQU0sTUFBTSxHQUFHLHdCQUFVLENBQUMsV0FBVyxDQUNuQyxnQkFBZ0IsRUFDaEIsVUFBVSxDQUNYLENBQUM7UUFDRixNQUFNLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQ3hCLElBQUksQ0FBQyxjQUFjLEdBQUcsTUFBTSxDQUFDLFlBQVksU0FBQyx1QkFBTSxFQUFHLENBQUM7UUFDcEQsSUFBSSxDQUFDLGNBQWMsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUMzQyxJQUFJLENBQUMsY0FBYyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFDaEQsSUFBSSxDQUFDLGNBQWMsR0FBRyxLQUFLLENBQUM7WUFDNUIsSUFBSSxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7WUFDMUIsdUJBQWEsQ0FBQyxRQUFRLENBQUMsVUFBVSxFQUFFLENBQUM7WUFDcEMsMkJBQWlCLENBQUMsUUFBUSxDQUFDLFlBQVksQ0FBQywrQkFBVyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBQ2hFLENBQUMsQ0FBQyxDQUFDO0lBQ0wsQ0FBQztJQUVELGNBQWMsQ0FBQyxHQUFhO1FBQzFCLElBQ0UsQ0FBQyxDQUNDLEdBQUcsQ0FBQyxZQUFZLFNBQUMsNkNBQWU7WUFDaEMsdUJBQWEsQ0FBQyxRQUFRLENBQUMsUUFBUSxFQUFFO1lBQ2pDLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxVQUFVLENBQ3RCLEVBQ0Q7WUFDQSxPQUFPO1NBQ1I7UUFFRCxJQUFJLElBQUksQ0FBQyxjQUFjLEVBQUU7WUFDdkIsSUFBSSxDQUFDLGNBQWMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1lBQy9DLElBQUksQ0FBQyxjQUFjLEdBQUcsSUFBSSxDQUFDO1NBQzVCO0lBQ0gsQ0FBQztJQUVELGFBQWEsQ0FBQyxHQUFhO1FBQ3pCLElBQUksQ0FBQyxDQUFDLEdBQUcsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsTUFBTyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLEVBQUU7WUFDbkUsT0FBTztTQUNSO1FBRUQsSUFBSSxJQUFJLENBQUMsY0FBYyxFQUFFO1lBQ3ZCLElBQUksQ0FBQyxjQUFjLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztZQUNoRCxJQUFJLENBQUMsY0FBYyxHQUFHLEtBQUssQ0FBQztTQUM3QjtJQUNILENBQUM7Q0FDRjtBQXZERCxtQ0F1REMifQ==","assetPath":"Assets/Scripts/Quest/ReturnInteractor.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"cameraOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"book","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"ReturnInteractor","description":""},"isCompiled":true}'
+  typescriptHash: 18099ac946c72e7bb4788a094ef23610
+  onlyWriteTrigger: 0

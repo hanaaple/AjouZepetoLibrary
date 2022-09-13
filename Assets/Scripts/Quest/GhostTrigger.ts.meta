@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 8c5cd659f593c5644adcf527973155e5
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst MissionController_1 =
+    require(\"./MissionController\");\r\nclass GhostTrigger extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    OnTriggerEnter(col) {\r\n        const player = col.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n       
+    this.AddMaterial(this.ghostMaterial, player.transform);\r\n        player.Teleport(this.spawnPoint.position,
+    this.spawnPoint.rotation);\r\n        MissionController_1.default.instance.MissionClear(MissionController_1.MissionType.BECOMEGHOST);\r\n   
+    }\r\n    AddMaterial(material, trans) {\r\n        if (!material)\r\n           
+    return;\r\n        const mesh = trans.GetComponentsInChildren($typeof(UnityEngine_1.SkinnedMeshRenderer));\r\n       
+    mesh.forEach((item) => {\r\n            let mats = new Array(item.materials.length);\r\n           
+    for (let idx = 0; idx < item.materials.length; idx++) {\r\n                if
+    (item.materials[idx].name == \"eyelash(Clone)\") {\r\n                    continue;\r\n               
+    }\r\n                mats[idx] = material;\r\n            }\r\n            item.materials
+    = mats;\r\n        });\r\n    }\r\n}\r\nexports.default = GhostTrigger;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2hvc3RUcmlnZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR2hvc3RUcmlnZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBS3FCO0FBQ3JCLDZFQUE4RDtBQUM5RCxpREFBc0Q7QUFDdEQsMkRBQXFFO0FBRXJFLE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFPN0QsY0FBYyxDQUFDLEdBQWE7UUFDMUIsTUFBTSxNQUFNLEdBQUcsR0FBRyxDQUFDLFlBQVksU0FBQyw2Q0FBZSxFQUFHLENBQUM7UUFDbkQsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsYUFBYSxFQUFFLE1BQU0sQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUN2RCxNQUFNLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxVQUFVLENBQUMsUUFBUSxDQUFDLENBQUM7UUFDcEUsMkJBQWlCLENBQUMsUUFBUSxDQUFDLFlBQVksQ0FBQywrQkFBVyxDQUFDLFdBQVcsQ0FBQyxDQUFDO0lBQ25FLENBQUM7SUFFTSxXQUFXLENBQUMsUUFBa0IsRUFBRSxLQUFnQjtRQUNyRCxJQUFJLENBQUMsUUFBUTtZQUFFLE9BQU87UUFDdEIsTUFBTSxJQUFJLEdBQUcsS0FBSyxDQUFDLHVCQUF1QixTQUFDLGlDQUFtQixFQUFHLENBQUM7UUFDbEUsSUFBSSxDQUFDLE9BQU8sQ0FBQyxDQUFDLElBQXlCLEVBQUUsRUFBRTtZQUN6QyxJQUFJLElBQUksR0FBZSxJQUFJLEtBQUssQ0FBVyxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxDQUFDO1lBQ2xFLEtBQUssSUFBSSxHQUFHLEdBQUcsQ0FBQyxFQUFFLEdBQUcsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sRUFBRSxHQUFHLEVBQUUsRUFBRTtnQkFDcEQsSUFBSSxJQUFJLENBQUMsU0FBUyxDQUFDLEdBQUcsQ0FBQyxDQUFDLElBQUksSUFBSSxnQkFBZ0IsRUFBRTtvQkFDaEQsU0FBUztpQkFDVjtnQkFDRCxJQUFJLENBQUMsR0FBRyxDQUFDLEdBQUcsUUFBUSxDQUFDO2FBQ3RCO1lBQ0QsSUFBSSxDQUFDLFNBQVMsR0FBRyxJQUFJLENBQUM7UUFDeEIsQ0FBQyxDQUFDLENBQUM7SUFDTCxDQUFDO0NBQ0Y7QUE1QkQsK0JBNEJDIn0=","assetPath":"Assets/Scripts/Quest/GhostTrigger.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"spawnPoint","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"ghostMaterial","type":"UnityEngine.Material","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"GhostTrigger","description":""},"isCompiled":true}'
+  typescriptHash: c02e00411c238cac388d7d457f024fd8
+  onlyWriteTrigger: 0

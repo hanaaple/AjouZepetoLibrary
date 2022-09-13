@@ -1,0 +1,45 @@
+fileFormatVersion: 2
+guid: 50c2f7168d154544a9ca4681f1ebcddf
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nexports.MissionType = void 0;\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nvar MissionType;\\r\\n(function
+    (MissionType) {\\r\\n    MissionType[MissionType[\\\"BOOKLOAN\\\"] = 0] = \\\"BOOKLOAN\\\";\\r\\n   
+    MissionType[MissionType[\\\"FINDGHOST\\\"] = 1] = \\\"FINDGHOST\\\";\\r\\n   
+    MissionType[MissionType[\\\"BECOMEGHOST\\\"] = 2] = \\\"BECOMEGHOST\\\";\\r\\n})(MissionType
+    = exports.MissionType || (exports.MissionType = {}));\\r\\nclass MissionController
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    // \uCC45 \uB300\uCD9C\\r\\n   
+    // \uADC0\uC2E0 \uCC3E\uAE30(\uBC84\uD2BC)\\r\\n    // \uADC0\uC2E0 \uB418\uAE30\\r\\n   
+    Awake() {\\r\\n        if (!MissionController.instance) {\\r\\n            MissionController.instance
+    = this;\\r\\n        }\\r\\n    }\\r\\n    Start() {\\r\\n        this.missionList
+    = new Array(3);\\r\\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\\r\\n            this.worldCanvas.worldCamera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;\\r\\n       
+    });\\r\\n    }\\r\\n    MissionClear(missionType) {\\r\\n        // console.log(this.missionList[MissionType.FINDGHOST]);\\r\\n       
+    // console.log(this.missionList[1]);\\r\\n        // console.log(MissionType.FINDGHOST);\\r\\n       
+    this.missionList[missionType] = true;\\r\\n        // switch (missionType) {\\r\\n       
+    //   case MissionType.BOOKLOAN: {\\r\\n        //     this.missionList[0] = true;\\r\\n       
+    //     break;\\r\\n        //   }\\r\\n        //   case MissionType.FINDGHOST:
+    {\\r\\n        //     break;\\r\\n        //   }\\r\\n        //   case MissionType.BECOMEGHOST:
+    {\\r\\n        //     this.missionList[2] = true;\\r\\n        //     break;\\r\\n       
+    //   }\\r\\n        //   default:\\r\\n        //     break;\\r\\n        //
+    }\\r\\n    }\\r\\n}\\r\\nexports.default = MissionController;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTWlzc2lvbkNvbnRyb2xsZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJNaXNzaW9uQ29udHJvbGxlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFDQSw2RUFBNEQ7QUFDNUQsaURBQXNEO0FBRXRELElBQVksV0FJWDtBQUpELFdBQVksV0FBVztJQUNyQixxREFBWSxDQUFBO0lBQ1osdURBQWEsQ0FBQTtJQUNiLDJEQUFlLENBQUE7QUFDakIsQ0FBQyxFQUpXLFdBQVcsR0FBWCxtQkFBVyxLQUFYLG1CQUFXLFFBSXRCO0FBQ0QsTUFBcUIsaUJBQWtCLFNBQVEscUNBQXFCO0lBS2xFLE9BQU87SUFDUCxZQUFZO0lBQ1osUUFBUTtJQUVSLEtBQUs7UUFDSCxJQUFJLENBQUMsaUJBQWlCLENBQUMsUUFBUSxFQUFFO1lBQy9CLGlCQUFpQixDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUM7U0FDbkM7SUFDSCxDQUFDO0lBQ0QsS0FBSztRQUNILElBQUksQ0FBQyxXQUFXLEdBQUcsSUFBSSxLQUFLLENBQVUsQ0FBQyxDQUFDLENBQUM7UUFDekMsMkNBQWEsQ0FBQyxRQUFRLENBQUMsa0JBQWtCLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUN6RCxJQUFJLENBQUMsV0FBVyxDQUFDLFdBQVcsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxZQUFZLENBQUMsTUFBTSxDQUFDO1FBQzVFLENBQUMsQ0FBQyxDQUFDO0lBQ0wsQ0FBQztJQUVELFlBQVksQ0FBQyxXQUF3QjtRQUNuQyx3REFBd0Q7UUFDeEQsb0NBQW9DO1FBQ3BDLHNDQUFzQztRQUV0QyxJQUFJLENBQUMsV0FBVyxDQUFDLFdBQVcsQ0FBQyxHQUFHLElBQUksQ0FBQztRQUNyQyx5QkFBeUI7UUFDekIsaUNBQWlDO1FBQ2pDLGtDQUFrQztRQUNsQyxhQUFhO1FBQ2IsTUFBTTtRQUNOLGtDQUFrQztRQUNsQyxhQUFhO1FBQ2IsTUFBTTtRQUNOLG9DQUFvQztRQUNwQyxrQ0FBa0M7UUFDbEMsYUFBYTtRQUNiLE1BQU07UUFDTixhQUFhO1FBQ2IsYUFBYTtRQUNiLElBQUk7SUFDTixDQUFDO0NBQ0Y7QUEzQ0Qsb0NBMkNDIn0=\",\"assetPath\":\"Assets/Scripts/Quest/MissionController.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UIModule\",\"name\":\"worldCanvas\",\"type\":\"UnityEngine.Canvas\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"missionList\",\"type\":\"System.Boolean[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"MissionController\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: afbc708eafc4f5b375909b6634782816
+  onlyWriteTrigger: 0
