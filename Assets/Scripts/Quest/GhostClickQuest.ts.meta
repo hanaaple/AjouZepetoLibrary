@@ -1,0 +1,44 @@
+fileFormatVersion: 2
+guid: 8b54981786439a845a0963faa0c73f24
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    MissionController_1 = require(\"./MissionController\");\r\nclass GhostClickQuest
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCamera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;\r\n       
+    });\r\n        this.ghostButton = new Array();\r\n        this.ghostObjectList.forEach((item)
+    => {\r\n            const t = UnityEngine_1.GameObject.Instantiate(this.ghostButtonPrefab,
+    this.canvasParent);\r\n            const tButton = t.GetComponent($typeof(UnityEngine_UI_1.Button));\r\n           
+    tButton.onClick.AddListener(() => {\r\n                MissionController_1.default.instance.MissionClear(MissionController_1.MissionType.FINDGHOST);\r\n               
+    const len = this.ghostObjectList.length;\r\n                for (let i = 0; i
+    < len; i++) {\r\n                    UnityEngine_1.GameObject.Destroy(this.ghostButton[i].gameObject);\r\n               
+    }\r\n                this.ghostButton = null;\r\n                this.zepetoCamera
+    = null;\r\n            });\r\n            this.ghostButton.push(tButton);\r\n       
+    });\r\n    }\r\n    Update() {\r\n        if (this.zepetoCamera != null) {\r\n           
+    this.ghostObjectList.forEach((item, idx) => {\r\n                this.ghostButton[idx].transform.position
+    = UnityEngine_1.Vector3.op_Addition(this.transform.position, this.buttonOffset);\r\n               
+    this.ghostButton[idx].transform.LookAt(this.zepetoCamera.transform);\r\n               
+    this.ghostButton[idx].transform.eulerAngles = UnityEngine_1.Vector3.op_Addition(this.ghostButton[idx].transform.eulerAngles,
+    new UnityEngine_1.Vector3(0, 180, 0));\r\n            });\r\n        }\r\n   
+    }\r\n}\r\nexports.default = GhostClickQuest;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2hvc3RDbGlja1F1ZXN0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR2hvc3RDbGlja1F1ZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXFFO0FBQ3JFLG1EQUF3QztBQUN4Qyw2RUFBNEQ7QUFDNUQsaURBQXNEO0FBQ3RELDJEQUFxRTtBQUVyRSxNQUFxQixlQUFnQixTQUFRLHFDQUFxQjtJQWFoRSxLQUFLO1FBQ0gsMkNBQWEsQ0FBQyxRQUFRLENBQUMsa0JBQWtCLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUN6RCxJQUFJLENBQUMsWUFBWSxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFlBQVksQ0FBQyxNQUFNLENBQUM7UUFDakUsQ0FBQyxDQUFDLENBQUM7UUFDSCxJQUFJLENBQUMsV0FBVyxHQUFHLElBQUksS0FBSyxFQUFVLENBQUM7UUFDdkMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxPQUFPLENBQUMsQ0FBQyxJQUFJLEVBQUUsRUFBRTtZQUNwQyxNQUFNLENBQUMsR0FBRyx3QkFBVSxDQUFDLFdBQVcsQ0FDOUIsSUFBSSxDQUFDLGlCQUFpQixFQUN0QixJQUFJLENBQUMsWUFBWSxDQUNsQixDQUFDO1lBQ0YsTUFBTSxPQUFPLEdBQUcsQ0FBQyxDQUFDLFlBQVksU0FBQyx1QkFBTSxFQUFHLENBQUM7WUFDekMsT0FBTyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO2dCQUMvQiwyQkFBaUIsQ0FBQyxRQUFRLENBQUMsWUFBWSxDQUFDLCtCQUFXLENBQUMsU0FBUyxDQUFDLENBQUM7Z0JBQy9ELE1BQU0sR0FBRyxHQUFHLElBQUksQ0FBQyxlQUFlLENBQUMsTUFBTSxDQUFDO2dCQUN4QyxLQUFLLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUcsR0FBRyxFQUFFLENBQUMsRUFBRSxFQUFFO29CQUM1Qix3QkFBVSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsV0FBVyxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxDQUFDO2lCQUNwRDtnQkFDRCxJQUFJLENBQUMsV0FBVyxHQUFHLElBQUksQ0FBQztnQkFDeEIsSUFBSSxDQUFDLFlBQVksR0FBRyxJQUFJLENBQUM7WUFDM0IsQ0FBQyxDQUFDLENBQUM7WUFDSCxJQUFJLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUNqQyxDQUFDLENBQUMsQ0FBQztJQUNMLENBQUM7SUFFRCxNQUFNO1FBQ0osSUFBSSxJQUFJLENBQUMsWUFBWSxJQUFJLElBQUksRUFBRTtZQUM3QixJQUFJLENBQUMsZUFBZSxDQUFDLE9BQU8sQ0FBQyxDQUFDLElBQUksRUFBRSxHQUFHLEVBQUUsRUFBRTtnQkFDekMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxHQUFHLENBQUMsQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLHFCQUFPLENBQUMsV0FBVyxDQUM1RCxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFDdkIsSUFBSSxDQUFDLFlBQVksQ0FDbEIsQ0FBQztnQkFFRixJQUFJLENBQUMsV0FBVyxDQUFDLEdBQUcsQ0FBQyxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsQ0FBQztnQkFFcEUsSUFBSSxDQUFDLFdBQVcsQ0FBQyxHQUFHLENBQUMsQ0FBQyxTQUFTLENBQUMsV0FBVyxHQUFHLHFCQUFPLENBQUMsV0FBVyxDQUMvRCxJQUFJLENBQUMsV0FBVyxDQUFDLEdBQUcsQ0FBQyxDQUFDLFNBQVMsQ0FBQyxXQUFXLEVBQzNDLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUUsR0FBRyxFQUFFLENBQUMsQ0FBQyxDQUN2QixDQUFDO1lBQ0osQ0FBQyxDQUFDLENBQUM7U0FDSjtJQUNILENBQUM7Q0FDRjtBQXRERCxrQ0FzREMifQ==","assetPath":"Assets/Scripts/Quest/GhostClickQuest.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"canvasParent","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"ghostButtonPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"ghostObjectList","type":"UnityEngine.GameObject[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"buttonOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"GhostClickQuest","description":""},"isCompiled":true}'
+  typescriptHash: 704d393211c1a865324530a22e63deb4
+  onlyWriteTrigger: 0
