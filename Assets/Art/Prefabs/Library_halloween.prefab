@@ -3580,6 +3580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarvedPumpkin_03_p (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1456554847384819591, guid: be41ee3ba21e94b408025d7327e344e0, type: 3}
+      propertyPath: m_Range
+      value: 2.73
+      objectReference: {fileID: 0}
     - target: {fileID: 1875487840753743703, guid: be41ee3ba21e94b408025d7327e344e0, type: 3}
       propertyPath: m_RootOrder
       value: 285
@@ -11841,6 +11845,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4356764942421192192, guid: 0fbd1e7e75547b043a591d28d4b8071a, type: 3}
+      propertyPath: m_Range
+      value: 1.55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fbd1e7e75547b043a591d28d4b8071a, type: 3}
 --- !u!4 &4139940924037964116 stripped
@@ -16548,6 +16556,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7088897605787763915}
     m_Modifications:
+    - target: {fileID: 1700176094919334305, guid: a167874400f42c04a99288717a565757, type: 3}
+      propertyPath: m_Range
+      value: 2.58
+      objectReference: {fileID: 0}
     - target: {fileID: 8411808912772754491, guid: a167874400f42c04a99288717a565757, type: 3}
       propertyPath: m_Name
       value: CarvedPumpkin_02_g
@@ -18974,6 +18986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarvedPumpkin_01_g
       objectReference: {fileID: 0}
+    - target: {fileID: 8736801093394802846, guid: cbc1675871b91a84dbec60b0cab47551, type: 3}
+      propertyPath: m_Range
+      value: 2.54
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc1675871b91a84dbec60b0cab47551, type: 3}
 --- !u!4 &5245927145964993499 stripped
@@ -20714,6 +20730,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7088897605787763915}
     m_Modifications:
+    - target: {fileID: 5871414999572992154, guid: 196ef33409d50b64c935afb349da3b42, type: 3}
+      propertyPath: m_Range
+      value: 1.86
+      objectReference: {fileID: 0}
     - target: {fileID: 8411808912772754491, guid: 196ef33409d50b64c935afb349da3b42, type: 3}
       propertyPath: m_Name
       value: CarvedPumpkin_02_y 1
@@ -22786,6 +22806,10 @@ PrefabInstance:
     - target: {fileID: 1875487840753743703, guid: 0fbd1e7e75547b043a591d28d4b8071a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356764942421192192, guid: 0fbd1e7e75547b043a591d28d4b8071a, type: 3}
+      propertyPath: m_Range
+      value: 3.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fbd1e7e75547b043a591d28d4b8071a, type: 3}
@@ -25187,6 +25211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarvedPumpkin_01_p
       objectReference: {fileID: 0}
+    - target: {fileID: 9046021666247307180, guid: cebdbf1c90380284d8b0bb9feca1d89b, type: 3}
+      propertyPath: m_Range
+      value: 1.61
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cebdbf1c90380284d8b0bb9feca1d89b, type: 3}
 --- !u!4 &2310718636346633407 stripped
@@ -26027,6 +26055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarvedPumpkin_03_p
       objectReference: {fileID: 0}
+    - target: {fileID: 1456554847384819591, guid: be41ee3ba21e94b408025d7327e344e0, type: 3}
+      propertyPath: m_Range
+      value: 1.97
+      objectReference: {fileID: 0}
     - target: {fileID: 1875487840753743703, guid: be41ee3ba21e94b408025d7327e344e0, type: 3}
       propertyPath: m_RootOrder
       value: 231
@@ -26396,6 +26428,10 @@ PrefabInstance:
     - target: {fileID: 1246585523158429165, guid: be41ee3ba21e94b408025d7327e344e0, type: 3}
       propertyPath: m_Name
       value: CarvedPumpkin_03_p (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456554847384819591, guid: be41ee3ba21e94b408025d7327e344e0, type: 3}
+      propertyPath: m_Range
+      value: 1.97
       objectReference: {fileID: 0}
     - target: {fileID: 1875487840753743703, guid: be41ee3ba21e94b408025d7327e344e0, type: 3}
       propertyPath: m_RootOrder
@@ -30713,6 +30749,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7088897605787763915}
     m_Modifications:
+    - target: {fileID: 7088806465790997576, guid: 10d387b592e6a524e86301803d527dba, type: 3}
+      propertyPath: m_Range
+      value: 2.01
+      objectReference: {fileID: 0}
     - target: {fileID: 8302444268890309299, guid: 10d387b592e6a524e86301803d527dba, type: 3}
       propertyPath: m_RootOrder
       value: 262
