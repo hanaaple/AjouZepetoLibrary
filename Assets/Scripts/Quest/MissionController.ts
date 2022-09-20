@@ -1,4 +1,5 @@
-import { Canvas } from "UnityEngine";
+import { Canvas, GameObject, Sprite } from "UnityEngine";
+import { Button, Image } from "UnityEngine.UI";
 import { ZepetoPlayers } from "ZEPETO.Character.Controller";
 import { ZepetoScriptBehaviour } from "ZEPETO.Script";
 
@@ -9,6 +10,15 @@ export enum MissionType {
 }
 export default class MissionController extends ZepetoScriptBehaviour {
   public worldCanvas: Canvas;
+
+  public questButton: Button;
+  public questPanel: GameObject;
+  public questExitButton: Button;
+
+  public questImage: Image[];
+
+  public questIncompleteSprite: Sprite;
+  public questCompleteSprite: Sprite;
 
   public missionList: boolean[];
   public static instance: MissionController;
@@ -24,7 +34,18 @@ export default class MissionController extends ZepetoScriptBehaviour {
   Start() {
     this.missionList = new Array<boolean>(3);
     ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
+      this.questButton.gameObject.SetActive(false);
+      this.questPanel.SetActive(true);
       this.worldCanvas.worldCamera = ZepetoPlayers.instance.ZepetoCamera.camera;
+    });
+    this.questButton.onClick.AddListener(() => {
+      this.questButton.gameObject.SetActive(false);
+      this.questPanel.SetActive(true);
+    });
+
+    this.questExitButton.onClick.AddListener(() => {
+      this.questButton.gameObject.SetActive(true);
+      this.questPanel.SetActive(false);
     });
   }
 
@@ -34,6 +55,8 @@ export default class MissionController extends ZepetoScriptBehaviour {
     // console.log(MissionType.FINDGHOST);
 
     this.missionList[missionType] = true;
+
+    this.questImage[missionType].sprite = this.questCompleteSprite;
     // switch (missionType) {
     //   case MissionType.BOOKLOAN: {
     //     this.missionList[0] = true;

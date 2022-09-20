@@ -19,10 +19,10 @@ export default class TakeInteractor extends ZepetoScriptBehaviour {
   @NonSerialized()
   public isInteractable: bool;
 
+  public bookPrefab: GameObject;
   Initialize(
     takeButtonPrefab: GameObject,
     canvasRoot: Transform,
-    bookPrefab: GameObject,
     targetObj: string,
     posOffset: Vector3,
     rotOffset: Vector3
@@ -35,7 +35,7 @@ export default class TakeInteractor extends ZepetoScriptBehaviour {
     this.interactButton = button.GetComponent<Button>();
     this.interactButton.onClick.AddListener(() => {
       //   if (!PlayerUiController.instance.IsTaking()) {
-      const book = GameObject.Instantiate<GameObject>(bookPrefab);
+      const book = GameObject.Instantiate<GameObject>(this.bookPrefab);
       ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character
         .GetComponentsInChildren<Transform>()
         .forEach((characterObj) => {

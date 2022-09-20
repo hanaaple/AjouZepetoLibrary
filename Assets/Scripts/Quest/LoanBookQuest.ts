@@ -27,9 +27,6 @@ export default class LoanBookQuest extends ZepetoScriptBehaviour {
   private takeButtonPrefab: GameObject;
 
   @SerializeField()
-  private bookPrefab: GameObject;
-
-  @SerializeField()
   private returnButtonPrefab: GameObject;
 
   @SerializeField()
@@ -74,7 +71,6 @@ export default class LoanBookQuest extends ZepetoScriptBehaviour {
         item.Initialize(
           this.takeButtonPrefab,
           this.takeOffButton.transform.parent,
-          this.bookPrefab,
           this.rightHandBone,
           this.posOffset,
           this.rotOffset
