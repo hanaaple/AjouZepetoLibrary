@@ -1641,77 +1641,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439274559}
   m_CullTransparentMesh: 1
---- !u!1 &453069232
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 453069233}
-  - component: {fileID: 453069235}
-  - component: {fileID: 453069234}
-  m_Layer: 8
-  m_Name: Take Book Zone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &453069233
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453069232}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.49, y: 11.79, z: 15.51}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 842982102}
-  m_RootOrder: 95
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &453069234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453069232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  script:
-    keys:
-    - cameraOffset
-    - bookPrefab
-    unityValues:
-    - {fileID: 0}
-    - {fileID: 8978351968934070905, guid: e20ff2328278ebe45bad3d6038ae6240, type: 3}
-    values:
-    - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.0,\"y\":2.0,\"z\":0.0}"}'
-    - 
-    unityArrayValues: []
-    arrayValues: []
-    script: {fileID: 4458252877524076426, guid: 4c3b2dc3e2c4ab441a4ac4c210a96032, type: 3}
-    isExpaned: 0
---- !u!65 &453069235
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453069232}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.24, y: 3.42, z: 14.04}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &462357138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,77 +1761,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462357138}
   m_CullTransparentMesh: 1
---- !u!1 &463818762
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 463818763}
-  - component: {fileID: 463818765}
-  - component: {fileID: 463818764}
-  m_Layer: 8
-  m_Name: Take Book Zone (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &463818763
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463818762}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.49, y: 11.79, z: -10.42}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 842982102}
-  m_RootOrder: 96
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &463818764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463818762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  script:
-    keys:
-    - cameraOffset
-    - bookPrefab
-    unityValues:
-    - {fileID: 0}
-    - {fileID: 1303197128059096367, guid: 1c654a9e0efa5a045bfb76f53f14c277, type: 3}
-    values:
-    - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.0,\"y\":2.0,\"z\":0.0}"}'
-    - 
-    unityArrayValues: []
-    arrayValues: []
-    script: {fileID: 4458252877524076426, guid: 4c3b2dc3e2c4ab441a4ac4c210a96032, type: 3}
-    isExpaned: 0
---- !u!65 &463818765
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463818762}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.24, y: 3.42, z: 24}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &523284119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,11 +3117,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807170373}
   m_CullTransparentMesh: 1
---- !u!4 &842982102 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2445372878654298853, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
-  m_PrefabInstance: {fileID: 1333205131}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &920328175
 GameObject:
   m_ObjectHideFlags: 0
@@ -5069,6 +4922,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 371912635654321033, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_RootOrder
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113566189231777571, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_RootOrder
+      value: 101
+      objectReference: {fileID: 0}
     - target: {fileID: 1640633420058752266, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5077,6 +4938,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[7]
       value: 
       objectReference: {fileID: 2100000, guid: 863c280f5d4f9a146a0440fe7a4e235e, type: 2}
+    - target: {fileID: 4063341731734514032, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_RootOrder
+      value: 98
+      objectReference: {fileID: 0}
     - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -5121,9 +4986,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4873515508900880255, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_RootOrder
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 6273989219010695316, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_RootOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6819014374879330470, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_Name
       value: Ajou_Central_Library_halloween
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111825535418155016, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306976439006470346, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_RootOrder
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 7636300705637505714, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_IsActive
@@ -5234,8 +5115,8 @@ MonoBehaviour:
     - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":-0.05000000074505806,\"y\":0.05000000074505806,\"z\":0.004000000189989805}"}'
     - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.07500000298023224,\"y\":1.7000000476837159,\"z\":-5.599999904632568}"}'
     unityArrayValues:
-    - {fileID: 453069232}
-    - {fileID: 463818762}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 1057798330}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: bef7d785b2937304897ff349e6f80665, type: 3}
