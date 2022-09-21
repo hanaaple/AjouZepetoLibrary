@@ -45,7 +45,7 @@ export default class GhostClickQuest extends ZepetoScriptBehaviour {
     if (this.zepetoCamera != null) {
       this.ghostObjectList.forEach((item, idx) => {
         this.ghostButton[idx].transform.position = Vector3.op_Addition(
-          this.transform.position,
+          item.transform.position,
           this.buttonOffset
         );
 
