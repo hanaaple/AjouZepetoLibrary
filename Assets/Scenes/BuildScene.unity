@@ -2525,6 +2525,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &646237735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3964960812205916810, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+  m_PrefabInstance: {fileID: 1333205131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &682387588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,6 +2705,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &754727367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8746990735871764571, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+  m_PrefabInstance: {fileID: 1333205131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &762619857
 GameObject:
   m_ObjectHideFlags: 0
@@ -4848,7 +4858,7 @@ GameObject:
   - component: {fileID: 1330154357}
   - component: {fileID: 1330154356}
   m_Layer: 5
-  m_Name: Quest List
+  m_Name: Quest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4928,7 +4938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1113566189231777571, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_RootOrder
-      value: 101
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 1640633420058752266, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_IsActive
@@ -4940,7 +4950,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 863c280f5d4f9a146a0440fe7a4e235e, type: 2}
     - target: {fileID: 4063341731734514032, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_RootOrder
-      value: 98
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_RootOrder
@@ -4988,11 +4998,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4873515508900880255, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_RootOrder
-      value: 97
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 6273989219010695316, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_RootOrder
-      value: 100
+      value: 98
       objectReference: {fileID: 0}
     - target: {fileID: 6819014374879330470, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_Name
@@ -5004,7 +5014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7306976439006470346, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_RootOrder
-      value: 99
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 7636300705637505714, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_IsActive
@@ -5105,9 +5115,9 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     values:
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":2,\"type\":\"UnityEngine.Object,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":5,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":2,\"length\":1,\"type\":\"UnityEngine.Object,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":5,\"length\":1,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     - 
     - 
@@ -5115,8 +5125,11 @@ MonoBehaviour:
     - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":-0.05000000074505806,\"y\":0.05000000074505806,\"z\":0.004000000189989805}"}'
     - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.07500000298023224,\"y\":1.7000000476837159,\"z\":-5.599999904632568}"}'
     unityArrayValues:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 1988354832}
+    - {fileID: 754727367}
+    - {fileID: 1555534180}
+    - {fileID: 646237735}
+    - {fileID: 2041761654}
     - {fileID: 1057798330}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: bef7d785b2937304897ff349e6f80665, type: 3}
@@ -5726,6 +5739,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531374979}
   m_CullTransparentMesh: 1
+--- !u!1 &1555534180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1917659543763200802, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+  m_PrefabInstance: {fileID: 1333205131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1606724057
 GameObject:
   m_ObjectHideFlags: 0
@@ -7341,6 +7359,11 @@ Transform:
   m_Father: {fileID: 32409962}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1988354832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4822022693161745741, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+  m_PrefabInstance: {fileID: 1333205131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2020536546
 GameObject:
   m_ObjectHideFlags: 0
@@ -7533,6 +7556,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023426187}
   m_CullTransparentMesh: 1
+--- !u!1 &2041761654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7891521140085145587, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+  m_PrefabInstance: {fileID: 1333205131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2046595539
 GameObject:
   m_ObjectHideFlags: 0
@@ -7749,16 +7777,20 @@ MonoBehaviour:
     - questPanel
     - questExitButton
     - questImage
-    - questIncompleteSprite
+    - questUnClearSprite
     - questCompleteSprite
+    - questImages
+    - questClearSprite
     unityValues:
     - {fileID: 779655385}
     - {fileID: 0}
     - {fileID: 523284120}
     - {fileID: 991595763}
     - {fileID: 439274561}
-    - {fileID: 0}
+    - {fileID: 1330154356}
     - {fileID: 21300000, guid: 37295d3883f793c428c4d7a654b8ba7e, type: 3}
+    - {fileID: 21300000, guid: 2aa9cf099d2c379409490dde3335fe13, type: 3}
+    - {fileID: 0}
     - {fileID: 21300000, guid: 3897982125c5dfc4bba3a579f9eece80, type: 3}
     values:
     - 
@@ -7767,9 +7799,11 @@ MonoBehaviour:
     - 
     - 
     - 
+    - 
+    - 
+    - 
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":3,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
-    - 
     - 
     unityArrayValues:
     - {fileID: 121590241}

@@ -13,11 +13,13 @@ export default class MissionController extends ZepetoScriptBehaviour {
 
   public questButton: Button;
   public questPanel: GameObject;
+  public questImage: Image;
   public questExitButton: Button;
 
-  public questImage: Image[];
+  public questImages: Image[];
 
-  public questIncompleteSprite: Sprite;
+  public questUnClearSprite: Sprite;
+  public questClearSprite: Sprite;
   public questCompleteSprite: Sprite;
 
   public missionList: boolean[];
@@ -56,21 +58,22 @@ export default class MissionController extends ZepetoScriptBehaviour {
 
     this.missionList[missionType] = true;
 
-    this.questImage[missionType].sprite = this.questCompleteSprite;
-    // switch (missionType) {
-    //   case MissionType.BOOKLOAN: {
-    //     this.missionList[0] = true;
-    //     break;
-    //   }
-    //   case MissionType.FINDGHOST: {
-    //     break;
-    //   }
-    //   case MissionType.BECOMEGHOST: {
-    //     this.missionList[2] = true;
-    //     break;
-    //   }
-    //   default:
-    //     break;
-    // }
+    this.questImages[missionType].sprite = this.questClearSprite;
+
+    let isClear = true;
+    this.missionList.forEach((item) => {
+      if (!item) {
+        isClear = false;
+      }
+    });
+    if (isClear) {
+      this.questImages.forEach((item) => {
+        item.gameObject.SetActive(false);
+      });
+      this.questImage.sprite = this.questCompleteSprite;
+
+      this.questButton.gameObject.SetActive(false);
+      this.questPanel.SetActive(true);
+    }
   }
 }
