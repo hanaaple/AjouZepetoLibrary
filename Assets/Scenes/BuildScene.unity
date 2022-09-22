@@ -4848,7 +4848,7 @@ GameObject:
   - component: {fileID: 1330154357}
   - component: {fileID: 1330154356}
   m_Layer: 5
-  m_Name: Quest List
+  m_Name: Quest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6884,6 +6884,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+--- !u!1 &1333205132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7891521140085145587, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+  m_PrefabInstance: {fileID: 1333205131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1333205133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3964960812205916810, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+  m_PrefabInstance: {fileID: 1333205131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1333205134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1917659543763200802, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+  m_PrefabInstance: {fileID: 1333205131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1333205135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8746990735871764571, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+  m_PrefabInstance: {fileID: 1333205131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1333205136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4822022693161745741, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+  m_PrefabInstance: {fileID: 1333205131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1334947919
 GameObject:
   m_ObjectHideFlags: 0
@@ -6965,9 +6990,9 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     values:
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":2,\"type\":\"UnityEngine.Object,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":5,\"type\":\"UnityEngine.GameObject,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":2,\"length\":1,\"type\":\"UnityEngine.Object,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":5,\"length\":1,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     - 
     - 
@@ -6975,8 +7000,11 @@ MonoBehaviour:
     - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":-0.05000000074505806,\"y\":0.05000000074505806,\"z\":0.004000000189989805}"}'
     - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.07500000298023224,\"y\":1.7000000476837159,\"z\":-5.599999904632568}"}'
     unityArrayValues:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 1333205136}
+    - {fileID: 1333205135}
+    - {fileID: 1333205134}
+    - {fileID: 1333205133}
+    - {fileID: 1333205132}
     - {fileID: 1057798330}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: bef7d785b2937304897ff349e6f80665, type: 3}
@@ -9609,15 +9637,19 @@ MonoBehaviour:
     - questPanel
     - questExitButton
     - questImage
-    - questIncompleteSprite
+    - questImages
     - questCompleteSprite
+    - questUnClearSprite
+    - questClearSprite
     unityValues:
     - {fileID: 779655385}
     - {fileID: 0}
     - {fileID: 523284120}
     - {fileID: 991595763}
     - {fileID: 439274561}
+    - {fileID: 1330154356}
     - {fileID: 0}
+    - {fileID: 21300000, guid: 2aa9cf099d2c379409490dde3335fe13, type: 3}
     - {fileID: 21300000, guid: 37295d3883f793c428c4d7a654b8ba7e, type: 3}
     - {fileID: 21300000, guid: 3897982125c5dfc4bba3a579f9eece80, type: 3}
     values:
@@ -9627,8 +9659,10 @@ MonoBehaviour:
     - 
     - 
     - 
+    - 
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":3,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
     - 
     - 
     unityArrayValues:
