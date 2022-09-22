@@ -146,7 +146,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.ZEPETO.me.zepeto.template.default
+    Standalone: com.ZEPETO.me.zepeto.ajou.library
   buildNumber:
     Standalone: 0
     iPhone: 0
