@@ -4962,6 +4962,26 @@ PrefabInstance:
       propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 146751182064405266, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146751182064405266, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146751182064405266, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146751182064405266, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 146751182064405266, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 153866398162385584, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_Lightmapping
       value: 2
@@ -4988,6 +5008,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 189281223930691301, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245635521071110913, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245635521071110913, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245635521071110913, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245635521071110913, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245635521071110913, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245635521071110913, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_SkinnedMotionVectors
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 276930112994607791, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
@@ -5810,6 +5854,30 @@ PrefabInstance:
       propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4442352952102948184, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442352952102948184, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442352952102948184, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442352952102948184, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442352952102948184, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442352952102948184, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_SkinnedMotionVectors
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4463438461958053344, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_LightProbeUsage
       value: 0
@@ -5864,6 +5932,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4485540276035214135, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487926168722423779, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487926168722423779, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487926168722423779, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487926168722423779, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487926168722423779, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487926168722423779, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_SkinnedMotionVectors
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4547483903859796852, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
@@ -6416,6 +6508,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012727224935288378, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017931347549206847, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017931347549206847, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_ReflectionProbeUsage
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7081607663768703740, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
@@ -6990,7 +7090,7 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     values:
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":5,\"type\":\"UnityEngine.GameObject,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":5,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":5,\"length\":1,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
