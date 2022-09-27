@@ -36,6 +36,7 @@ export default class GhostClickQuest extends ZepetoScriptBehaviour {
         }
         this.ghostButton = null;
         this.zepetoCamera = null;
+        this.ghostObjectList = null;
       });
       this.ghostButton.push(tButton);
     });
