@@ -1,4 +1,4 @@
-import { Canvas, GameObject, Sprite } from "UnityEngine";
+import { Canvas, Debug, GameObject, Sprite } from "UnityEngine";
 import { Button, Image } from "UnityEngine.UI";
 import { ZepetoPlayers } from "ZEPETO.Character.Controller";
 import { ZepetoScriptBehaviour } from "ZEPETO.Script";
@@ -61,11 +61,14 @@ export default class MissionController extends ZepetoScriptBehaviour {
     this.questImages[missionType].sprite = this.questClearSprite;
 
     let isClear = true;
-    this.missionList.forEach((item) => {
+    for (let i = 0; i < this.missionList.length; i++) {
+      const item = this.missionList[i];
+      console.log(item);
       if (!item) {
+        console.log("클리어 실패");
         isClear = false;
       }
-    });
+    }
     if (isClear) {
       this.questImages.forEach((item) => {
         item.gameObject.SetActive(false);
