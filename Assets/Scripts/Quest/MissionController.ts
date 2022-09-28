@@ -20,7 +20,6 @@ export default class MissionController extends ZepetoScriptBehaviour {
 
   public questUnClearSprite: Sprite;
   public questClearSprite: Sprite;
-  public questCompleteSprite: Sprite;
 
   public missionList: boolean[];
   public static instance: MissionController;
@@ -70,11 +69,6 @@ export default class MissionController extends ZepetoScriptBehaviour {
       }
     }
     if (isClear) {
-      this.questImages.forEach((item) => {
-        item.gameObject.SetActive(false);
-      });
-      this.questImage.sprite = this.questCompleteSprite;
-
       this.questButton.gameObject.SetActive(false);
       this.questPanel.SetActive(true);
     }
