@@ -4470,44 +4470,6 @@ Transform:
   m_Father: {fileID: 1334947920}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1193399878 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5432554717288322378, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
-  m_PrefabInstance: {fileID: 1333205131}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1193399881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1193399878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  script:
-    keys:
-    - canvasParent
-    - ghostButtonPrefab
-    - ghostObjectList
-    - buttonOffset
-    unityValues:
-    - {fileID: 779655386}
-    - {fileID: 998346418847623968, guid: e8177370e65b3c84ea11ccac39d556e7, type: 3}
-    - {fileID: 0}
-    - {fileID: 0}
-    values:
-    - 
-    - 
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":0,\"type\":\"UnityEngine.Object,
-      UnityEngine.CoreModule\",\"isUnity\":true}"}'
-    - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.0,\"y\":0.0,\"z\":0.0}"}'
-    unityArrayValues: []
-    arrayValues: []
-    script: {fileID: 4458252877524076426, guid: 8b54981786439a845a0963faa0c73f24, type: 3}
-    isExpaned: 0
 --- !u!1 &1233388489
 GameObject:
   m_ObjectHideFlags: 0
@@ -7171,7 +7133,7 @@ MonoBehaviour:
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     unityArrayValues:
     - {fileID: 93567281}
-    - {fileID: 1193399878}
+    - {fileID: 1703156696}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 8b54981786439a845a0963faa0c73f24, type: 3}
     isExpaned: 0
@@ -8332,6 +8294,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659942202}
   m_CullTransparentMesh: 1
+--- !u!1 &1703156696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 822679892798940576, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+  m_PrefabInstance: {fileID: 1333205131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1707055251
 GameObject:
   m_ObjectHideFlags: 0
@@ -9738,7 +9705,6 @@ MonoBehaviour:
     - questExitButton
     - questImage
     - questImages
-    - questCompleteSprite
     - questUnClearSprite
     - questClearSprite
     unityValues:
@@ -9749,7 +9715,6 @@ MonoBehaviour:
     - {fileID: 439274561}
     - {fileID: 1330154356}
     - {fileID: 0}
-    - {fileID: 21300000, guid: 2aa9cf099d2c379409490dde3335fe13, type: 3}
     - {fileID: 21300000, guid: 37295d3883f793c428c4d7a654b8ba7e, type: 3}
     - {fileID: 21300000, guid: 3897982125c5dfc4bba3a579f9eece80, type: 3}
     values:
@@ -9762,7 +9727,6 @@ MonoBehaviour:
     - 
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":3,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
-    - 
     - 
     - 
     unityArrayValues:
