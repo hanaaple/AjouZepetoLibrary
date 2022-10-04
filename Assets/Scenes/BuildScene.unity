@@ -3996,7 +3996,7 @@ MonoBehaviour:
       targetScaleWeight: 1
     collisionTimeThreshold: 0.1
   characterData:
-    slopeLimit: 45
+    slopeLimit: 60
     stepOffset: 0.3
     skinWidth: 0.0001
     minMoveDistance: 0.001
@@ -6299,6 +6299,10 @@ PrefabInstance:
     - target: {fileID: 6309705648343231785, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_DynamicOccludee
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334981875060262564, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1205117
       objectReference: {fileID: 0}
     - target: {fileID: 6368715757422866773, guid: 16842bd336a34d6448923c7cf0015925, type: 3}
       propertyPath: m_Lightmapping
