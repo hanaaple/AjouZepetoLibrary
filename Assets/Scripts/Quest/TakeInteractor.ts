@@ -51,7 +51,11 @@ export default class TakeInteractor extends ZepetoScriptBehaviour {
   }
 
   OnTriggerEnter(col: Collider) {
-    if (!col.GetComponent<ZepetoCharacter>()) {
+    const character = col.GetComponent<ZepetoCharacter>();
+    if (
+      !character ||
+      character != ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character
+    ) {
       return;
     }
 
@@ -62,7 +66,11 @@ export default class TakeInteractor extends ZepetoScriptBehaviour {
   }
 
   OnTriggerExit(col: Collider) {
-    if (!col.GetComponent<ZepetoCharacter>()) {
+    const character = col.GetComponent<ZepetoCharacter>();
+    if (
+      !character ||
+      character != ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character
+    ) {
       return;
     }
 

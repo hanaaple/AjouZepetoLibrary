@@ -4,7 +4,7 @@ import {
   SkinnedMeshRenderer,
   Transform,
 } from "UnityEngine";
-import { ZepetoCharacter } from "ZEPETO.Character.Controller";
+import { ZepetoCharacter, ZepetoPlayers } from "ZEPETO.Character.Controller";
 import { ZepetoScriptBehaviour } from "ZEPETO.Script";
 import MissionController, { MissionType } from "./MissionController";
 
@@ -19,7 +19,9 @@ export default class GhostTrigger extends ZepetoScriptBehaviour {
     const player = col.GetComponent<ZepetoCharacter>();
     this.AddMaterial(this.ghostMaterial, player.transform);
     player.Teleport(this.spawnPoint.position, this.spawnPoint.rotation);
-    MissionController.instance.MissionClear(MissionType.BECOMEGHOST);
+    if (player == ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character) {
+      MissionController.instance.MissionClear(MissionType.BECOMEGHOST);
+    }
   }
 
   public AddMaterial(material: Material, trans: Transform) {
