@@ -1,7 +1,8 @@
-import { Camera, GameObject, Transform, Vector3 } from "UnityEngine";
+import { Camera, Collider, GameObject, Transform, Vector3 } from "UnityEngine";
 import { Button } from "UnityEngine.UI";
-import { ZepetoPlayers } from "ZEPETO.Character.Controller";
+import { ZepetoCharacter, ZepetoPlayers } from "ZEPETO.Character.Controller";
 import { ZepetoScriptBehaviour } from "ZEPETO.Script";
+import GhostVisible from "./GhostVisible";
 import MissionController, { MissionType } from "./MissionController";
 
 export default class GhostClickQuest extends ZepetoScriptBehaviour {
@@ -27,6 +28,8 @@ export default class GhostClickQuest extends ZepetoScriptBehaviour {
         this.ghostButtonPrefab,
         this.canvasParent
       );
+      t.SetActive(false);
+      item.GetComponent<GhostVisible>().button = t;
       const tButton = t.GetComponent<Button>();
       tButton.onClick.AddListener(() => {
         MissionController.instance.MissionClear(MissionType.FINDGHOST);

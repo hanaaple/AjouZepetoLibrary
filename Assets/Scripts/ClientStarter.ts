@@ -133,15 +133,8 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
     );
     const spawnInfo = new SpawnInfo();
 
-    if (this.IsZeroPosition(player.transform.position)) {
-      spawnInfo.position = this.spawnPoint.position;
-      spawnInfo.rotation = this.spawnPoint.rotation;
-    } else {
-      const position = this.ParseVector3(player.transform.position);
-      const rotation = this.ParseVector3(player.transform.rotation);
-      spawnInfo.position = position;
-      spawnInfo.rotation = Quaternion.Euler(rotation);
-    }
+    spawnInfo.position = this.spawnPoint.position;
+    spawnInfo.rotation = this.spawnPoint.rotation;
 
     const isLocal = this.room.SessionId === player.sessionId;
     ZepetoPlayers.instance.CreatePlayerWithUserId(
