@@ -10376,6 +10376,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1296266319125452913, guid: 3baabd8e9fb70614e8036917995de8a1, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296266319125452913, guid: 3baabd8e9fb70614e8036917995de8a1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1369562829374651071, guid: 3baabd8e9fb70614e8036917995de8a1, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -10676,8 +10684,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1296266319125452913, guid: 3baabd8e9fb70614e8036917995de8a1, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3baabd8e9fb70614e8036917995de8a1, type: 3}
 --- !u!4 &8203840012912410397 stripped
 Transform:
@@ -26447,6 +26454,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 20.14
       objectReference: {fileID: 0}
+    - target: {fileID: 2960111864309180134, guid: 610d5b4c86f3a2b4a9ed17f59c410576, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960111864309180134, guid: 610d5b4c86f3a2b4a9ed17f59c410576, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2960111864881005623, guid: 610d5b4c86f3a2b4a9ed17f59c410576, type: 3}
       propertyPath: m_Name
       value: 3F
@@ -26615,8 +26630,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.23
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2960111864309180134, guid: 610d5b4c86f3a2b4a9ed17f59c410576, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 610d5b4c86f3a2b4a9ed17f59c410576, type: 3}
 --- !u!4 &8203840014104695792 stripped
 Transform:
@@ -34994,6 +35008,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8203840014441414496}
     m_Modifications:
+    - target: {fileID: 115006407508498761, guid: 395d910c79fccbb4db3512128cffe844, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -7513297493162946847, guid: bb15fb0f85531fa4aa2d6c9f318b6dff, type: 3}
     - target: {fileID: 661571615039118096, guid: 395d910c79fccbb4db3512128cffe844, type: 3}
       propertyPath: m_Name
       value: 2F
@@ -35065,6 +35083,14 @@ PrefabInstance:
     - target: {fileID: 1455085722939628509, guid: 395d910c79fccbb4db3512128cffe844, type: 3}
       propertyPath: m_LocalPosition.z
       value: -19.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131942743008937637, guid: 395d910c79fccbb4db3512128cffe844, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2131942743008937637, guid: 395d910c79fccbb4db3512128cffe844, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2765423602580988760, guid: 395d910c79fccbb4db3512128cffe844, type: 3}
       propertyPath: m_LocalScale.y
@@ -35150,8 +35176,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.53
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2131942743008937637, guid: 395d910c79fccbb4db3512128cffe844, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 395d910c79fccbb4db3512128cffe844, type: 3}
 --- !u!4 &8203840012774145283 stripped
 Transform:
