@@ -292,7 +292,7 @@ Transform:
   - {fileID: 1646375631}
   - {fileID: 1659582691}
   m_Father: {fileID: 1334947920}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &121590239
 GameObject:
@@ -1122,7 +1122,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!1 &351856460
 GameObject:
@@ -2436,7 +2436,7 @@ Transform:
   m_Children:
   - {fileID: 1641064477}
   m_Father: {fileID: 1334947920}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &641158250
 GameObject:
@@ -7106,9 +7106,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 620660573}
   - {fileID: 69582565}
   - {fileID: 1714301522}
-  - {fileID: 620660573}
   - {fileID: 1166026881}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -8122,7 +8122,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &1646375629
 GameObject:
@@ -8556,7 +8556,7 @@ Transform:
   m_Children:
   - {fileID: 341528016}
   m_Father: {fileID: 1334947920}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751111679
 GameObject:
@@ -9096,7 +9096,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &1798974384
 GameObject:
@@ -9365,7 +9365,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!1 &1952920138
 GameObject:
