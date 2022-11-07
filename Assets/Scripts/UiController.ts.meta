@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 58ae649d9feb9bc4799671a8d7b1b1dd
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst ZEPETO_Script_1
+    = require(\\\"ZEPETO.Script\\\");\\r\\nconst ZEPETO_World_1 = require(\\\"ZEPETO.World\\\");\\r\\nconst
+    CaptureController_1 = require(\\\"./ScreenShot/CaptureController\\\");\\r\\nconst
+    ScreenShotModeManager_1 = require(\\\"./ScreenShot/ScreenShotModeManager\\\");\\r\\nconst
+    WaitForSecondsCash_1 = require(\\\"./WaitForSecondsCash\\\");\\r\\nclass UiController
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor() {\\r\\n       
+    super(...arguments);\\r\\n        //  Camera Mode\\r\\n        this.isThirdPersonView
+    = false;\\r\\n        this.isVideoMode = false;\\r\\n        // private quickMessages
+    : string[]\\r\\n        // TOAST_MESSAGE = {\\r\\n        //   UPLOADING: \\\"Uploading...\\\",\\r\\n       
+    //   COMPLETE: \\\"Done\\\",\\r\\n        //   FAILED: \\\"Failed\\\",\\r\\n       
+    //   SAVED: \\\"Saved!\\\",\\r\\n        // };\\r\\n        this.isUIOpen = false;\\r\\n   
+    }\\r\\n    AddVector2(t1, t2) {\\r\\n        return new UnityEngine_1.Vector2(t1.x
+    + t2.x, t1.y + t2.y);\\r\\n    }\\r\\n    // public InitUIPos() {\\r\\n    //  
+    const poseRect = this.poseContent.GetComponent<RectTransform>();\\r\\n    //  
+    const poseGrid = this.poseContent.GetComponent<GridLayoutGroup>();\\r\\n    //  
+    var y_count = Math.floor(\\r\\n    //     (this.poseContent.transform.childCount
+    + 1) / poseGrid.constraintCount\\r\\n    //   );\\r\\n    //   var base_y = poseRect.rect.height
+    / 2;\\r\\n    //   poseRect.sizeDelta = new Vector2(\\r\\n    //     poseRect.sizeDelta.x,\\r\\n   
+    //     (y_count - 1) * poseGrid.spacing.y + y_count * poseGrid.cellSize.y\\r\\n   
+    //   );\\r\\n    //   console.log(base_y);\\r\\n    //   console.log(poseRect.rect.height);\\r\\n   
+    //   this.pose_Y = poseRect.rect.height / 2 - base_y;\\r\\n    //   console.log(this.pose_Y);\\r\\n   
+    //   const gestureRect = this.gestureContent.GetComponent<RectTransform>();\\r\\n   
+    //   const gestureGrid = this.gestureContent.GetComponent<GridLayoutGroup>();\\r\\n   
+    //   var y_count = Math.floor(\\r\\n    //     (this.gestureContent.transform.childCount
+    + 1) /\\r\\n    //       gestureGrid.constraintCount\\r\\n    //   );\\r\\n   
+    //   var base_y = gestureRect.rect.height / 2;\\r\\n    //   gestureRect.sizeDelta
+    = new Vector2(\\r\\n    //     gestureRect.sizeDelta.x,\\r\\n    //     (y_count
+    - 1) * gestureGrid.spacing.y + y_count * gestureGrid.cellSize.y\\r\\n    //  
+    );\\r\\n    //   console.log(base_y);\\r\\n    //   console.log(gestureRect.rect.height);\\r\\n   
+    //   this.gesture_Y = gestureRect.rect.height / 2 - base_y;\\r\\n    //   console.log(this.gesture_Y);\\r\\n   
+    //   this.poseModeButton.gameObject.SetActive(true);\\r\\n    // }\\r\\n    //
+    SetUIPos() {\\r\\n    //   const poseRect = this.poseContent.GetComponent<RectTransform>();\\r\\n   
+    //   poseRect.anchoredPosition = new Vector2(\\r\\n    //     poseRect.anchoredPosition.x,\\r\\n   
+    //     -this.pose_Y\\r\\n    //   );\\r\\n    //   console.log(this.pose_Y);\\r\\n   
+    //   const gestureRect = this.gestureContent.GetComponent<RectTransform>();\\r\\n   
+    //   gestureRect.anchoredPosition = new Vector2(\\r\\n    //     gestureRect.anchoredPosition.x,\\r\\n   
+    //     -this.gesture_Y\\r\\n    //   );\\r\\n    //   console.log(this.gesture_Y);\\r\\n   
+    // }\\r\\n    Start() {\\r\\n        this._screenShotModeManager = this.screenShotModeManager.GetComponent($typeof(ScreenShotModeManager_1.default));\\r\\n       
+    this._captureController = this.captureController.GetComponent($typeof(CaptureController_1.default));\\r\\n       
+    this.viewChangeImage = this.viewChangeButton.GetComponent($typeof(UnityEngine_UI_1.Image));\\r\\n       
+    this.waitForSecond = WaitForSecondsCash_1.default.instance.WaitForSeconds(1);\\r\\n       
+    this.screenDefaultPanel.SetActive(true);\\r\\n        this.screenShotModePanel.SetActive(false);\\r\\n       
+    this.screenShotResultPanel.SetActive(false);\\r\\n        // this.poseDefaultPanels.SetActive(true);\\r\\n       
+    // this.poseModePanels.SetActive(false);\\r\\n        // this.poseModeButton.gameObject.SetActive(false);\\r\\n       
+    // this.gestureContent.SetActive(true);\\r\\n        // this.poseContent.SetActive(false);\\r\\n       
+    // SafeArea \uC124\uC815\\r\\n        let safeArea = UnityEngine_1.Screen.safeArea;\\r\\n       
+    let newAnchorMin = safeArea.position;\\r\\n        let newAnchorMax = this.AddVector2(safeArea.position,
+    safeArea.size);\\r\\n        newAnchorMin.x /= UnityEngine_1.Screen.width;\\r\\n       
+    newAnchorMax.x /= UnityEngine_1.Screen.width;\\r\\n        newAnchorMin.y /=
+    UnityEngine_1.Screen.height;\\r\\n        newAnchorMax.y /= UnityEngine_1.Screen.height;\\r\\n       
+    this.safeAreaObjects.map((item) => {\\r\\n            const rect = item.GetComponent($typeof(UnityEngine_1.RectTransform));\\r\\n           
+    rect.anchorMin = newAnchorMin;\\r\\n            rect.anchorMax = newAnchorMax;\\r\\n       
+    });\\r\\n        this.screenShotModeButton.onClick.AddListener(() => {\\r\\n           
+    if (this.isUIOpen)\\r\\n                return;\\r\\n            this.isUIOpen
+    = true;\\r\\n            // \uC2A4\uD06C\uB9B0\uC0F7 \uBAA8\uB4DC Panel \uD0A4\uAE30\\r\\n           
+    // Default Panel \uB044\uAE30\\r\\n            this.screenDefaultPanel.SetActive(false);\\r\\n           
+    this.screenShotModePanel.SetActive(true);\\r\\n            this.isThirdPersonView
+    = true;\\r\\n            console.log(this._screenShotModeManager);\\r\\n           
+    this._screenShotModeManager.StartScreenShotMode();\\r\\n        });\\r\\n       
+    this.viewChangeButton.onClick.AddListener(() => {\\r\\n            if (this.isThirdPersonView)
+    {\\r\\n                this.viewChangeImage.sprite = this.selfiViewSprite;\\r\\n               
+    this._screenShotModeManager.SetSelfieCameraMode();\\r\\n                // this.poseDefaultPanels.SetActive(false)\\r\\n               
+    // this.poseModePanels.SetActive(false)\\r\\n                this.isThirdPersonView
+    = false;\\r\\n            }\\r\\n            else {\\r\\n                this.viewChangeImage.sprite
+    = this.thirdPersonViewSprite;\\r\\n                this._screenShotModeManager.SetZepetoCameraMode();\\r\\n               
+    // this.poseDefaultPanels.SetActive(true)\\r\\n                this.isThirdPersonView
+    = true;\\r\\n            }\\r\\n        });\\r\\n        this.videoModeButton.onClick.AddListener(()
+    => {\\r\\n            this.videoModeButton.image.sprite = this.focusedVideoModeSprite;\\r\\n           
+    this.imageModeButton.image.sprite = this.idleImageModeSprite;\\r\\n           
+    this.isVideoMode = true;\\r\\n        });\\r\\n        this.imageModeButton.onClick.AddListener(()
+    => {\\r\\n            this.imageModeButton.image.sprite = this.focusedImageModeSprite;\\r\\n           
+    this.videoModeButton.image.sprite = this.idleVideoModeSprite;\\r\\n           
+    this.isVideoMode = false;\\r\\n        });\\r\\n        this.screenShotModeExitButton.onClick.AddListener(()
+    => {\\r\\n            // \uC2A4\uD06C\uB9B0\uC0F7 \uBAA8\uB4DC Panel \uB044\uAE30\\r\\n           
+    // Default Panel \uD0A4\uAE30\\r\\n            this.isUIOpen = false;\\r\\n           
+    this.screenDefaultPanel.SetActive(true);\\r\\n            this.screenShotModePanel.SetActive(false);\\r\\n           
+    this._screenShotModeManager.ExitScreenShotMode(this.isThirdPersonView);\\r\\n       
+    });\\r\\n        // \uC2A4\uD06C\uB9B0\uC0F7 \uCD2C\uC601\\r\\n        this.shootScreenShotButton.onClick.AddListener(()
+    => {\\r\\n            //\uC2A4\uD06C\uB9B0\uC0F7\\r\\n            this._captureController.TakeScreenShot(this.isVideoMode);\\r\\n           
+    //\uACB0\uACFC \uBCF4\uC5EC\uC8FC\uAE30\\r\\n            if (!this.isVideoMode)
+    {\\r\\n                this.ShowCaptureResultPanel();\\r\\n                this.audioSource.PlayOneShot(this.screenShotAudio);\\r\\n           
+    }\\r\\n        });\\r\\n        //ScreenShot Result\\r\\n        this.screenShotResultExitButton.onClick.AddListener(()
+    => {\\r\\n            //\uC2A4\uD06C\uB9B0\uC0F7 \uACB0\uACFC \uCC3D \uB044\uAE30\\r\\n           
+    this.isUIOpen = false;\\r\\n            this.screenShotResultPanel.SetActive(false);\\r\\n           
+    this.screenDefaultPanel.SetActive(true);\\r\\n            this._screenShotModeManager.ExitScreenShotMode(this.isThirdPersonView);\\r\\n       
+    });\\r\\n        this.saveButton.onClick.AddListener(() => {\\r\\n           
+    this._captureController.Save(this.isVideoMode);\\r\\n            //\uD1A0\uC2A4\uD2B8
+    \uBA54\uC2DC\uC9C0\\r\\n        });\\r\\n        this.shareButton.onClick.AddListener(()
+    => {\\r\\n            this._captureController.Share(this.isVideoMode);\\r\\n       
+    });\\r\\n        this.feedButton.onClick.AddListener(() => {\\r\\n           
+    this.screenShotResultPanel.SetActive(false);\\r\\n            this.screenShotFeedPanel.SetActive(true);\\r\\n       
+    });\\r\\n        this.createFeedButton.onClick.AddListener(() => {\\r\\n           
+    this.isUIOpen = false;\\r\\n            this._screenShotModeManager.ExitScreenShotMode(this.isThirdPersonView);\\r\\n           
+    this._captureController.CreateFeed(this.isVideoMode);\\r\\n            this.screenDefaultPanel.SetActive(true);\\r\\n           
+    this.screenShotFeedPanel.SetActive(false);\\r\\n        });\\r\\n        this.feedBackButton.onClick.AddListener(()
+    => {\\r\\n            this.screenShotResultPanel.SetActive(true);\\r\\n           
+    this.screenShotFeedPanel.SetActive(false);\\r\\n        });\\r\\n        // this.poseModeButton.onClick.AddListener(()
+    => {\\r\\n        //   if (this.isUIOpen) return;\\r\\n        //   this.SetUIPos();\\r\\n       
+    //   this.isUIOpen = true;\\r\\n        //   this.poseDefaultPanels.SetActive(false);\\r\\n       
+    //   this.poseModePanels.SetActive(true);\\r\\n        // });\\r\\n        //
+    this.poseExitButton.onClick.AddListener(() => {\\r\\n        //   this.isUIOpen
+    = false;\\r\\n        //   this.poseDefaultPanels.SetActive(true);\\r\\n       
+    //   this.poseModePanels.SetActive(false);\\r\\n        // });\\r\\n        //
+    this.gestureButton.onClick.AddListener(() => {\\r\\n        //   if (this.gestureContent.activeSelf)
+    return;\\r\\n        //   this.SetUIPos();\\r\\n        //   this.poseContent.SetActive(false);\\r\\n       
+    //   this.gestureContent.SetActive(true);\\r\\n        // });\\r\\n        //
+    this.poseButton.onClick.AddListener(() => {\\r\\n        //   if (this.poseContent.activeSelf)
+    return;\\r\\n        //   this.SetUIPos();\\r\\n        //   this.poseContent.SetActive(true);\\r\\n       
+    //   this.gestureContent.SetActive(false);\\r\\n        // });\\r\\n        this.quickModeButton.onClick.AddListener(()
+    => {\\r\\n            this.quickDefaultPanel.SetActive(false);\\r\\n           
+    this.quickModePanel.SetActive(true);\\r\\n        });\\r\\n        this.quickExitButton.onClick.AddListener(()
+    => {\\r\\n            this.quickDefaultPanel.SetActive(true);\\r\\n           
+    this.quickModePanel.SetActive(false);\\r\\n        });\\r\\n        for (var
+    index = 0; index < this.quickContentButtons.length; index++) {\\r\\n           
+    const idx = index;\\r\\n            // ClientStarter.instance.Debug(quickMessages)\\r\\n           
+    // this.quickMessages[index] = this.quickContentButtons[index].transform.GetComponentInChildren<Text>().text\\r\\n           
+    this.quickContentButtons[idx].onClick.AddListener(() => {\\r\\n               
+    var quickMessages = this.quickContentButtons[idx].transform.GetComponentInChildren($typeof(UnityEngine_UI_1.Text)).text;\\r\\n               
+    ZEPETO_World_1.WorldMultiplayChatContent.instance.Send(quickMessages);\\r\\n           
+    });\\r\\n        }\\r\\n        // for(var index = 0; index < this.poseContent.transform.childCount;
+    index++){\\r\\n        //     this.poseContent.transform.GetChild(index).GetComponent<Button>().onClick.AddListener(()
+    =>{\\r\\n        //     })\\r\\n        // }\\r\\n        // for(var index =
+    0; index < this.poseContent.transform.childCount; index++){\\r\\n        //    
+    this.poseContent.transform.GetChild(index).GetComponent<Button>().onClick.AddListener(()
+    =>{\\r\\n        //     })\\r\\n        // }\\r\\n    }\\r\\n    ShowCaptureResultPanel()
+    {\\r\\n        this.screenShotModePanel.SetActive(false);\\r\\n        this.screenShotResultPanel.SetActive(true);\\r\\n   
+    }\\r\\n    ShowCreateFeedResult(result) {\\r\\n        if (result) {\\r\\n           
+    // this.createFeedButton.gameObject.SetActive(false);\\r\\n            this.StartCoroutine(this.ShowToastMessage(\\\"Complete\\\"));\\r\\n       
+    }\\r\\n        else {\\r\\n            this.StartCoroutine(this.ShowToastMessage(\\\"FAILED\\\"));\\r\\n       
+    }\\r\\n    }\\r\\n    *ShowToastMessage(text) {\\r\\n        // let toastMessage:
+    GameObject = null;\\r\\n        // if (text == this.TOAST_MESSAGE.feedFailed)\\r\\n       
+    //     toastMessage = GameObject.Instantiate<GameObject>(this.toastErrorMessage);\\r\\n       
+    // else\\r\\n        //     toastMessage = GameObject.Instantiate<GameObject>(this.toastSuccessMessage);\\r\\n       
+    // toastMessage.transform.SetParent(this.screenShotResultPanel.transform);\\r\\n       
+    // toastMessage.GetComponentInChildren<Text>().text = text;\\r\\n        // GameObject.Destroy(toastMessage,
+    1);\\r\\n    }\\r\\n}\\r\\nexports.default = UiController;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVWlDb250cm9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVWlDb250cm9sbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBVXFCO0FBQ3JCLG1EQUFxRDtBQUNyRCxpREFBc0Q7QUFDdEQsK0NBQXlEO0FBQ3pELHNFQUErRDtBQUMvRCw4RUFBdUU7QUFDdkUsNkRBQXNEO0FBRXRELE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFBL0Q7O1FBc0RFLGVBQWU7UUFDZixzQkFBaUIsR0FBRyxLQUFLLENBQUM7UUFDMUIsZ0JBQVcsR0FBRyxLQUFLLENBQUM7UUFvQnBCLG1DQUFtQztRQUVuQyxvQkFBb0I7UUFDcEIsK0JBQStCO1FBQy9CLHNCQUFzQjtRQUN0QixzQkFBc0I7UUFDdEIscUJBQXFCO1FBQ3JCLEtBQUs7UUFFRyxhQUFRLEdBQVksS0FBSyxDQUFDO0lBZ1JwQyxDQUFDO0lBM1FDLFVBQVUsQ0FBQyxFQUFXLEVBQUUsRUFBVztRQUNqQyxPQUFPLElBQUkscUJBQU8sQ0FBQyxFQUFFLENBQUMsQ0FBQyxHQUFHLEVBQUUsQ0FBQyxDQUFDLEVBQUUsRUFBRSxDQUFDLENBQUMsR0FBRyxFQUFFLENBQUMsQ0FBQyxDQUFDLENBQUM7SUFDL0MsQ0FBQztJQUVELHVCQUF1QjtJQUN2QixxRUFBcUU7SUFDckUsdUVBQXVFO0lBQ3ZFLDhCQUE4QjtJQUM5Qiw2RUFBNkU7SUFDN0UsT0FBTztJQUNQLDJDQUEyQztJQUMzQyxzQ0FBc0M7SUFDdEMsNEJBQTRCO0lBQzVCLHlFQUF5RTtJQUN6RSxPQUFPO0lBQ1AseUJBQXlCO0lBQ3pCLHVDQUF1QztJQUN2QyxxREFBcUQ7SUFDckQsOEJBQThCO0lBRTlCLDJFQUEyRTtJQUMzRSw2RUFBNkU7SUFDN0UsOEJBQThCO0lBQzlCLHVEQUF1RDtJQUN2RCxvQ0FBb0M7SUFDcEMsT0FBTztJQUNQLDhDQUE4QztJQUM5Qyx5Q0FBeUM7SUFDekMsK0JBQStCO0lBQy9CLCtFQUErRTtJQUMv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\",\"assetPath\":\"Assets/Scripts/UiController.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"safeAreaObjects\",\"type\":\"UnityEngine.GameObject[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"SerializeField\",\"args\":[]}]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"screenDefaultPanel\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"Header\",\"args\":[\"\\\"ScreenShot
+    Panels\\\"\"]}]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"screenShotModePanel\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"screenShotResultPanel\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"screenShotFeedPanel\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"audioSource\",\"type\":\"UnityEngine.AudioSource\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"Header\",\"args\":[\"\\\"ScreenShot
+    Audio\\\"\"]}]},{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"screenShotAudio\",\"type\":\"UnityEngine.AudioClip\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"screenShotModeButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"Header\",\"args\":[\"\\\"ScreenShot
+    Mode\\\"\"]}]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"shootScreenShotButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"screenShotModeExitButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"viewChangeButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"selfiViewSprite\",\"type\":\"UnityEngine.Sprite\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"thirdPersonViewSprite\",\"type\":\"UnityEngine.Sprite\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"videoModeButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"imageModeButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"focusedVideoModeSprite\",\"type\":\"UnityEngine.Sprite\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"idleVideoModeSprite\",\"type\":\"UnityEngine.Sprite\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"focusedImageModeSprite\",\"type\":\"UnityEngine.Sprite\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"idleImageModeSprite\",\"type\":\"UnityEngine.Sprite\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"saveButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"Header\",\"args\":[\"\\\"ScreenShot
+    Result\\\"\"]}]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"shareButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"feedButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"screenShotResultExitButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"createFeedButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"Header\",\"args\":[\"\\\"ScreenShot
+    Feed\\\"\"]}]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"feedBackButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"captureController\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"Header\",\"args\":[\"\\\"\uC2A4\uD06C\uB9BD\uD2B8
+    \uBAA8\uC74C \uC624\uBE0C\uC81D\uD2B8\\\"\"]}]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"screenShotModeManager\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"isThirdPersonView\",\"type\":\"System.Boolean\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"isVideoMode\",\"type\":\"System.Boolean\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"quickDefaultPanel\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"Header\",\"args\":[\"\\\"Quick
+    Panel\\\"\"]}]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"quickModePanel\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"quickModeButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[{\"name\":\"Header\",\"args\":[\"\\\"Quick
+    Mode\\\"\"]}]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"quickExitButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"quickContentButtons\",\"type\":\"UnityEngine.UI.Button[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"UiController\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: e6d35fef572edcae8827b8c785f1d7e3
+  onlyWriteTrigger: 0

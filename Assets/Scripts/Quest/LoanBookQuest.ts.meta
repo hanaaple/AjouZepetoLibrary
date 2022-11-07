@@ -1,0 +1,62 @@
+fileFormatVersion: 2
+guid: bef7d785b2937304897ff349e6f80665
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ReturnInteractor_1 = require(\"./ReturnInteractor\");\r\nconst
+    TakeInteractor_1 = require(\"./TakeInteractor\");\r\nclass LoanBookQuest extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n        super(...arguments);\r\n       
+    this.rightHandBone = \"hand_R\";\r\n    }\r\n    static get instance() {\r\n       
+    return this._instance;\r\n    }\r\n    Awake() {\r\n        LoanBookQuest._instance
+    = this;\r\n    }\r\n    Start() {\r\n        this._takeInteractors = new Array(this.takeInteractors.length);\r\n       
+    this.takeInteractors.forEach((item) => {\r\n            this._takeInteractors.push(item.GetComponent($typeof(TakeInteractor_1.default)));\r\n       
+    });\r\n        this._returnInteractors = new Array(this.returnInteractors.length);\r\n       
+    this.returnInteractors.forEach((item) => {\r\n            this._returnInteractors.push(item.GetComponent($typeof(ReturnInteractor_1.default)));\r\n       
+    });\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.localCamera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera;\r\n           
+    this.takeOffButton.onClick.AddListener(() => {\r\n                if (this.interactObj)
+    {\r\n                    UnityEngine_1.GameObject.Destroy(this.interactObj);\r\n                   
+    this.interactObj = null;\r\n                }\r\n                this.takeOffButton.gameObject.SetActive(false);\r\n           
+    });\r\n            this._takeInteractors.forEach((item) => {\r\n               
+    item.Initialize(this.takeButtonPrefab, this.takeOffButton.transform.parent, this.rightHandBone,
+    this.posOffset, this.rotOffset);\r\n            });\r\n            this._returnInteractors.forEach((item)
+    => {\r\n                item.Initialize(this.returnButtonPrefab, this.takeOffButton.transform.parent);\r\n           
+    });\r\n        });\r\n    }\r\n    Update() {\r\n        if (this.localCamera
+    != null) {\r\n            this._takeInteractors.forEach((item) => {\r\n               
+    if (!item.isInteractable)\r\n                    return;\r\n                var
+    screenPos = this.localCamera.WorldToScreenPoint(UnityEngine_1.Vector3.op_Addition(item.transform.position,
+    item.cameraOffset));\r\n                item.interactButton.transform.position
+    = screenPos;\r\n                item.interactButton.transform.position = screenPos;\r\n           
+    });\r\n            this._returnInteractors.forEach((item) => {\r\n               
+    if (!item.isInteractable)\r\n                    return;\r\n                var
+    screenPos = this.localCamera.WorldToScreenPoint(UnityEngine_1.Vector3.op_Addition(item.transform.position,
+    item.cameraOffset));\r\n                item.interactButton.transform.position
+    = screenPos;\r\n                item.interactButton.transform.position = screenPos;\r\n           
+    });\r\n        }\r\n    }\r\n    IsTaking() {\r\n        return this.interactObj
+    ? true : false;\r\n    }\r\n    EnableUnHand(book) {\r\n        if (this.interactObj)
+    {\r\n            UnityEngine_1.GameObject.Destroy(this.interactObj);\r\n           
+    this.interactObj = null;\r\n        }\r\n        this.interactObj = book;\r\n       
+    this.takeOffButton.gameObject.SetActive(true);\r\n    }\r\n    ReturnBook() {\r\n       
+    if (this.interactObj) {\r\n            UnityEngine_1.GameObject.Destroy(this.interactObj);\r\n           
+    this.interactObj = null;\r\n        }\r\n        this.takeOffButton.gameObject.SetActive(false);\r\n   
+    }\r\n}\r\nexports.default = LoanBookQuest;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTG9hbkJvb2tRdWVzdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkxvYW5Cb29rUXVlc3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBMEQ7QUFFMUQsNkVBQTREO0FBQzVELGlEQUFzRDtBQUN0RCx5REFBa0Q7QUFDbEQscURBQThDO0FBRTlDLE1BQXFCLGFBQWMsU0FBUSxxQ0FBcUI7SUFBaEU7O1FBZ0NVLGtCQUFhLEdBQVcsUUFBUSxDQUFDO0lBMkYzQyxDQUFDO0lBeEhRLE1BQU0sS0FBSyxRQUFRO1FBQ3hCLE9BQU8sSUFBSSxDQUFDLFNBQVMsQ0FBQztJQUN4QixDQUFDO0lBNkJELEtBQUs7UUFDSCxhQUFhLENBQUMsU0FBUyxHQUFHLElBQUksQ0FBQztJQUNqQyxDQUFDO0lBQ0QsS0FBSztRQUNILElBQUksQ0FBQyxnQkFBZ0IsR0FBRyxJQUFJLEtBQUssQ0FDL0IsSUFBSSxDQUFDLGVBQWUsQ0FBQyxNQUFNLENBQzVCLENBQUM7UUFDRixJQUFJLENBQUMsZUFBZSxDQUFDLE9BQU8sQ0FBQyxDQUFDLElBQUksRUFBRSxFQUFFO1lBQ3BDLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLFlBQVksU0FBQyx3QkFBYyxHQUFJLENBQUM7UUFDbEUsQ0FBQyxDQUFDLENBQUM7UUFFSCxJQUFJLENBQUMsa0JBQWtCLEdBQUcsSUFBSSxLQUFLLENBQ2pDLElBQUksQ0FBQyxpQkFBaUIsQ0FBQyxNQUFNLENBQzlCLENBQUM7UUFDRixJQUFJLENBQUMsaUJBQWlCLENBQUMsT0FBTyxDQUFDLENBQUMsSUFBSSxFQUFFLEVBQUU7WUFDdEMsSUFBSSxDQUFDLGtCQUFrQixDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsWUFBWSxTQUFDLDBCQUFnQixHQUFJLENBQUM7UUFDdEUsQ0FBQyxDQUFDLENBQUM7UUFFSCwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFF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","assetPath":"Assets/Scripts/Quest/LoanBookQuest.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"takeInteractors","type":"UnityEngine.GameObject[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"returnInteractors","type":"UnityEngine.GameObject[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"takeOffButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"takeButtonPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"returnButtonPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"posOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"rotOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"LoanBookQuest","description":""},"isCompiled":true}'
+  typescriptHash: 1c1767950b4b57ae0c9cae589ea85bc5
+  onlyWriteTrigger: 0

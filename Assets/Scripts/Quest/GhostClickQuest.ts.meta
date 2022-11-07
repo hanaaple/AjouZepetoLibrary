@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: 8b54981786439a845a0963faa0c73f24
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    GhostVisible_1 = require(\"./GhostVisible\");\r\nconst MissionController_1 =
+    require(\"./MissionController\");\r\nclass GhostClickQuest extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCamera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;\r\n       
+    });\r\n        this.ghostButton = new Array();\r\n        this.ghostObjectList.forEach((item)
+    => {\r\n            const t = UnityEngine_1.GameObject.Instantiate(this.ghostButtonPrefab,
+    this.canvasParent);\r\n            t.SetActive(false);\r\n            item.GetComponent($typeof(GhostVisible_1.default)).button
+    = t;\r\n            const tButton = t.GetComponent($typeof(UnityEngine_UI_1.Button));\r\n           
+    tButton.onClick.AddListener(() => {\r\n                MissionController_1.default.instance.MissionClear(MissionController_1.MissionType.FINDGHOST);\r\n               
+    const len = this.ghostObjectList.length;\r\n                for (let i = 0; i
+    < len; i++) {\r\n                    UnityEngine_1.GameObject.Destroy(this.ghostButton[i].gameObject);\r\n               
+    }\r\n                this.ghostButton = null;\r\n                this.zepetoCamera
+    = null;\r\n                this.ghostObjectList = null;\r\n            });\r\n           
+    this.ghostButton.push(tButton);\r\n        });\r\n    }\r\n    Update() {\r\n       
+    if (this.zepetoCamera != null) {\r\n            this.ghostObjectList.forEach((item,
+    idx) => {\r\n                this.ghostButton[idx].transform.position = UnityEngine_1.Vector3.op_Addition(item.transform.position,
+    this.buttonOffset);\r\n                this.ghostButton[idx].transform.LookAt(this.zepetoCamera.transform);\r\n               
+    this.ghostButton[idx].transform.eulerAngles = UnityEngine_1.Vector3.op_Addition(this.ghostButton[idx].transform.eulerAngles,
+    new UnityEngine_1.Vector3(0, 180, 0));\r\n            });\r\n        }\r\n   
+    }\r\n}\r\nexports.default = GhostClickQuest;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2hvc3RDbGlja1F1ZXN0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR2hvc3RDbGlja1F1ZXN0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQStFO0FBQy9FLG1EQUF3QztBQUN4Qyw2RUFBNkU7QUFDN0UsaURBQXNEO0FBQ3RELGlEQUEwQztBQUMxQywyREFBcUU7QUFFckUsTUFBcUIsZUFBZ0IsU0FBUSxxQ0FBcUI7SUFhaEUsS0FBSztRQUNILDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDekQsSUFBSSxDQUFDLFlBQVksR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxZQUFZLENBQUMsTUFBTSxDQUFDO1FBQ2pFLENBQUMsQ0FBQyxDQUFDO1FBQ0gsSUFBSSxDQUFDLFdBQVcsR0FBRyxJQUFJLEtBQUssRUFBVSxDQUFDO1FBQ3ZDLElBQUksQ0FBQyxlQUFlLENBQUMsT0FBTyxDQUFDLENBQUMsSUFBSSxFQUFFLEVBQUU7WUFDcEMsTUFBTSxDQUFDLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQzlCLElBQUksQ0FBQyxpQkFBaUIsRUFDdEIsSUFBSSxDQUFDLFlBQVksQ0FDbEIsQ0FBQztZQUNGLENBQUMsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFDbkIsSUFBSSxDQUFDLFlBQVksU0FBQyxzQkFBWSxHQUFJLE1BQU0sR0FBRyxDQUFDLENBQUM7WUFDN0MsTUFBTSxPQUFPLEdBQUcsQ0FBQyxDQUFDLFlBQVksU0FBQyx1QkFBTSxFQUFHLENBQUM7WUFDekMsT0FBTyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO2dCQUMvQiwyQkFBaUIsQ0FBQyxRQUFRLENBQUMsWUFBWSxDQUFDLCtCQUFXLENBQUMsU0FBUyxDQUFDLENBQUM7Z0JBQy9ELE1BQU0sR0FBRyxHQUFHLElBQUksQ0FBQyxlQUFlLENBQUMsTUFBTSxDQUFDO2dCQUN4QyxLQUFLLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUcsR0FBRyxFQUFFLENBQUMsRUFBRSxFQUFFO29CQUM1Qix3QkFBVSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsV0FBVyxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxDQUFDO2lCQUNwRDtnQkFDRCxJQUFJLENBQUMsV0FBVyxHQUFHLElBQUksQ0FBQztnQkFDeEIsSUFBSSxDQUFDLFlBQVksR0FBRyxJQUFJLENBQUM7Z0JBQ3pCLElBQUksQ0FBQyxlQUFlLEdBQUcsSUFBSSxDQUFDO1lBQzlCLENBQUMsQ0FBQyxDQUFDO1lBQ0gsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLENBQUM7UUFDakMsQ0FBQyxDQUFDLENBQUM7SUFDTCxDQUFDO0lBRUQsTUFBTTtRQUNKLElBQUksSUFBSSxDQUFDLFlBQVksSUFBSSxJQUFJLEVBQUU7WUFDN0IsSUFBSSxDQUFDLGVBQWUsQ0FBQyxPQUFPLENBQUMsQ0FBQyxJQUFJLEVBQUUsR0FBRyxFQUFFLEVBQUU7Z0JBQ3pDLElBQUksQ0FBQyxXQUFXLENBQUMsR0FBRyxDQUFDLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxxQkFBTyxDQUFDLFdBQVcsQ0FDNUQsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQ3ZCLElBQUksQ0FBQyxZQUFZLENBQ2xCLENBQUM7Z0JBRUYsSUFBSSxDQUFDLFdBQVcsQ0FBQyxHQUFHLENBQUMsQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLENBQUM7Z0JBRXBFLElBQUksQ0FBQyxXQUFXLENBQUMsR0FBRyxDQUFDLENBQUMsU0FBUyxDQUFDLFdBQVcsR0FBRyxxQkFBTyxDQUFDLFdBQVcsQ0FDL0QsSUFBSSxDQUFDLFdBQVcsQ0FBQyxHQUFHLENBQUMsQ0FBQyxTQUFTLENBQUMsV0FBVyxFQUMzQyxJQUFJLHFCQUFPLENBQUMsQ0FBQyxFQUFFLEdBQUcsRUFBRSxDQUFDLENBQUMsQ0FDdkIsQ0FBQztZQUNKLENBQUMsQ0FBQyxDQUFDO1NBQ0o7SUFDSCxDQUFDO0NBQ0Y7QUF6REQsa0NBeURDIn0=","assetPath":"Assets/Scripts/Quest/GhostClickQuest.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"canvasParent","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"ghostButtonPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"ghostObjectList","type":"UnityEngine.GameObject[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"buttonOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"GhostClickQuest","description":""},"isCompiled":true}'
+  typescriptHash: 1e5ff99ea64212aa61df46644b39cafc
+  onlyWriteTrigger: 0

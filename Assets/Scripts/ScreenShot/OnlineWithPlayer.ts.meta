@@ -1,0 +1,89 @@
+fileFormatVersion: 2
+guid: bd2f96a634115d440ae987bd2608a8bf
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst OnlineSelfieCamera_1
+    = require(\\\"./OnlineSelfieCamera\\\");\\r\\nconst ClientStarter_1 = require(\\\"../ClientStarter\\\");\\r\\nclass
+    OnlineWithPlayer extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor()
+    {\\r\\n        super(...arguments);\\r\\n        this.isWatching = false;\\r\\n       
+    this.isTaking = false;\\r\\n        // target\uC5D0 \uB300\uD55C body\uC640 head\uC758
+    weight \uC124\uC815\\r\\n        // - head\uAC00 target\uC758 \uC6C0\uC9C1\uC784\uC5D0
+    \uB354 \uD06C\uAC8C \uBC18\uC751\uD558\uB3C4\uB85D \uD568\\r\\n        this.bodyWeight
+    = 0.3;\\r\\n        this.headWeight = 0.7;\\r\\n        this.rightHandBone =
+    \\\"hand_R\\\";\\r\\n    }\\r\\n    Start() {\\r\\n        this.animator = this.GetComponent($typeof(UnityEngine_1.Animator));\\r\\n   
+    }\\r\\n    Initialize(cameraPrefab, buttonUIPrefab, canvasRoot) {\\r\\n       
+    this.buttonUI = UnityEngine_1.GameObject.Instantiate(buttonUIPrefab, canvasRoot).transform;\\r\\n       
+    this.buttonUI.gameObject.SetActive(false);\\r\\n        this.cameraTarget =\\r\\n           
+    UnityEngine_1.GameObject.Instantiate(cameraPrefab).transform;\\r\\n        let
+    selfieCamera = this.cameraTarget.GetComponent($typeof(OnlineSelfieCamera_1.default));\\r\\n       
+    this.gripTarget = selfieCamera.GetGripObject().transform;\\r\\n    }\\r\\n   
+    SetSelfieStick(player, selfieStickPrefab) {\\r\\n        this.isTaking = true;\\r\\n       
+    if (!player.isLocalPlayer) {\\r\\n            this.buttonUI.gameObject.SetActive(true);\\r\\n           
+    this.selfieStick =\\r\\n                UnityEngine_1.GameObject.Instantiate(selfieStickPrefab).transform;\\r\\n           
+    player.character\\r\\n                .GetComponentsInChildren($typeof(UnityEngine_1.Transform)).forEach((characterObj)
+    => {\\r\\n                if (characterObj.name == this.rightHandBone) {\\r\\n                   
+    this.selfieStick.parent = characterObj;\\r\\n                    this.selfieStick.localPosition
+    = UnityEngine_1.Vector3.zero;\\r\\n                    this.selfieStick.localRotation
+    = UnityEngine_1.Quaternion.Euler(UnityEngine_1.Vector3.zero);\\r\\n               
+    }\\r\\n            });\\r\\n        }\\r\\n    }\\r\\n    RemovePlayer(player)
+    {\\r\\n        this.isTaking = false;\\r\\n        UnityEngine_1.GameObject.Destroy(this.buttonUI.gameObject);\\r\\n       
+    UnityEngine_1.GameObject.Destroy(this.cameraTarget.gameObject);\\r\\n       
+    if (!player.isLocalPlayer) {\\r\\n            UnityEngine_1.GameObject.Destroy(this.selfieStick.gameObject);\\r\\n           
+    this.cameraTarget = null;\\r\\n            this.gripTarget = null;\\r\\n           
+    this.selfieStick = null;\\r\\n        }\\r\\n    }\\r\\n    Watch(watchTarget)
+    {\\r\\n        if (this.isWatching) {\\r\\n            ClientStarter_1.default.instance.Debug(\\\"\uC774\uBBF8
+    \uBCF4\uACE0 \uC788\uC2B5\uB2C8\uB2E4.\\\");\\r\\n        }\\r\\n        else
+    {\\r\\n            this.watchTarget = watchTarget;\\r\\n            this.isWatching
+    = true;\\r\\n        }\\r\\n    }\\r\\n    StopWatch() {\\r\\n        if (this.isWatching)
+    {\\r\\n            this.watchTarget = null;\\r\\n            this.isWatching
+    = false;\\r\\n        }\\r\\n        else {\\r\\n            ClientStarter_1.default.instance.Debug(\\\"\uC774\uBBF8
+    \uAED0\uC2B5\uB2C8\uB2E4.\\\");\\r\\n        }\\r\\n    }\\r\\n    // \uC720\uC800\uAC00
+    \uB85C\uCEEC\uC774 \uC544\uB2CC \uACBD\uC6B0\uC5D0\uB9CC \uC628\uB2E4\\r\\n   
+    // \uB85C\uCEEC --> \uC628\uB77C\uC778 \uCE90\uB9AD\uD130 \uC5C5\uB370\uC774\uD2B8\\r\\n   
+    OnUpdateOnline(player, screenPos) {\\r\\n        this.buttonUI.position = UnityEngine_1.Vector3.Lerp(this.buttonUI.position,
+    screenPos, 0.8);\\r\\n        // ClientStarter.instance.Debug(\\\"\uD558\uC774\\\")\\r\\n       
+    // ClientStarter.instance.Debug(this.buttonUI.gameObject.activeSelf)\\r\\n       
+    // this.camera.position = this.ParseVector3(takingUser.cameraTransform.position)\\r\\n       
+    // \uCC0D\uACE0 \uC788\uB294 \uD50C\uB808\uC774\uC5B4 foreach\\r\\n        const
+    takingUser = ClientStarter_1.default.instance\\r\\n            .GetRoom()\\r\\n           
+    .State.selfiePlayer.get_Item(player.id);\\r\\n        if (takingUser.cameraTransform
+    == null ||\\r\\n            takingUser.cameraTransform == undefined) {\\r\\n           
+    ClientStarter_1.default.instance.Debug(`\uC704\uD5D8\uD560 \uBED4 \uD588\uC2B5\uB2C8\uB2E4
+    - \uCE74\uBA54\uB77C\uC2A4\uD0A4\uB9C8 transform NULL`);\\r\\n        }\\r\\n       
+    else {\\r\\n            // console.log(takingUser.cameraTransform.position)\\r\\n           
+    this.cameraTarget.position = this.ParseVector3(takingUser.cameraTransform.position);\\r\\n           
+    if (!player.isLocalPlayer) {\\r\\n                player.character.transform.LookAt(new
+    UnityEngine_1.Vector3(this.cameraTarget.position.x, player.character.transform.position.y,
+    this.cameraTarget.position.z));\\r\\n            }\\r\\n        }\\r\\n    }\\r\\n   
+    OnAnimatorIK(layerIndex) {\\r\\n        if (this.isWatching) {\\r\\n           
+    this.animator.SetLookAtWeight(1, this.bodyWeight, 0.9);\\r\\n            // lookAt
+    target \uC124\uC815\\r\\n            this.animator.SetLookAtPosition(this.watchTarget.position);\\r\\n       
+    }\\r\\n        if (this.isTaking) {\\r\\n            this.animator.SetLookAtWeight(1,
+    this.bodyWeight, this.headWeight);\\r\\n            // lookAt target \uC124\uC815\\r\\n           
+    this.animator.SetLookAtPosition(this.cameraTarget.position);\\r\\n           
+    // rightHand\uC758 target weight \uC124\uC815\\r\\n            this.animator.SetIKPositionWeight(UnityEngine_1.AvatarIKGoal.RightHand,
+    1);\\r\\n            // rightHand\uAC00 \uBED7\uC744 \uC704\uCE58\uB97C Grip\uC73C\uB85C
+    \uC124\uC815\\r\\n            this.animator.SetIKPosition(UnityEngine_1.AvatarIKGoal.RightHand,
+    this.gripTarget.position);\\r\\n        }\\r\\n    }\\r\\n    ParseVector3(vector3)
+    {\\r\\n        return new UnityEngine_1.Vector3(vector3.x, vector3.y, vector3.z);\\r\\n   
+    }\\r\\n}\\r\\nexports.default = OnlineWithPlayer;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiT25saW5lV2l0aFBsYXllci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk9ubGluZVdpdGhQbGF5ZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FPcUI7QUFFckIsaURBQXNEO0FBRXRELDZEQUFzRDtBQUN0RCxvREFBNkM7QUFFN0MsTUFBcUIsZ0JBQWlCLFNBQVEscUNBQXFCO0lBQW5FOztRQVVVLGVBQVUsR0FBWSxLQUFLLENBQUM7UUFDNUIsYUFBUSxHQUFZLEtBQUssQ0FBQztRQUVsQyxtQ0FBbUM7UUFDbkMsb0NBQW9DO1FBQzVCLGVBQVUsR0FBVyxHQUFHLENBQUM7UUFDekIsZUFBVSxHQUFXLEdBQUcsQ0FBQztRQUVoQixrQkFBYSxHQUFXLFFBQVEsQ0FBQztJQXdJcEQsQ0FBQztJQXRJQyxLQUFLO1FBQ0gsSUFBSSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUMsWUFBWSxTQUFDLHNCQUFRLEVBQUcsQ0FBQztJQUNoRCxDQUFDO0lBRU0sVUFBVSxDQUNmLFlBQXdCLEVBQ3hCLGNBQTBCLEVBQzFCLFVBQXFCO1FBRXJCLElBQUksQ0FBQyxRQUFRLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQ3BDLGNBQWMsRUFDZCxVQUFVLENBQ1gsQ0FBQyxTQUFTLENBQUM7UUFDWixJQUFJLENBQUMsUUFBUSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDMUMsSUFBSSxDQUFDLFlBQVk7WUFDZix3QkFBVSxDQUFDLFdBQVcsQ0FBYSxZQUFZLENBQUMsQ0FBQyxTQUFTLENBQUM7UUFDN0QsSUFBSSxZQUFZLEdBQUcsSUFBSSxDQUFDLFlBQVksQ0FBQyxZQUFZLFNBQUMsNEJBQWtCLEVBQUcsQ0FBQztRQUN4RSxJQUFJLENBQUMsVUFBVSxHQUFHLFlBQVksQ0FBQyxhQUFhLEVBQUUsQ0FBQyxTQUFTLENBQUM7SUFDM0QsQ0FBQztJQUVNLGNBQWMsQ0FBQyxNQUFvQixFQUFFLGlCQUE2QjtRQUN2RSxJQUFJ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\",\"assetPath\":\"Assets/Scripts/ScreenShot/OnlineWithPlayer.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"buttonUI\",\"type\":\"UnityEngine.Transform\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"cameraTarget\",\"type\":\"UnityEngine.Transform\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"OnlineWithPlayer\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 6c22c2b8fd50873da295ff58fb6b23ab
+  onlyWriteTrigger: 0
