@@ -26,6 +26,7 @@ import {
 } from "UnityEngine";
 import WaitForSecondsCash from "./WaitForSecondsCash";
 import SelfieRegistrant from "./ScreenShot/SelfieRegistrant";
+import AnimationLinker from "./AnimationLinker";
 
 export default class ClientStarter extends ZepetoScriptBehaviour {
   @SerializeField()
@@ -116,9 +117,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
       ZepetoPlayers.instance.OnAddedPlayer.AddListener((sessionId: string) => {
         const isLocal = this.room.SessionId === sessionId;
         const player: Player = this.room.State.players.get_Item(sessionId);
-        if (player == null || player == undefined) return;
-
-        if (!isLocal) {
+        if (player && !isLocal) {
           this.Debug(`[온라인 플레이어 생성] player  ${sessionId}`);
           player.OnChange += (changeValues) =>
             this.OnUpdateMultiPlayer(sessionId, player);
@@ -253,6 +252,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
     }
     console.log(`[OnRemove] players - sessionId : ${sessionId}`);
     ZepetoPlayers.instance.RemovePlayer(sessionId);
+    AnimationLinker.instance.OnRemovePlayer(sessionId);
   }
 
   private OnUpdateMultiPlayer(sessionId: string, player: Player) {
@@ -289,6 +289,41 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
       if (player.subState === CharacterJumpState.JumpDouble) {
         zepetoPlayer.character.DoubleJump();
       }
+    }
+
+    //문제는 제스처 중에 다시 제스처를 누르면 무시된다.
+    if (player.state == CharacterState.Gesture) {
+      if (!AnimationLinker.instance.GetIsGesturing(sessionId)) {
+        console.log("서버 - 제스처 세팅", player.state);
+        AnimationLinker.instance.GestureHandler(
+          zepetoPlayer,
+          player.gesture,
+          player.isInfinite
+        );
+        zepetoPlayer.character.transform.position = position;
+        zepetoPlayer.character.transform.eulerAngles = this.ParseVector3(
+          player.transform.rotation
+        );
+      } else if (
+        AnimationLinker.instance.GetPlayingGesture(sessionId).name !=
+        player.gesture
+      ) {
+        console.log("서버 - 제스처 세팅", player.state);
+        zepetoPlayer.character.transform.position = position;
+        zepetoPlayer.character.transform.eulerAngles = this.ParseVector3(
+          player.transform.rotation
+        );
+        AnimationLinker.instance.GestureHandler(
+          zepetoPlayer,
+          player.gesture,
+          player.isInfinite
+        );
+      }
+    } else if (
+      player.state != CharacterState.Gesture &&
+      AnimationLinker.instance.GetIsGesturing(sessionId)
+    ) {
+      AnimationLinker.instance.GestureHandler(zepetoPlayer, "");
     }
   }
 
@@ -330,13 +365,6 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
       );
     }
     this.room.Send("onChangedState", data.GetObject());
-  }
-
-  SendAnimation(name: string, interactor: string) {
-    const data = new RoomData();
-    data.Add("animation", name);
-    data.Add("interactor", interactor);
-    this.room.Send("onChangedAnimation", data.GetObject());
   }
 
   SendGesture(name: string, isInfinite: boolean = false) {
