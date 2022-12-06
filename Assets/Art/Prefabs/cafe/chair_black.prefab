@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 415261160757204373}
   - component: {fileID: 2461140895154823519}
   - component: {fileID: 3883843660969770461}
+  - component: {fileID: 5363521595333959593}
+  - component: {fileID: 4827052416415864804}
   m_Layer: 0
   m_Name: chair_black
   m_TagString: Untagged
@@ -96,3 +98,48 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3883578628890574265, guid: c151de83f2abfa348807048dd4b00b09, type: 3}
+--- !u!135 &5363521595333959593
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4118338357426929802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.15
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4827052416415864804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4118338357426929802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - interactButtonPrefab
+    - animationClip
+    - cameraOffset
+    - fixedPointOffset
+    unityValues:
+    - {fileID: 4585434367995452817, guid: f900c18340d48c24ebef6c4163fe83ec, type: 3}
+    - {fileID: 7400000, guid: 091aae07a6cec9c4ab410e5f7f01f592, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    values:
+    - 
+    - 
+    - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.0,\"y\":1.5,\"z\":0.0}"}'
+    - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.0,\"y\":0.0,\"z\":0.0}"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: c9d076fc21e1d084a9b7d53b00eb8443, type: 3}
+    isExpaned: 0

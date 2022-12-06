@@ -1,0 +1,65 @@
+fileFormatVersion: 2
+guid: c9d076fc21e1d084a9b7d53b00eb8443
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    AnimationLinker_1 = require(\"./AnimationLinker\");\r\nconst ClientStarter_1
+    = require(\"./ClientStarter\");\r\nconst ObjectPooler_1 = require(\"./ObjectPooler\");\r\nclass
+    FixedInteractor extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.isIn = false;\r\n    }\r\n   
+    Start() {\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.localCamera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera;\r\n       
+    });\r\n    }\r\n    Update() {\r\n        if (this._interactButton && this.localCamera)
+    {\r\n            var screenPos = this.localCamera.WorldToScreenPoint(UnityEngine_1.Vector3.op_Addition(this.transform.position,
+    this.cameraOffset));\r\n            this._interactButton.transform.position =
+    screenPos;\r\n        }\r\n    }\r\n    SetButton(isActive) {\r\n        if (isActive)
+    {\r\n            const buttonObject = ObjectPooler_1.default.instance.GetObject(this.interactButtonPrefab);\r\n           
+    buttonObject.SetActive(true);\r\n            AnimationLinker_1.default.instance.SetInteractorParent(buttonObject);\r\n           
+    this._interactButton = buttonObject.GetComponent($typeof(UnityEngine_UI_1.Button));\r\n           
+    this._interactButton.onClick.AddListener(() => {\r\n                AnimationLinker_1.default.instance.PlayGesture(this.animationClip.name,
+    true);\r\n                var offset = UnityEngine_1.Vector3.op_Addition(UnityEngine_1.Vector3.op_Addition(UnityEngine_1.Vector3.op_Multiply(this.transform.right,
+    this.fixedPointOffset.x), UnityEngine_1.Vector3.op_Multiply(this.transform.up,
+    this.fixedPointOffset.y)), UnityEngine_1.Vector3.op_Multiply(this.transform.forward,
+    this.fixedPointOffset.z));\r\n                const charTransform = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform;\r\n               
+    charTransform.position = UnityEngine_1.Vector3.op_Addition(this.transform.position,
+    offset);\r\n                charTransform.rotation = this.transform.rotation;\r\n               
+    ClientStarter_1.default.instance.SendTransform(charTransform);\r\n               
+    this.StartCoroutine(this.CheckPlayerMove());\r\n                this.SetButton(false);\r\n           
+    });\r\n        }\r\n        else {\r\n            this._interactButton?.gameObject.SetActive(false);\r\n           
+    this._interactButton?.onClick.RemoveAllListeners();\r\n            this._interactButton
+    = null;\r\n        }\r\n    }\r\n    *CheckPlayerMove() {\r\n        while (true)
+    {\r\n            if (AnimationLinker_1.default.instance.GetPlayingGesture(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.id)
+    != this.animationClip) {\r\n                if (this.isIn) {\r\n                   
+    this.SetButton(true);\r\n                }\r\n                break;\r\n           
+    }\r\n            else if (ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.tryMove
+    ||\r\n                ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.tryJump)
+    {\r\n                if (this.isIn) {\r\n                    this.SetButton(true);\r\n               
+    }\r\n                AnimationLinker_1.default.instance.StopGesture(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer);\r\n               
+    break;\r\n            }\r\n            yield null;\r\n        }\r\n    }\r\n   
+    OnTriggerEnter(col) {\r\n        if (col.gameObject.layer != UnityEngine_1.LayerMask.NameToLayer(\"LocalPlayer\"))
+    {\r\n            return;\r\n        }\r\n        this.isIn = true;\r\n       
+    this.SetButton(true);\r\n    }\r\n    OnTriggerExit(col) {\r\n        if (col.gameObject.layer
+    != UnityEngine_1.LayerMask.NameToLayer(\"LocalPlayer\")) {\r\n            return;\r\n       
+    }\r\n        this.isIn = false;\r\n        this.SetButton(false);\r\n    }\r\n}\r\nexports.default
+    = FixedInteractor;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRml4ZWRJbnRlcmFjdG9yLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRml4ZWRJbnRlcmFjdG9yLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBT3FCO0FBQ3JCLG1EQUF3QztBQUN4Qyw2RUFBNEQ7QUFDNUQsaURBQXNEO0FBQ3RELHVEQUFnRDtBQUNoRCxtREFBNEM7QUFDNUMsaURBQTBDO0FBRTFDLE1BQXFCLGVBQWdCLFNBQVEscUNBQXFCO0lBQWxFOztRQVNVLFNBQUksR0FBWSxLQUFLLENBQUM7SUErRmhDLENBQUM7SUE3RkMsS0FBSztRQUNILDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDekQsSUFBSSxDQUFDLFdBQVcsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLE1BQU0sQ0FBQztRQUM1RSxDQUFDLENBQUMsQ0FBQztJQUNMLENBQUM7SUFFRCxNQUFNO1FBQ0osSUFBSSxJQUFJLENBQUMsZUFBZSxJQUFJLElBQUksQ0FBQyxXQUFXLEVBQUU7WUFDNUMsSUFBSSxTQUFTLEdBQUcsSUFBSSxDQUFDLFdBQVcsQ0FBQyxrQkFBa0IsQ0FDakQscUJBQU8sQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLFlBQVksQ0FBQyxDQUNoRSxDQUFDO1lBQ0YsSUFBSSxDQUFDLGVBQWUsQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLFNBQVMsQ0FBQztTQUNyRDtJQUNILENBQUM7SUFFRCxTQUFTLENBQUMsUUFBaUI7UUFDekIsSUFBSSxRQUFRLEVBQUU7WUFDWixNQUFNLFlBQVksR0FBRyxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQ2xELElBQUksQ0FBQyxvQkFBb0IsQ0FDMUIsQ0FBQztZQUNGLFlBQVksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7WUFDN0IseUJBQWUsQ0FB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","assetPath":"Assets/Scripts/FixedInteractor.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"interactButtonPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.AnimationModule","name":"animationClip","type":"UnityEngine.AnimationClip","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"cameraOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"fixedPointOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"FixedInteractor","description":""},"isCompiled":true}'
+  typescriptHash: 926c4cdfc0746bd08cffeec089aba95c
+  onlyWriteTrigger: 0

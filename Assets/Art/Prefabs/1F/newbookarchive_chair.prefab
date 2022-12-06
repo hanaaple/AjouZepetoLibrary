@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 5556026795497357039}
   - component: {fileID: 68907149270962618}
   - component: {fileID: 3940556011340806837}
+  - component: {fileID: 8002921628277652122}
+  - component: {fileID: 1574587968143709809}
   m_Layer: 0
   m_Name: newbookarchive_chair
   m_TagString: Untagged
@@ -126,3 +128,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.31620505, y: 0.32839215, z: 0.30903542}
   m_Center: {x: 0, y: 0.16419607, z: 0}
+--- !u!135 &8002921628277652122
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517369546618037077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.15
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1574587968143709809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517369546618037077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - interactButtonPrefab
+    - animationClip
+    - cameraOffset
+    - fixedPointOffset
+    unityValues:
+    - {fileID: 4585434367995452817, guid: f900c18340d48c24ebef6c4163fe83ec, type: 3}
+    - {fileID: 7400000, guid: 091aae07a6cec9c4ab410e5f7f01f592, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    values:
+    - 
+    - 
+    - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.0,\"y\":1.5,\"z\":0.0}"}'
+    - '{"type":"UnityEngine.Vector3, UnityEngine.CoreModule","value":"{\"x\":0.0,\"y\":0.0,\"z\":0.0}"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: c9d076fc21e1d084a9b7d53b00eb8443, type: 3}
+    isExpaned: 0

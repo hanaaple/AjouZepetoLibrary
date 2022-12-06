@@ -46,6 +46,12 @@ export default class extends Sandbox {
       console.log("[Debug]: " + message.sentence);
     });
 
+    this.onMessage("onChangedGesture", (client, message) => {
+      const player = this.state.players.get(client.sessionId);
+      player.gesture = message.gesture;
+      player.isInfinite = message.isInfinite;
+    });
+
     //client - 찍는 플레이어
     this.onMessage("onSelfieMode", (client, message) => {
       const user = new SelfieUser();
