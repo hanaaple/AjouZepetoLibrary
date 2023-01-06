@@ -27,6 +27,7 @@ import {
 import WaitForSecondsCash from "./WaitForSecondsCash";
 import SelfieRegistrant from "./ScreenShot/SelfieRegistrant";
 import AnimationLinker from "./AnimationLinker";
+import PickUpZepetoCharacter from "./Quest/PickUpZepetoCharacter";
 
 export default class ClientStarter extends ZepetoScriptBehaviour {
   @SerializeField()
@@ -104,6 +105,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
 
         const myPlayer = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer;
         myPlayer.character.gameObject.AddComponent<AudioListener>();
+        myPlayer.character.gameObject.AddComponent<PickUpZepetoCharacter>();
         myPlayer.character.OnChangedState.AddListener((next, cur) => {
           console.log("로컬 State 변경", cur, next);
           this.SendState(next);

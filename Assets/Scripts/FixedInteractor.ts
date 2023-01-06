@@ -23,9 +23,11 @@ export default class FixedInteractor extends ZepetoScriptBehaviour {
   private localCamera: Camera;
 
   private isIn: boolean = false;
+  private originCamOffset: Vector3;
 
   Start() {
     ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
+      this.originCamOffset = ZepetoPlayers.instance.cameraData.offset;
       this.localCamera = ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera;
     });
   }
@@ -50,6 +52,7 @@ export default class FixedInteractor extends ZepetoScriptBehaviour {
       this._interactButton = buttonObject.GetComponent<Button>();
 
       this._interactButton.onClick.AddListener(() => {
+        ZepetoPlayers.instance.cameraData.offset = Vector3.zero;
         AnimationLinker.instance.PlayGesture(this.animationClip.name, true);
         var offset = Vector3.op_Addition(
           Vector3.op_Addition(
@@ -97,6 +100,7 @@ export default class FixedInteractor extends ZepetoScriptBehaviour {
         AnimationLinker.instance.StopGesture(
           ZepetoPlayers.instance.LocalPlayer.zepetoPlayer
         );
+        ZepetoPlayers.instance.cameraData.offset = this.originCamOffset;
         break;
       }
       yield null;

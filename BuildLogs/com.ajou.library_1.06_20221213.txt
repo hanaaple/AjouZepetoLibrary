@@ -1,0 +1,727 @@
+[World Settings]
+world id             com.ajou.library    
+version              1.06                
+max clients          16                  
+orientation          horizontal          
+disable invite       false               
+disable room list    false               
+disable private room false               
+
+[Build Manifest]
+[scenes]
+183 kb               assets/scenes/christmas buildscene.unity
+[assets]
+290 kb               assets/art/modelings/1f/curation_desk.fbx
+3 kb                 assets/art/prefabs/1f/toilet_board_woman.prefab
+57 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_snowsled.fbx
+30 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.001.fbx
+2 kb                 assets/art/materials/info_3f_1.mat
+271 kb               assets/art/modelings/1f/newbookarchive_chair1.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_mistletoe.002.prefab
+3 kb                 assets/art/ui/screenshot/피드작성_버튼.png
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+3 kb                 assets/art/prefabs/info/floor_info_3_4.prefab
+5 kb                 assets/art/prefabs/1f/multimedia_wheelchair.prefab
+793 kb               assets/art/modelings/center_terrass_chair.fbx
+42 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_candle.003.fbx
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/environment/rw_lp_cp_nature_bigtree_snow.002.prefab
+2 kb                 assets/art/prefabs/rooftop/beer1.prefab
+90 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cupcake.004.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_candle.005.prefab
+2 kb                 assets/art/materials/blinn1.mat
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_candycane.003.prefab
+281 kb               assets/art/modelings/1f/newbookarchive_wheelchair.fbx
+482 kb               assets/fonts/비트로 코어 otf.otf
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+5 kb                 assets/art/prefabs/1f/hall_bench.prefab
+5 kb                 assets/art/prefabs/cafe/window_table.prefab
+2 kb                 assets/art/ui/screenshot/video.png
+2 kb                 assets/art/prefabs/info/info_3f_2.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_chrismassock.001.prefab
+2 kb                 assets/art/materials/rock_texture.mat
+1 mb                 assets/art/modelings/234f/small_sofa3.fbx
+258 kb               assets/art/modelings/1f/multimedia_dvd_speaker.fbx
+278 kb               assets/art/modelings/1f/revolving_door.fbx
+27 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreebelt_grey.fbx
+72 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_animal_deer.fbx
+3 kb                 assets/art/ui/screenshot/videoactive.png
+134 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_streetlamp_big.fbx
+27 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_tablecloth.001.fbx
+34 kb                assets/art/modelings/rooftop/beanpack4.fbx
+111 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/effects/rw_lp_cp_effect_snowglobe.prefab
+2 kb                 assets/art/prefabs/rooftop/tent.prefab
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+5 kb                 assets/art/prefabs/cafe/cafetable_small.prefab
+35 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_balloon.001.fbx
+574 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_roll.anim
+163 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreechain_colorful.fbx
+3 kb                 assets/art/prefabs/rooftop/chair1.prefab
+2 kb                 assets/art/materials/rooftop_terrass_ver2.mat
+48 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.003.fbx
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/characters_rigged/rw_lp_cp_character_snowmanrigged.003.prefab
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/animation/characters/controllers/snowmananimatorcontroller 2.controller
+531 kb               assets/art/textures/center_terrass_texture_snow 1.png
+465 kb               assets/art/textures/cafe_interior_ver1.png
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+5 kb                 assets/art/prefabs/234f/newbookarchive_chair.prefab
+2 kb                 assets/art/prefabs/rooftop/table_big.prefab
+306 kb               assets/animator/zepetoanimatorv2.controller
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+2 kb                 assets/art/prefabs/234f/cnlounge_hallwall.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_giftbox.008.prefab
+3 mb                 assets/art/purchased asset/little_ghost_hq/textures/ghost_male/skin_03/littleghost_for substance v2_ghost1_albedotransparency.png
+495 kb               assets/art/modelings/cafe/cafetable_big.fbx
+1 mb                 assets/art/modelings/234f/datapc_desk.fbx
+3 kb                 assets/art/prefabs/1f/cnlounge_cleanwall.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.007.prefab
+286 kb               assets/art/modelings/1f/multimedia_wheelchair.fbx
+27 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_tablecloth.002.fbx
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_giftbox.001.prefab
+28 kb                assets/art/textures/colortexture_001.png
+51 kb                assets/art/textures/texture_etc.png
+1 mb                 assets/art/modelings/1f/cnlounge_desk_person.fbx
+2 kb                 assets/art/prefabs/1f/multimedia_computer_set.prefab
+161 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_barrel_group.002.fbx
+5 kb                 assets/art/prefabs/cafe/kiosk.prefab
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+180 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cupcake.005.fbx
+39 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.014.fbx
+49 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_teddybear.002.fbx
+3 kb                 assets/art/prefabs/234f/magazine_bookself1.prefab
+54 kb                assets/art/textures/ari.png
+123 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/buildings/rw_lp_cp_build_treedecorationshop.prefab
+27 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreebelt_red.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/buildings/rw_lp_cp_build_shophouse.003.prefab
+3 kb                 assets/art/prefabs/1f/hall_sofa2.prefab
+3 kb                 assets/art/prefabs/info/loan_info1.prefab
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.004.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.020.prefab
+4 kb                 assets/art/prefabs/selfiecamera.prefab
+113 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_candle.001.fbx
+7 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_snowglobe.002.prefab
+22 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_statue.fbx
+1 mb                 assets/art/modelings/3floor.fbx
+124 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rigged/rw_lp_cp_character_cookiemansmallrigged.fbx
+42 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_giftbox.002.fbx
+2 kb                 assets/art/materials/ver4_winter.mat
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cookie.002.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_chrismassock.004.prefab
+257 kb               assets/art/modelings/1f/toilet_board_man.fbx
+828 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_turn.anim
+6 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_teddybear.002.prefab
+4 mb                 assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_snowglobe.001.fbx
+2 kb                 assets/art/prefabs/rooftop/screen.prefab
+2 kb                 assets/art/prefabs/rooftop/beanpack1.prefab
+80 kb                assets/art/purchased asset/3d lowpoly tree pack/model/tree01_trunk.fbx
+398 kb               assets/art/modelings/234f/new folder/big_sofa2.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.014.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_mistletoe.001.prefab
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_tablecloth.002.prefab
+2 kb                 assets/art/materials/paver_snow.mat
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+1 mb                 assets/art/modelings/1f/multimedia_dvd_shelf.fbx
+129 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_barrel_group.003.fbx
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/characters_rigged/rw_lp_cp_character_snowmanrigged.002.prefab
+116 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_burningcandle.001.fbx
+610 kb               assets/art/prefabs/1f.prefab
+2 kb                 assets/art/prefabs/onlinecamera.prefab
+30 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_candle.002.fbx
+126 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rigged/rw_lp_cp_character_cookiemanbigrigged.fbx
+52 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_giftbox.003.fbx
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_chrismassock.003.prefab
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/animation/characters/controllers/cookiemansmallanimatorcontroller.controller
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+2 kb                 assets/art/ui/screenshot/basicbutton.png
+69 kb                assets/art/modelings/info/loan_info1.fbx
+1017 kb              assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_sackwithgiftboxes.002.fbx
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/animation/characters/controllers/cookiemanbiganimatorcontroller.controller
+1 mb                 assets/art/modelings/1f/newbookarchive_exhibition.fbx
+69 kb                assets/art/modelings/info/loan_info2.fbx
+3 kb                 assets/art/prefabs/1f/multimedia_dvd_shelf.prefab
+36 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_build_shophouse.005.fbx
+22 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_rope.002.fbx
+2 kb                 assets/art/prefabs/rooftop/plate.prefab
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_giftbox.002.prefab
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/text/rw_lp_cp_text_christmascookies.prefab
+63 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_nature_bigtree_snow.002.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_snowflake.002.prefab
+516 kb               assets/art/textures/cafe_ver1.png
+32 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_burningcandle.005.fbx
+2 kb                 assets/art/prefabs/cafe/cafetable_big.prefab
+3 kb                 assets/art/prefabs/library_common/multimedia_keyboard.prefab
+2 kb                 assets/art/modelings/materials/lambert5.mat
+3 kb                 assets/art/prefabs/rooftop/chair3.prefab
+37 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_text_hohoho.002.fbx
+189 kb               assets/art/modelings/stairs.fbx
+1 mb                 assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_snowglobe.002.fbx
+258 kb               assets/art/modelings/books/whitebook.fbx
+65 kb                assets/art/modelings/library_common/multimedia_computer.fbx
+34 kb                assets/art/modelings/rooftop/beer2.fbx
+262 kb               assets/art/modelings/1f/multimedia_partition.fbx
+5 kb                 assets/art/prefabs/1f/newbookarchive_chair.prefab
+112 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cupcake.002.fbx
+36 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.013.fbx
+479 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_mistletoe.002.fbx
+2 kb                 assets/art/prefabs/books/yellowbook.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.002.prefab
+36 kb                assets/art/modelings/rooftop/plate.fbx
+260 kb               assets/art/modelings/1f/cnlounge_lamp2.fbx
+45 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_burningcandle.003.fbx
+95 kb                assets/art/modelings/library_common/printer.fbx
+2 kb                 assets/art/materials/default_material.mat
+10 kb                assets/art/purchased asset/little_ghost_hq/animation/little_ghost 2.controller
+43 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_build_shophouse.003.fbx
+3 kb                 assets/art/prefabs/1f/loan_desk.prefab
+10 kb                assets/art/textures/info_3f_2.png
+3 kb                 assets/art/prefabs/234f/small_sofa1.prefab
+248 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/animation/characters/rw_lp_cp_character@sitting.fbx
+267 kb               assets/art/modelings/1f/multimedia_dvd_desk.fbx
+71 kb                assets/audio/clip/camerashuuteraudio.mp3
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_giftbox.010.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_burningcandle.003.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_candycane.002.prefab
+25 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_rope.007.fbx
+1 kb                 assets/art/ui/screenshot/피드작성_페이지.png
+1 mb                 assets/art/modelings/2floor.fbx
+3 kb                 assets/art/prefabs/1f/cnlounge_wall.prefab
+60 kb                assets/art/modelings/rooftop/parasol.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_chrismassock.002.prefab
+260 kb               assets/art/modelings/1f/cnlounge_wall.fbx
+4 kb                 assets/art/prefabs/cafe/chair_white.prefab
+2 kb                 assets/art/materials/glow_portal 1.mat
+565 kb               assets/art/prefabs/2f.prefab
+3 kb                 assets/art/prefabs/takewithbutton.prefab
+2 kb                 assets/art/materials/white.mat
+491 kb               assets/art/modelings/cafe/window_table.fbx
+3 kb                 assets/art/prefabs/1f/gate.prefab
+2 kb                 assets/art/ui/screenshot/image.png
+2 kb                 assets/art/materials/center_terrass_texture_snow.mat
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_statue.prefab
+13 kb                assets/art/prefabs/rooftop/anchorage_set.prefab
+1 mb                 assets/art/modelings/celing_1f.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_barrel_group.003.prefab
+106 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_text_christmascookies.fbx
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_giftbox.003.prefab
+460 kb               assets/art/purchased asset/3d lowpoly tree pack/texture/tree01_trunk.png
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.005.prefab
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action2.anim
+34 kb                assets/art/modelings/rooftop/table_big.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.019.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_balloon.003.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_snowflake.006.prefab
+2 kb                 assets/art/modelings/materials/lambert3.mat
+257 kb               assets/art/modelings/1f/cnlounge_lamp4.fbx
+2 kb                 assets/art/prefabs/rooftop/grill.prefab
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/environment/rw_lp_cp_nature_christmastree_snow.002.prefab
+69 kb                assets/art/modelings/library_common/bookloan.fbx
+1 mb                 assets/art/textures/line_glow.png
+12 mb                assets/art/purchased asset/redworks - lp christmas pack/assets/textures/rw_lp_texture_00.tif
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+70 kb                assets/art/modelings/info/floor_info_2_3.fbx
+3 kb                 assets/art/prefabs/info/loan_info2.prefab
+3 kb                 assets/art/prefabs/library_common/tray.prefab
+489 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk_fast.anim
+6 kb                 assets/art/textures/rooftop_terrass_ver2.png
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.018.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_rope.007.prefab
+3 kb                 assets/art/prefabs/234f/loan_desk_2nd.prefab
+38 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_snowflake.006.fbx
+2 kb                 assets/art/prefabs/info/info_3f 1.prefab
+5 mb                 assets/art/purchased asset/little_ghost_hq/meshes/little_ghost v4.fbx
+124 kb               assets/art/textures/paver_snow.png
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/text/rw_lp_cp_text_happynewyear.prefab
+4 kb                 assets/art/purchased asset/coreywilton/halloweenprops/prefabs/woodencross_01.prefab
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/environment/rw_lp_cp_nature_middletree_snow.002.prefab
+119 kb               assets/art/modelings/rooftop/garland.fbx
+1 mb                 assets/art/modelings/234f/bookself.fbx
+50 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_chrismassock.003.fbx
+3 kb                 assets/art/prefabs/1f/loan_bookshelf.prefab
+1 mb                 assets/art/modelings/234f/bookself_wood.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_balloon.002.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cookie.004.prefab
+1 mb                 assets/art/modelings/celing_3f.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_chrismassock.005.prefab
+2 mb                 assets/art/modelings/terrass.fbx
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_giftbox.007.prefab
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_giftbox.004.prefab
+36 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_build_shophouse.004.fbx
+72 kb                assets/art/modelings/library_common/multimedia_mouse.fbx
+2 mb                 assets/art/textures/glow_blue.png
+2 kb                 assets/art/prefabs/rooftop/pot2.prefab
+3 kb                 assets/art/prefabs/234f/small_sofa3.prefab
+2 kb                 assets/art/prefabs/rooftop/table_small.prefab
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/characters_rigged/rw_lp_cp_character_cookiemanbigrigged.prefab
+277 kb               assets/art/modelings/1f/multimedia_door_open.fbx
+2 kb                 assets/art/prefabs/wall.prefab
+2 kb                 assets/art/materials/rooftop_terrass_ver1 1.mat
+41 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.018.fbx
+146 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_burningcandle.004.fbx
+1 mb                 assets/art/modelings/1f/newbookarchive_chair.fbx
+22 kb                assets/art/purchased asset/little_ghost_hq/textures/ghost_female/skin_01/littleghost_for substance v2_ghost_2_albedotransparency.png
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/materials/standart/rw_lp_materialice.mat
+192 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/animation/characters/deer.anim
+3 kb                 assets/art/prefabs/info/multimedia_info02.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_rope.008.prefab
+260 kb               assets/art/modelings/1f/gate_desk.fbx
+2 kb                 assets/art/materials/lambert1.mat
+1 mb                 assets/art/modelings/celing_4f.fbx
+2 kb                 assets/art/materials/cafe_interior_ver1.mat
+10 kb                assets/art/ui/screenshot/screenshot_background.png
+67 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cupcake.003.fbx
+337 kb               assets/art/modelings/234f/new folder/big_sofa1.fbx
+40 kb                assets/art/modelings/rooftop/kettle.fbx
+26 kb                assets/art/textures/paver 1.jpg
+3 kb                 assets/art/prefabs/1f/multimedia_door_open.prefab
+227 kb               assets/art/fbx/selfiestick_long.fbx
+39 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.011.fbx
+29 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_giftbox.010.fbx
+43 kb                assets/art/modelings/rooftop/box.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_candycane.001.prefab
+5 kb                 assets/art/prefabs/1f/newbookarchive_chair1.prefab
+2 kb                 assets/art/ui/screenshot/1인칭버튼.png
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_mistletoe.003.prefab
+1 mb                 assets/art/modelings/1f/newbookarchive_bookshelf.fbx
+263 kb               assets/art/modelings/1f/hall_chair.fbx
+259 kb               assets/art/modelings/1f/multimedia_dvd_monitor.fbx
+2 kb                 assets/art/prefabs/rooftop/kettle.prefab
+494 kb               assets/art/modelings/cafe/cafetable_small.fbx
+491 kb               assets/art/modelings/cafe/kiosk.fbx
+978 kb               assets/art/prefabs/worlds/winter_christmas/terrass_winter.prefab
+5 kb                 assets/art/ui/screenshot/selfie_button.png
+2 kb                 assets/art/prefabs/rooftop/beanpack4.prefab
+24 kb                assets/art/modelings/234f/texture_etc.png
+6 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_snowglobe.001.prefab
+467 kb               assets/art/textures/block 2.png
+35 kb                assets/art/materials/candle_light.png
+28 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cookie.002.fbx
+1 mb                 assets/art/modelings/1f/loan_desk.fbx
+618 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_idle.anim
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/stamp.anim
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cupcake.001.prefab
+125 kb               assets/art/modelings/rooftop/shelf_set.fbx
+111 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/effects/rw_lp_cp_effect_snow.prefab
+87 kb                assets/art/modelings/rooftop/lamp_white.fbx
+1 mb                 assets/art/modelings/1floor.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cupcake.005.prefab
+10 kb                assets/art/purchased asset/little_ghost_hq/prefabs/lg_02.prefab
+2 mb                 assets/art/purchased asset/little_ghost_hq/textures/props/skin_04/littleghost_for substance v2_props_albedotransparency.png
+3 kb                 assets/art/prefabs/1f/cnlounge_lamp1.prefab
+3 kb                 assets/art/ui/screenshot/cameraresultexitbutton.png
+3 kb                 assets/art/ui/screenshot/3인칭버튼.png
+2 kb                 assets/art/materials/colortexture_001.mat
+2 kb                 assets/art/materials/glow_portal.mat
+2 kb                 assets/art/materials/lambert11.mat
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_snowflake.004.prefab
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk.anim
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_burningcandle.005.prefab
+33 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.002.fbx
+100 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/buildings/rw_lp_cp_build_candleshop.prefab
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/materials/standart/rw_lp_materialemmited.mat
+1014 kb              packages/zepeto.character.controller/runtime/_resources/animations/base/v2/idle.anim
+2 kb                 assets/art/prefabs/books/greenbook.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_rope.006.prefab
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/fall_end.anim
+2 kb                 assets/art/purchased asset/little_ghost_hq/material/props/props_04.mat
+12 mb                assets/art/purchased asset/coreywilton/halloweenprops/textures/t_woodencross_01_albedotransparency.tga
+3 kb                 assets/art/prefabs/1f/cnlounge_desk1.prefab
+2 kb                 assets/art/materials/rooftop_bottom.mat
+3 kb                 assets/art/prefabs/1f/multimedia_dvd_monitor.prefab
+25 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_rope.005.fbx
+3 kb                 assets/art/prefabs/1f/toilet_board_man.prefab
+2 kb                 assets/art/purchased asset/little_ghost_hq/material/ghost_male/ghostm_03.mat
+46 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cookie.003.fbx
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+3 kb                 assets/art/prefabs/1f/newbookarchive_desk.prefab
+2 kb                 assets/art/materials/rooftop_terrass_ver1.mat
+143 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_candle.004.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.006.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.008.prefab
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+620 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_mistletoe.004.fbx
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+35 kb                assets/art/purchased asset/coreywilton/halloweenprops/meshes/sm_woodencross_01.fbx
+2 kb                 assets/art/purchased asset/little_ghost_hq/material/props/props_02.mat
+2 kb                 assets/art/prefabs/rooftop/mugcup2.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreechain_colorful.prefab
+44 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_nature_middletree_snow.002.fbx
+293 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_mistletoe.003.fbx
+76 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rigged/rw_lp_cp_character_snowmanrigged.004.fbx
+600 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_slight.anim
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/character/rw_lp_cp_character_cookiemansmall.prefab
+2 kb                 assets/art/ui/screenshot/cameraexitbutton.png
+118 kb               assets/art/prefabs/lights_vfx_yellow 1.prefab
+10 kb                assets/art/modelings/info/info_3f 1.fbm/info_3f_1.png
+2 kb                 assets/art/materials/info_3f_1 1.mat
+3 kb                 assets/art/prefabs/1f/toilet_door_man.prefab
+257 kb               assets/art/modelings/1f/toilet_board_etc.fbx
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/materials/standart/rw_lp_materialglass.mat
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_sackwithgiftboxes.001.prefab
+34 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.006.fbx
+14 kb                assets/art/prefabs/stairs.prefab
+3 kb                 assets/art/prefabs/rooftop/chair2.prefab
+290 kb               assets/art/modelings/234f/new folder/newbookarchive_desk_6.fbx
+3 kb                 assets/art/prefabs/1f/hall_sofa1.prefab
+34 kb                assets/art/modelings/rooftop/beanpack3.fbx
+25 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_rope.006.fbx
+2 mb                 assets/art/purchased asset/little_ghost_hq/textures/props/skin_02/littleghost_for substance v2_props_albedotransparency.png
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cupcake.002.prefab
+39 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_giftbox.008.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_sackwithgiftboxes.002.prefab
+30 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_candle.005.fbx
+1 kb                 assets/art/ui/quickchat/chatitem.png
+3 kb                 assets/art/prefabs/rooftop/parasol.prefab
+1 mb                 assets/art/modelings/234f/new folder/newbookarchive_chair.fbx
+3 kb                 assets/art/prefabs/1f/newbookarchive_sofa1.prefab
+3 kb                 assets/art/prefabs/library_common/multimedia_mouse.prefab
+2 kb                 assets/art/materials/ver4.mat
+204 kb               assets/art/modelings/ari.fbx
+2 kb                 assets/art/materials/texture_1stfloor_01.mat
+2 kb                 assets/art/purchased asset/3d lowpoly tree pack/texture/materials/tree03_trunk.mat
+36 kb                assets/art/modelings/info/info_3f 1.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+1 mb                 assets/art/modelings/234f/datapc_computerset.fbx
+3 kb                 assets/art/prefabs/234f/big_sofa2.prefab
+2 kb                 assets/art/prefabs/234f/datapc_clearwall.prefab
+96 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_giftbox.006.fbx
+101 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_nature_bigtree_snow.001.fbx
+171 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/buildings/rw_lp_cp_build_christmascookieshop.002.prefab
+88 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_deersculpture.fbx
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/animation/characters/controllers/snowmananimatorcontroller 3.controller
+3 kb                 assets/art/prefabs/selfiestick_long.prefab
+36 kb                assets/art/modelings/rooftop/mugcup.fbx
+325 kb               assets/art/modelings/1f/loan_bookshelf.fbx
+240 kb               assets/art/prefabs/portal.prefab
+2 kb                 assets/art/prefabs/center_terrass_bottom.prefab
+1 mb                 assets/art/modelings/4floor.fbx
+49 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.008.fbx
+53 kb                assets/art/modelings/rooftop/chair3.fbx
+97 kb                assets/art/modelings/library_common/tray.fbx
+2 kb                 assets/art/materials/ari.mat
+8 kb                 assets/art/ui/quickchat/chatbackground.png
+75 kb                assets/art/modelings/library_common/sterilizer.fbx
+70 kb                assets/art/modelings/info/floor_info_3_4.fbx
+291 kb               assets/art/modelings/234f/new folder/newbookarchive_desk_4.fbx
+3 kb                 assets/art/prefabs/1f/multimedia_dvd_desk.prefab
+65 kb                assets/art/modelings/rooftop/tarp.fbx
+2 kb                 assets/art/materials/block.mat
+424 kb               assets/art/prefabs/3f.prefab
+311 kb               assets/art/modelings/1f/hall_sofa2.fbx
+43 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_snowflake.002.fbx
+2 kb                 assets/art/prefabs/books/graybook.prefab
+442 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_move.anim
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreebelt_purple.prefab
+66 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_text_happynewyear.fbx
+3 kb                 assets/art/prefabs/1f/newbookarchive_desk_high.prefab
+48 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_giftbox.005.fbx
+60 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_mistletoe.001.fbx
+261 kb               assets/art/modelings/1f/gate.fbx
+1 mb                 assets/art/modelings/1f/cnlounge_desk2.fbx
+258 kb               assets/art/modelings/books/yellowbook.fbx
+28 kb                assets/art/prefabs/rooftop/shelf_set.prefab
+28 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cookie.005.fbx
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_deerstatue.prefab
+44 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_giftbox.009.fbx
+1 mb                 assets/art/modelings/234f/loan_desk_2nd.fbx
+5 kb                 assets/art/prefabs/cafe/cafe_desk.prefab
+1 kb                 assets/art/ui/quickchat/chatexit.png
+2 kb                 assets/art/prefabs/rooftop/doma.prefab
+3 kb                 assets/art/prefabs/234f/datapc_computerset.prefab
+161 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rigged/rw_lp_cp_character_snowmanrigged.003.fbx
+25 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_chocolatebar.002.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.012.prefab
+258 kb               assets/art/modelings/books/greenbook.fbx
+3 kb                 assets/art/prefabs/info/bookcuration_info.prefab
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/text/rw_lp_cp_text_hohoho.001.prefab
+292 kb               assets/art/modelings/1f/toilet_door_woman.fbx
+629 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_sackwithgiftboxes.fbx
+2 kb                 assets/art/materials/blinn2.mat
+33 kb                assets/art/modelings/rooftop/doma.fbx
+263 kb               assets/art/modelings/1f/endtrance_door.fbx
+1 mb                 assets/art/textures/ver4.png
+1 mb                 assets/art/modelings/1f/multimedia_computer_set.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_barrel_group.002.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_deersculpture.prefab
+3 kb                 assets/art/prefabs/info/floor_info_2_3.prefab
+27 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreebelt_purple.fbx
+139 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cupcake.001.fbx
+3 kb                 assets/art/prefabs/light.prefab
+84 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_giftbox.007.fbx
+326 kb               assets/art/modelings/rooftop/screen.fbx
+3 kb                 assets/art/prefabs/234f/bookself_wood.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.011.prefab
+3 kb                 assets/art/prefabs/library_common/multimedia_computer.prefab
+374 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run_fast.anim
+258 kb               assets/art/modelings/1f/hall_board.fbx
+1 mb                 assets/art/modelings/1f/cnlounge_desk1.fbx
+264 kb               assets/art/modelings/1f/multimedia_kiosk.fbx
+2 kb                 assets/art/purchased asset/little_ghost_hq/material/ghost_male/ghostm_01.mat
+76 kb                assets/art/modelings/info/info_2f.fbx
+68 kb                assets/art/modelings/1f/loan_monitor_black.fbx
+34 kb                assets/art/modelings/rooftop/beanpack1.fbx
+3 kb                 assets/art/prefabs/1f/newbookarchive_bookshelf.prefab
+766 kb               assets/art/textures/center_terrass_texture.png
+69 kb                assets/art/modelings/info/bookcuration_info.fbx
+4 kb                 assets/art/prefabs/cafe/cafe_chair.prefab
+49 kb                assets/art/modelings/rooftop/chair1.fbx
+5 kb                 assets/art/prefabs/1f/newbookarchive_wheelchair.prefab
+18 kb                assets/art/prefabs/worlds/winter_christmas/ajou_central_library_winter.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_rope.001.prefab
+3 kb                 assets/art/prefabs/library_common/printer.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_giftbox.009.prefab
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/environment/rw_lp_cp_nature_bigtree_snow.001.prefab
+48 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_snowsledwithdeers.prefab
+445 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run.anim
+3 kb                 assets/art/prefabs/1f/newbookarchive_sofa2.prefab
+4 kb                 assets/art/ui/screenshot/savebutton.png
+91 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_text_merrychristmas.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/buildings/rw_lp_cp_build_shophouse.005.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_snowsled.prefab
+5 kb                 assets/art/prefabs/1f/cnlounge_lamp3.prefab
+233 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/environment/rw_lp_cp_nature_christmastreewithdecoration.001.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.016.prefab
+35 kb                assets/art/modelings/rooftop/pot2.fbx
+10 kb                assets/art/prefabs/props/ari santa.prefab
+3 kb                 assets/art/prefabs/info/floor_info_1_2.prefab
+43 kb                assets/art/materials/skybox_2.png
+3 kb                 assets/art/prefabs/1f/multimedia_dvd_speaker.prefab
+36 kb                assets/art/modelings/rooftop/pergola.fbx
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/animation/characters/controllers/snowmananimatorcontroller 4.controller
+33 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_burningcandle.002.fbx
+1 mb                 assets/art/textures/texture_1stfloor_01.jpg
+2 kb                 assets/art/prefabs/books/whitebook.prefab
+1 kb                 packages/zepeto.character.controller/runtime/_resources/camera/zepetocamera.prefab
+2 kb                 assets/art/prefabs/books/redbook.prefab
+36 kb                assets/art/modelings/rooftop/mugcup2.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.013.prefab
+33 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_candycane.002.fbx
+261 kb               assets/art/modelings/1f/cnlounge_cleanwall.fbx
+6 kb                 assets/art/prefabs/rooftop/box.prefab
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/text/rw_lp_cp_text_hohoho.002.prefab
+3 kb                 assets/art/prefabs/interact button.prefab
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_tablecloth.001.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.003.prefab
+4 kb                 assets/art/ui/screenshot/sharebutton.png
+50 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_chrismassock.002.fbx
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/text/rw_lp_cp_text_candles.prefab
+12 kb                assets/art/ui/gesture_button.png
+45 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_candycane.003.fbx
+43 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_nature_christmastree_snow.002.fbx
+262 kb               assets/art/modelings/1f/newbookarchive_desk.fbx
+2 kb                 assets/art/prefabs/rooftop/beer2.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.009.prefab
+310 kb               assets/art/modelings/1f/hall_sofa1.fbx
+40 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_chrismassock.004.fbx
+50 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_nature_christmastree_snow.001.fbx
+3 kb                 assets/art/prefabs/1f/multimedia_partition.prefab
+1 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/animation/characters/controllers/deeranimatorcontroller.controller
+464 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_double.anim
+2 kb                 assets/art/purchased asset/little_ghost_hq/material/ghost_female/ghostf_01.mat
+3 kb                 assets/art/prefabs/cafe_fence.prefab
+108 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rigged/rw_lp_cp_character_snowmanrigged.002.fbx
+2 mb                 assets/art/modelings/cafe_fence.fbx
+5 kb                 assets/art/prefabs/1f/cnlounge_lamp4.prefab
+2 kb                 assets/art/materials/skybox.mat
+792 kb               assets/art/modelings/center_terrass_bottom.fbx
+2 kb                 assets/art/materials/lights.mat
+2 kb                 assets/art/materials/texture_common_01.mat
+2 kb                 assets/art/prefabs/rooftop/beanpack3.prefab
+5 mb                 assets/art/modelings/center_library.fbx
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+44 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.016.fbx
+2 kb                 assets/art/prefabs/rooftop/mugcup.prefab
+3 kb                 assets/art/prefabs/234f/newbookarchive_desk_4.prefab
+48 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.012.fbx
+35 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_snowflake.005.fbx
+2 kb                 assets/art/prefabs/rooftop/pergola.prefab
+23 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_chocolatebar.001.fbx
+3 kb                 assets/art/prefabs/1f/loan_monitor_black.prefab
+142 kb               assets/art/modelings/garland_lights.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_candle.004.prefab
+3 kb                 assets/art/prefabs/library_common/sterilizer.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cupcake.004.prefab
+2 kb                 assets/art/materials/blinn4.mat
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action1.anim
+2 kb                 assets/art/prefabs/cafe/trash.prefab
+1 mb                 assets/art/textures/ver3.png
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_snowflake.005.prefab
+1 mb                 assets/art/modelings/1f/hall_bench.fbx
+50 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.009.fbx
+3 kb                 assets/art/prefabs/1f/cnlounge_desk2.prefab
+1 mb                 assets/animator/ani_sit.anim
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.010.prefab
+25 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_rope.008.fbx
+78 kb                assets/art/modelings/rooftop/grill.fbx
+22 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_rope.001.fbx
+50 kb                assets/art/modelings/234f/datapc_clearwall.fbx
+3 kb                 assets/art/prefabs/1f/multimedia_kiosk.prefab
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/characters_rigged/rw_lp_cp_character_cookiemansmallrigged.prefab
+33 kb                assets/art/purchased asset/3d lowpoly tree pack/model/tree03_trunk.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_balloon.001.prefab
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+70 kb                assets/art/modelings/library_common/multimedia_keyboard.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_snowflake.001.prefab
+76 kb                assets/art/modelings/info/multimedia_info02.fbx
+155 kb               assets/art/textures/texture_common_01.jpg
+53 kb                assets/art/modelings/rooftop/chair2.fbx
+3 kb                 assets/art/prefabs/1f/revolving_door.prefab
+3 kb                 assets/art/prefabs/1f/endtrance_door.prefab
+258 kb               assets/art/modelings/books/graybook.fbx
+733 kb               assets/art/prefabs/worlds/winter_christmas/library_winter.prefab
+2 kb                 assets/art/materials/texture_etc.mat
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/buildings/rw_lp_cp_build_shophouse.004.prefab
+80 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cordwood.001.fbx
+2 kb                 assets/art/materials/center_terrass_texture.mat
+3 kb                 assets/art/prefabs/1f/toilet_door_woman.prefab
+1 mb                 assets/art/modelings/1f/newbookarchive_desk_high.fbx
+2 mb                 assets/art/purchased asset/3d lowpoly tree pack/texture/tree03_trunk.png
+2 kb                 assets/art/prefabs/garland_lights.prefab
+68 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_christmastree.prefab
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+5 kb                 assets/art/prefabs/1f/hall_chair.prefab
+45 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_chrismassock.005.fbx
+2 kb                 assets/art/prefabs/rooftop/tarp.prefab
+71 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/animation/characters/snowman.anim
+4 kb                 assets/art/ui/screenshot/피드작성.png
+1 mb                 assets/art/purchased asset/little_ghost_hq/textures/props/skin_01/littleghost_for substance v2_props_albedotransparency.png
+110 kb               assets/art/textures/rock_texture.jpg
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cookie.001.prefab
+239 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/buildings/rw_lp_cp_build_christmascookieshop.001.prefab
+3 kb                 assets/art/prefabs/234f/newbookarchive_desk_6.prefab
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_dash.anim
+3 kb                 assets/art/prefabs/1f/cnlounge_desk_person.prefab
+2 kb                 assets/art/prefabs/rooftop/light_bulbs.prefab
+157 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rigged/rw_lp_cp_animal_deerrigged.fbx
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+30 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.010.fbx
+2 kb                 assets/art/materials/1f_uv_ver2.mat
+7 kb                 assets/art/prefabs/center_terrass_chair.prefab
+33 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_hat.004.fbx
+493 kb               assets/art/modelings/cafe/cafe_chair.fbx
+44 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.019.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cookie.005.prefab
+2 kb                 assets/art/materials/paver.mat
+261 kb               assets/art/modelings/1f/newbookarchive_sofa1.fbx
+34 kb                assets/art/modelings/rooftop/pot1.fbx
+34 kb                assets/art/modelings/rooftop/table_small.fbx
+261 kb               assets/art/modelings/1f/newbookarchive_sofa2.fbx
+151 kb               assets/art/modelings/rooftop/anchorage_set.fbx
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+2 kb                 assets/art/purchased asset/coreywilton/halloweenprops/materials/m_woodencross_01.mat
+21 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.020.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreebelt_red.prefab
+32 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_balloon.002.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_rope.002.prefab
+70 kb                assets/art/modelings/info/floor_info_1_2.fbx
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/environment/rw_lp_cp_nature_christmastree_snow.001.prefab
+2 kb                 assets/art/materials/cafe_ver1.mat
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/text/rw_lp_cp_text_merrychristmas.prefab
+3 kb                 assets/art/prefabs/1f/hall_board.prefab
+287 kb               assets/art/prefabs/4f.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cordwood.001.prefab
+1 mb                 assets/art/textures/ver4_winter.png
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_candle.002.prefab
+18 kb                assets/art/purchased asset/little_ghost_hq/textures/ghost_male/skin_01/littleghost_for substance v2_ghost1_albedotransparency.png
+54 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_giftbox.001.fbx
+50 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.007.fbx
+1 mb                 assets/art/modelings/celing_2f.fbx
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/animals_rigged/rw_lp_cp_animal_deerrigged.prefab
+37 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_text_hohoho.001.fbx
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_rope.005.prefab
+2 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/materials/standart/rw_lp_material.mat
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+3 kb                 assets/art/prefabs/1f/gate_desk.prefab
+2 kb                 assets/art/materials/blinn5.mat
+3 kb                 assets/art/prefabs/library_common/bookloan.prefab
+44 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.005.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_mistletoe.004.prefab
+3 kb                 assets/art/prefabs/234f/bookself.prefab
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_giftbox.006.prefab
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+2 kb                 assets/art/prefabs/rooftop/garland.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cupcake.006.prefab
+72 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_nature_middletree_snow.001.fbx
+50 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreedecoration.004.fbx
+55 kb                assets/art/modelings/234f/cnlounge_hallwall.fbx
+2 kb                 assets/art/purchased asset/3d lowpoly tree pack/texture/materials/tree01_trunk.mat
+4 kb                 assets/art/ui/screenshot/back_button.png
+27 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_noeltreebelt_gold.fbx
+3 kb                 assets/art/prefabs/1f/cnlounge_lamp2.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_burningcandle.002.prefab
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_deep.anim
+37 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_build_shophouse.002.fbx
+257 kb               assets/art/modelings/1f/toilet_board_woman.fbx
+3 kb                 assets/art/prefabs/234f/datapc_desk.prefab
+3 kb                 assets/art/ui/screenshot/shotbutton.png
+258 kb               assets/art/modelings/books/redbook.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreedecoration.001.prefab
+499 kb               assets/art/modelings/cafe/trash.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_candle.001.prefab
+865 b                assets/art/ui/screenshot/screenshottexture.rendertexture
+61 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cupcake.006.fbx
+29 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cookie.001.fbx
+38 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_snowflake.003.fbx
+3 kb                 assets/art/prefabs/1f/toilet_board_etc.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_burningcandle.004.prefab
+3 kb                 assets/art/prefabs/1f/newbookarchive_exhibition.prefab
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/environment/rw_lp_cp_nature_middletree_snow.001.prefab
+38 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_balloon.003.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreebelt_grey.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_noeltreebelt_gold.prefab
+3 kb                 assets/art/ui/quickchat/chatbutton.png
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_hat.004.prefab
+330 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/falling.anim
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/animals/rw_lp_cp_animal_deer.prefab
+34 kb                assets/art/modelings/rooftop/beanpack2.fbx
+17 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/textures/rw_lp_emmisiontexture.tif
+297 kb               assets/art/modelings/rooftop/light_bulbs.fbx
+262 kb               assets/art/modelings/1f/cnlounge_lamp1.fbx
+491 kb               assets/art/modelings/cafe/cafe_desk.fbx
+1 mb                 assets/art/modelings/234f/magazine_bookself1.fbx
+2 kb                 assets/art/materials/blinn3.mat
+4 kb                 assets/art/prefabs/cafe/chair_black.prefab
+2 kb                 assets/art/ui/screenshot/imageactive.png
+3 kb                 assets/art/prefabs/1f/curation_desk.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cookie.003.prefab
+498 kb               assets/art/modelings/cafe/chair_black.fbx
+47 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_text_candles.fbx
+258 kb               assets/art/textures/texture_1stfloor_02.jpg
+34 kb                assets/art/modelings/rooftop/beer1.fbx
+69 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_candycane.001.fbx
+292 kb               assets/art/modelings/1f/toilet_door_man.fbx
+5 kb                 assets/art/prefabs/rooftop/lamp_white.prefab
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+3 kb                 assets/art/prefabs/234f/big_sofa1.prefab
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_cupcake.003.prefab
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/characters_rigged/rw_lp_cp_character_snowmanrigged.004.prefab
+283 kb               assets/art/purchased asset/redworks - lp christmas pack/assets/animation/characters/rw_lp_cp_character@sweep fall.fbx
+1 mb                 assets/art/textures/1f_uv_ver2.png
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_burningcandle.001.prefab
+10 kb                assets/art/purchased asset/little_ghost_hq/animation/little_ghost.controller
+498 kb               assets/art/modelings/cafe/chair_white.fbx
+2 kb                 assets/art/materials/light_vfx.mat
+1 mb                 assets/art/modelings/234f/small_sofa1.fbx
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+69 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_chrismassock.001.fbx
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+42 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_snowflake.004.fbx
+90 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_giftbox.004.fbx
+275 kb               assets/art/modelings/1f/cnlounge_lamp3.fbx
+2 kb                 assets/art/prefabs/rooftop/beanpack2.prefab
+2 kb                 assets/art/materials/new material.mat
+2 kb                 assets/art/prefabs/rooftop/pot1.prefab
+1 mb                 assets/art/textures/rooftop_bottom.jpg
+75 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_character_cookiemansmall.fbx
+46 kb                assets/art/modelings/rooftop/tent.fbx
+33 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_snowflake.001.fbx
+4 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_giftbox.005.prefab
+26 kb                assets/art/purchased asset/redworks - lp christmas pack/assets/meshes/rw_lp_cp_item_cookie.004.fbx
+3 kb                 assets/art/purchased asset/redworks - lp christmas pack/assets/prefabs/items/rw_lp_cp_item_candle.003.prefab
+[resources]
+0 b                  assets/resources    
+[streamingAssets]

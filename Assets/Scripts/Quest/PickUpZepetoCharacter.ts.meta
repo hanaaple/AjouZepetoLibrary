@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 060393ed6b997b742b9ed6832b7b1890
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nclass PickUpZepetoCharacter extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n        super(...arguments);\r\n       
+    this.rightHandBone = \"hand_R\";\r\n    }\r\n    PickUp(prefabObj) {\r\n       
+    if (this.pickObject) {\r\n            UnityEngine_1.GameObject.Destroy(this.pickObject);\r\n       
+    }\r\n        console.log(prefabObj);\r\n        this.pickObject = UnityEngine_1.GameObject.Instantiate(prefabObj);\r\n       
+    console.log(this.pickObject);\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character\r\n           
+    .GetComponentsInChildren($typeof(UnityEngine_1.Transform)).forEach((characterObj)
+    => {\r\n            if (characterObj.name == this.rightHandBone &&\r\n               
+    characterObj.transform.childCount != 0) {\r\n                this.pickObject.transform.SetParent(characterObj);\r\n           
+    }\r\n        });\r\n        return this.pickObject;\r\n    }\r\n    Drop() {\r\n       
+    if (this.pickObject) {\r\n            UnityEngine_1.GameObject.Destroy(this.pickObject);\r\n       
+    }\r\n        this.pickObject = null;\r\n    }\r\n}\r\nexports.default = PickUpZepetoCharacter;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUGlja1VwWmVwZXRvQ2hhcmFjdGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUGlja1VwWmVwZXRvQ2hhcmFjdGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXNEO0FBQ3RELDZDQUFvRDtBQUNwRCw2RUFBNEQ7QUFFNUQsTUFBcUIscUJBQXNCLFNBQVEscUNBQXFCO0lBQXhFOztRQUlVLGtCQUFhLEdBQVcsUUFBUSxDQUFDO0lBNEIzQyxDQUFDO0lBMUJRLE1BQU0sQ0FBQyxTQUFxQjtRQUNqQyxJQUFJLElBQUksQ0FBQyxVQUFVLEVBQUU7WUFDbkIsd0JBQVUsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxDQUFDO1NBQ3JDO1FBQ0QsT0FBTyxDQUFDLEdBQUcsQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUN2QixJQUFJLENBQUMsVUFBVSxHQUFHLHdCQUFVLENBQUMsV0FBVyxDQUFhLFNBQVMsQ0FBQyxDQUFDO1FBQ2hFLE9BQU8sQ0FBQyxHQUFHLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxDQUFDO1FBQzdCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUzthQUN0RCx1QkFBdUIsU0FBQyx1QkFBUyxHQUNqQyxPQUFPLENBQUMsQ0FBQyxZQUFZLEVBQUUsRUFBRTtZQUN4QixJQUNFLFlBQVksQ0FBQyxJQUFJLElBQUksSUFBSSxDQUFDLGFBQWE7Z0JBQ3ZDLFlBQVksQ0FBQyxTQUFTLENBQUMsVUFBVSxJQUFJLENBQUMsRUFDdEM7Z0JBQ0EsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLFlBQVksQ0FBQyxDQUFDO2FBQ25EO1FBQ0gsQ0FBQyxDQUFDLENBQUM7UUFDTCxPQUFPLElBQUksQ0FBQyxVQUFVLENBQUM7SUFDekIsQ0FBQztJQUVNLElBQUk7UUFDVCxJQUFJLElBQUksQ0FBQyxVQUFVLEVBQUU7WUFDbkIsd0JBQVUsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxDQUFDO1NBQ3JDO1FBQ0QsSUFBSSxDQUFDLFVBQVUsR0FBRyxJQUFJLENBQUM7SUFDekIsQ0FBQztDQUNGO0FBaENELHdDQWdDQyJ9","assetPath":"Assets/Scripts/Quest/PickUpZepetoCharacter.ts","manifest":{"properties":[],"name":"PickUpZepetoCharacter","description":""},"isCompiled":true}'
+  typescriptHash: 38d44cb2da32f3afb8f85d4c6d452183
+  onlyWriteTrigger: 0

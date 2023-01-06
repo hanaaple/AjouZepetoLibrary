@@ -20,7 +20,7 @@ export default class GhostTrigger extends ZepetoScriptBehaviour {
     this.AddMaterial(this.ghostMaterial, player.transform);
     player.Teleport(this.spawnPoint.position, this.spawnPoint.rotation);
     if (player == ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character) {
-      MissionController.instance.MissionClear(MissionType.BECOMEGHOST);
+      MissionController.instance?.MissionClear(MissionType.BECOMEGHOST);
     }
   }
 

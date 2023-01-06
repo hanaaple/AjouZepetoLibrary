@@ -27,7 +27,7 @@ export default class AnimationLinker extends ZepetoScriptBehaviour {
   }
 
   public SetInteractorParent(interactButton: GameObject) {
-    interactButton.transform.parent = this.interactCanvas;
+    interactButton.transform.SetParent(this.interactCanvas);
   }
 
   //Local에서 제스처 실행하는 함수

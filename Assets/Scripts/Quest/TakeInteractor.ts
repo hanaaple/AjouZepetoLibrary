@@ -19,7 +19,8 @@ export default class TakeInteractor extends ZepetoScriptBehaviour {
   @NonSerialized()
   public isInteractable: bool;
 
-  public bookPrefab: GameObject;
+  public prefab: GameObject;
+
   Initialize(
     takeButtonPrefab: GameObject,
     canvasRoot: Transform,
@@ -34,8 +35,7 @@ export default class TakeInteractor extends ZepetoScriptBehaviour {
     button.SetActive(false);
     this.interactButton = button.GetComponent<Button>();
     this.interactButton.onClick.AddListener(() => {
-      //   if (!PlayerUiController.instance.IsTaking()) {
-      const book = GameObject.Instantiate<GameObject>(this.bookPrefab);
+      const book = GameObject.Instantiate<GameObject>(this.prefab);
       ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character
         .GetComponentsInChildren<Transform>()
         .forEach((characterObj) => {
@@ -46,7 +46,6 @@ export default class TakeInteractor extends ZepetoScriptBehaviour {
           }
         });
       LoanBookQuest.instance.EnableUnHand(book);
-      // }
     });
   }
 

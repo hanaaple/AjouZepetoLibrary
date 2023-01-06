@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BuildScene.unity
+    path: Assets/Scenes/Holloween BuildScene.unity
     guid: d69abbd1509ccde429731171ebbca7d4
   m_configObjects: {}

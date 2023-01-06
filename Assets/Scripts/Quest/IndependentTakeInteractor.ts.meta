@@ -1,0 +1,57 @@
+fileFormatVersion: 2
+guid: 8cdfb5063bbefb34388264ebd113b673
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    PickUpZepetoCharacter_1 = require(\"./PickUpZepetoCharacter\");\r\nclass TakeInteractor
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.localCamera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera;\r\n           
+    this.takeOffButton.onClick.AddListener(() => {\r\n                ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character\r\n                   
+    .GetComponent($typeof(PickUpZepetoCharacter_1.default)).Drop();\r\n               
+    this.takeObj = null;\r\n                this.takeOffButton.gameObject.SetActive(false);\r\n           
+    });\r\n        });\r\n        this.Initialize();\r\n    }\r\n    Initialize()
+    {\r\n        const button = UnityEngine_1.GameObject.Instantiate(this.takeButtonPrefab,
+    this.interactCanvas);\r\n        button.SetActive(false);\r\n        this.interactButton
+    = button.GetComponent($typeof(UnityEngine_UI_1.Button));\r\n        this.interactButton.onClick.AddListener(()
+    => {\r\n            let ranVal = Math.floor(UnityEngine_1.Random.Range(0, this.takePrefabs.length));\r\n           
+    const takeObj = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character\r\n               
+    .GetComponent($typeof(PickUpZepetoCharacter_1.default)).PickUp(this.takePrefabs[ranVal]);\r\n           
+    takeObj.transform.localPosition = this.posOffset;\r\n            takeObj.transform.localRotation
+    = UnityEngine_1.Quaternion.Euler(this.rotOffset);\r\n            this.takeObj
+    = takeObj;\r\n            this.takeOffButton.gameObject.SetActive(true);\r\n       
+    });\r\n    }\r\n    Update() {\r\n        if (this.interactButton.gameObject.activeSelf
+    && this.localCamera) {\r\n            var screenPos = this.localCamera.WorldToScreenPoint(UnityEngine_1.Vector3.op_Addition(this.transform.position,
+    this.buttonCamOffset));\r\n            this.interactButton.transform.position
+    = screenPos;\r\n            this.interactButton.transform.position = screenPos;\r\n       
+    }\r\n        if (this.takeObj) {\r\n            this.takeObj.transform.localPosition
+    = this.posOffset;\r\n            this.takeObj.transform.localRotation = UnityEngine_1.Quaternion.Euler(this.rotOffset);\r\n       
+    }\r\n    }\r\n    OnTriggerEnter(col) {\r\n        const character = col.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n       
+    if (!character ||\r\n            character != ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character)
+    {\r\n            return;\r\n        }\r\n        if (this.interactButton) {\r\n           
+    this.interactButton.gameObject.SetActive(true);\r\n        }\r\n    }\r\n   
+    OnTriggerExit(col) {\r\n        const character = col.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n       
+    if (!character ||\r\n            character != ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character)
+    {\r\n            return;\r\n        }\r\n        if (this.interactButton) {\r\n           
+    this.interactButton.gameObject.SetActive(false);\r\n        }\r\n    }\r\n}\r\nexports.default
+    = TakeInteractor;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSW5kZXBlbmRlbnRUYWtlSW50ZXJhY3Rvci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkluZGVwZW5kZW50VGFrZUludGVyYWN0b3IudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FRcUI7QUFDckIsbURBQXdDO0FBQ3hDLDZFQUE2RTtBQUM3RSxpREFBc0Q7QUFDdEQsbUVBQTREO0FBRTVELE1BQXFCLGNBQWUsU0FBUSxxQ0FBcUI7SUFxQi9ELEtBQUs7UUFDSCwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3pELElBQUksQ0FBQyxXQUFXLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxNQUFNLENBQUM7WUFFMUUsSUFBSSxDQUFDLGFBQWEsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtnQkFDMUMsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTO3FCQUN0RCxZQUFZLFNBQUMsK0JBQXFCLEdBQ2xDLElBQUksRUFBRSxDQUFDO2dCQUNWLElBQUksQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO2dCQUNwQixJQUFJLENBQUMsYUFBYSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFDakQsQ0FBQyxDQUFDLENBQUM7UUFDTCxDQUFDLENBQUMsQ0FBQztRQUVILElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQztJQUNwQixDQUFDO0lBRUQsVUFBVTtRQUNSLE1BQU0sTUFBTSxHQUFHLHdCQUFVLENBQUMsV0FBVyxDQUNuQyxJQUFJLENBQUMsZ0JBQWdCLEVBQ3JCLElBQUksQ0FBQyxjQUFjLENBQ3BCLENBQUM7UUFDRixNQUFNLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQ3hCLElBQUksQ0FBQyxjQUFjLEdBQUcsTUFBTSxDQUFDLFlBQVksU0FBQyx1QkFB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","assetPath":"Assets/Scripts/Quest/IndependentTakeInteractor.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"interactCanvas","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"takeButtonPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"takeOffButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"buttonCamOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"takePrefabs","type":"UnityEngine.GameObject[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"posOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"Space","args":["10"]}]},{"assembly":"UnityEngine.CoreModule","name":"rotOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"TakeInteractor","description":""},"isCompiled":true}'
+  typescriptHash: cbb72405809f6915232c7e9a216d4826
+  onlyWriteTrigger: 0

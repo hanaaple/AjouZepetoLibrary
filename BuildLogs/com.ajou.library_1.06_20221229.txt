@@ -1,0 +1,556 @@
+[World Settings]
+world id             com.ajou.library    
+version              1.06                
+max clients          16                  
+orientation          horizontal          
+disable invite       false               
+disable room list    false               
+disable private room false               
+
+[Build Manifest]
+[scenes]
+168 kb               assets/scenes/spring.unity
+[assets]
+24 kb                assets/art/purchased asset/toyspack/models/bucket_01.fbx
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+2 kb                 assets/art/purchased asset/little_ghost_hq/material/props/props_02.mat
+14 kb                assets/art/purchased asset/spring/orchard trees/assets/prefabs/use/treewaxcherry-red2a.prefab
+2 kb                 assets/art/prefabs/rooftop/mugcup2.prefab
+7 kb                 assets/art/purchased asset/toyspack/prefabs/helicopter_01.prefab
+3 kb                 assets/art/prefabs/1f/toilet_board_woman.prefab
+2 kb                 assets/art/materials/info_3f_1.mat
+271 kb               assets/art/modelings/1f/newbookarchive_chair1.fbx
+3 kb                 assets/art/ui/screenshot/피드작성_버튼.png
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+3 kb                 assets/art/prefabs/info/floor_info_3_4.prefab
+5 kb                 assets/art/prefabs/1f/multimedia_wheelchair.prefab
+600 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_slight.anim
+2 kb                 assets/art/purchased asset/spring/orchard trees/assets/materials/billboard-waxcherry-red1.mat
+793 kb               assets/art/modelings/center_terrass_chair.fbx
+2 kb                 assets/art/ui/screenshot/cameraexitbutton.png
+46 kb                assets/art/purchased asset/toyspack/models/toystacker_01.fbx
+2 kb                 assets/art/prefabs/rooftop/beer1.prefab
+2 kb                 assets/art/purchased asset/toyspack/prefabs/rocket_01.prefab
+10 kb                assets/art/modelings/info/info_3f 1.fbm/info_3f_1.png
+2 kb                 assets/art/materials/info_3f_1 1.mat
+2 kb                 assets/art/materials/blinn1.mat
+3 kb                 assets/art/prefabs/1f/toilet_door_man.prefab
+257 kb               assets/art/modelings/1f/toilet_board_etc.fbx
+118 kb               assets/art/prefabs/lights_vfx_yellow 1.prefab
+281 kb               assets/art/modelings/1f/newbookarchive_wheelchair.fbx
+14 kb                assets/art/prefabs/stairs.prefab
+3 kb                 assets/art/prefabs/1f/hall_sofa1.prefab
+482 kb               assets/fonts/비트로 코어 otf.otf
+3 kb                 assets/art/prefabs/rooftop/chair2.prefab
+290 kb               assets/art/modelings/234f/new folder/newbookarchive_desk_6.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+5 kb                 assets/art/prefabs/1f/hall_bench.prefab
+5 kb                 assets/art/prefabs/cafe/window_table.prefab
+2 kb                 assets/art/ui/screenshot/video.png
+34 kb                assets/art/modelings/rooftop/beanpack3.fbx
+2 kb                 assets/art/prefabs/info/info_3f_2.prefab
+3 kb                 assets/art/prefabs/rooftop/bungee_info.prefab
+2 mb                 assets/art/purchased asset/little_ghost_hq/textures/props/skin_02/littleghost_for substance v2_props_albedotransparency.png
+2 kb                 assets/art/materials/rock_texture.mat
+57 kb                assets/art/purchased asset/toyspack/models/bunny_01.fbx
+8 kb                 assets/art/purchased asset/3d lowpoly tree pack/prefabs/tree03.prefab
+1 mb                 assets/art/modelings/234f/small_sofa3.fbx
+1 kb                 assets/art/ui/quickchat/chatitem.png
+1 mb                 assets/art/modelings/234f/new folder/newbookarchive_chair.fbx
+3 kb                 assets/art/prefabs/rooftop/parasol.prefab
+3 kb                 assets/art/prefabs/1f/newbookarchive_sofa1.prefab
+258 kb               assets/art/modelings/1f/multimedia_dvd_speaker.fbx
+278 kb               assets/art/modelings/1f/revolving_door.fbx
+2 kb                 assets/art/materials/ver4.mat
+204 kb               assets/art/modelings/ari.fbx
+2 kb                 assets/art/materials/texture_1stfloor_01.mat
+3 kb                 assets/art/ui/screenshot/videoactive.png
+3 kb                 assets/art/prefabs/library_common/multimedia_mouse.prefab
+2 kb                 assets/art/purchased asset/3d lowpoly tree pack/texture/materials/tree03_trunk.mat
+2 kb                 assets/art/purchased asset/3d lowpoly tree pack/texture/materials/tree03_leaves_pink.mat
+36 kb                assets/art/modelings/info/info_3f 1.fbx
+2 kb                 assets/art/purchased asset/toyspack/prefabs/horse_01.prefab
+34 kb                assets/art/modelings/rooftop/beanpack4.fbx
+25 kb                assets/art/purchased asset/halloween_asset/meshes/candy05.fbx
+1 mb                 assets/art/modelings/234f/datapc_computerset.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+14 kb                assets/art/purchased asset/toyspack/prefabs/robot_01.prefab
+2 kb                 assets/art/prefabs/rooftop/tent.prefab
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+481 kb               assets/art/purchased asset/3d lowpoly tree pack/texture/tree03_leaves_pink.png
+28 kb                assets/art/purchased asset/toyspack/models/rugbyball_01.fbx
+574 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_roll.anim
+601 kb               assets/art/purchased asset/3d lowpoly tree pack/texture/tree01_leaves_pink.png
+3 kb                 assets/art/prefabs/234f/big_sofa2.prefab
+2 kb                 assets/art/prefabs/234f/datapc_clearwall.prefab
+5 kb                 assets/art/prefabs/cafe/cafetable_small.prefab
+3 kb                 assets/art/prefabs/rooftop/chair1.prefab
+2 kb                 assets/art/materials/rooftop_terrass_ver2.mat
+387 kb               assets/art/purchased asset/spring/orchard trees/assets/textures/use/branch-waxcherryred.png
+43 kb                assets/art/purchased asset/toyspack/models/pool_01.fbx
+2 kb                 assets/art/purchased asset/toyspack/prefabs/bunny_01.prefab
+465 kb               assets/art/textures/cafe_interior_ver1.png
+3 kb                 assets/art/prefabs/selfiestick_long.prefab
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+2 kb                 assets/art/purchased asset/spring/orchard trees/assets/materials/use/branch-waxcherryred.mat
+36 kb                assets/art/modelings/rooftop/mugcup.fbx
+2 kb                 assets/art/prefabs/center_terrass_bottom.prefab
+325 kb               assets/art/modelings/1f/loan_bookshelf.fbx
+240 kb               assets/art/prefabs/portal.prefab
+306 kb               assets/art/animation/zepetoanimatorv2.controller
+1 mb                 assets/art/modelings/4floor.fbx
+2 kb                 assets/art/prefabs/rooftop/table_big.prefab
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+2 kb                 assets/art/purchased asset/halloween_asset/meshes/materials/candy_albedo.mat
+2 kb                 assets/art/prefabs/234f/cnlounge_hallwall.prefab
+53 kb                assets/art/modelings/rooftop/chair3.fbx
+97 kb                assets/art/modelings/library_common/tray.fbx
+3 mb                 assets/art/purchased asset/little_ghost_hq/textures/ghost_male/skin_03/littleghost_for substance v2_ghost1_albedotransparency.png
+7 kb                 assets/art/prefabs/ari.prefab
+2 kb                 assets/art/materials/ari.mat
+495 kb               assets/art/modelings/cafe/cafetable_big.fbx
+1 mb                 assets/art/modelings/234f/datapc_desk.fbx
+8 kb                 assets/art/ui/quickchat/chatbackground.png
+26 kb                assets/art/purchased asset/toyspack/models/slide_01.fbx
+75 kb                assets/art/modelings/library_common/sterilizer.fbx
+70 kb                assets/art/modelings/info/floor_info_3_4.fbx
+291 kb               assets/art/modelings/234f/new folder/newbookarchive_desk_4.fbx
+3 kb                 assets/art/prefabs/1f/multimedia_dvd_desk.prefab
+2 kb                 assets/art/purchased asset/toyspack/prefabs/rubberduck_01.prefab
+65 kb                assets/art/modelings/rooftop/tarp.fbx
+3 kb                 assets/art/prefabs/1f/cnlounge_cleanwall.prefab
+2 kb                 assets/art/materials/block.mat
+58 kb                assets/art/purchased asset/toyspack/models/horse_01.fbx
+286 kb               assets/art/modelings/1f/multimedia_wheelchair.fbx
+28 kb                assets/art/textures/colortexture_001.png
+5 kb                 assets/art/prefabs/234f/newbookarchive_chair.prefab
+424 kb               assets/art/prefabs/3f.prefab
+311 kb               assets/art/modelings/1f/hall_sofa2.fbx
+51 kb                assets/art/textures/texture_etc.png
+1 mb                 assets/art/modelings/1f/cnlounge_desk_person.fbx
+29 kb                assets/art/purchased asset/toyspack/models/boat_01.fbx
+2 kb                 assets/art/prefabs/books/graybook.prefab
+2 kb                 assets/art/prefabs/1f/multimedia_computer_set.prefab
+442 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_move.anim
+5 kb                 assets/art/prefabs/cafe/kiosk.prefab
+3 kb                 assets/art/prefabs/1f/newbookarchive_desk_high.prefab
+2 kb                 assets/art/purchased asset/toyspack/prefabs/rugbyball_01.prefab
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+261 kb               assets/art/modelings/1f/gate.fbx
+1 mb                 assets/art/modelings/1f/cnlounge_desk2.fbx
+258 kb               assets/art/modelings/books/yellowbook.fbx
+28 kb                assets/art/prefabs/rooftop/shelf_set.prefab
+84 kb                assets/art/purchased asset/toyspack/models/helicopter_01.fbx
+1 mb                 assets/art/modelings/234f/loan_desk_2nd.fbx
+5 kb                 assets/art/prefabs/cafe/cafe_desk.prefab
+3 kb                 assets/art/prefabs/234f/magazine_bookself1.prefab
+54 kb                assets/art/textures/ari.png
+28 kb                assets/art/purchased asset/halloween_asset/meshes/candy02.fbx
+1 kb                 assets/art/ui/quickchat/chatexit.png
+2 kb                 assets/art/prefabs/rooftop/doma.prefab
+3 kb                 assets/art/prefabs/234f/datapc_computerset.prefab
+258 kb               assets/art/modelings/books/greenbook.fbx
+3 kb                 assets/art/prefabs/info/bookcuration_info.prefab
+3 kb                 assets/art/prefabs/1f/hall_sofa2.prefab
+292 kb               assets/art/modelings/1f/toilet_door_woman.fbx
+2 kb                 assets/art/materials/blinn2.mat
+33 kb                assets/art/modelings/rooftop/doma.fbx
+3 kb                 assets/art/prefabs/info/loan_info1.prefab
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+8 kb                 assets/art/purchased asset/3d lowpoly tree pack/prefabs/tree01.prefab
+263 kb               assets/art/modelings/1f/endtrance_door.fbx
+4 kb                 assets/art/prefabs/selfiecamera.prefab
+202 kb               assets/art/purchased asset/spring/orchard trees/assets/models/use/treewaxcherry-red1.fbx
+1 mb                 assets/art/textures/ver4.png
+1 mb                 assets/art/modelings/1f/multimedia_computer_set.fbx
+3 kb                 assets/art/prefabs/info/floor_info_2_3.prefab
+1 mb                 assets/art/modelings/3floor.fbx
+3 kb                 assets/art/prefabs/light.prefab
+326 kb               assets/art/modelings/rooftop/screen.fbx
+3 kb                 assets/art/prefabs/234f/bookself_wood.prefab
+3 kb                 assets/art/purchased asset/toyspack/textures/toys_textureatlas.png
+257 kb               assets/art/modelings/1f/toilet_board_man.fbx
+3 kb                 assets/art/prefabs/library_common/multimedia_computer.prefab
+374 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run_fast.anim
+35 kb                assets/art/purchased asset/toyspack/models/trampoline_01.fbx
+1 mb                 assets/art/modelings/1f/cnlounge_desk1.fbx
+258 kb               assets/art/modelings/1f/hall_board.fbx
+264 kb               assets/art/modelings/1f/multimedia_kiosk.fbx
+828 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_turn.anim
+2 kb                 assets/art/purchased asset/little_ghost_hq/material/ghost_male/ghostm_01.mat
+76 kb                assets/art/modelings/info/info_2f.fbx
+68 kb                assets/art/modelings/1f/loan_monitor_black.fbx
+2 kb                 assets/art/prefabs/rooftop/screen.prefab
+34 kb                assets/art/modelings/rooftop/beanpack1.fbx
+3 kb                 assets/art/prefabs/1f/newbookarchive_bookshelf.prefab
+766 kb               assets/art/textures/center_terrass_texture.png
+69 kb                assets/art/modelings/info/bookcuration_info.fbx
+2 kb                 assets/art/prefabs/rooftop/beanpack1.prefab
+49 kb                assets/art/modelings/rooftop/chair1.fbx
+80 kb                assets/art/purchased asset/3d lowpoly tree pack/model/tree01_trunk.fbx
+2 kb                 assets/art/prefabs/cafe/cafe_chair.prefab
+2 kb                 assets/art/purchased asset/toyspack/prefabs/trampoline_01.prefab
+398 kb               assets/art/modelings/234f/new folder/big_sofa2.fbx
+117 kb               assets/art/purchased asset/spring/nanc cherry blossom petal particle/prefab/prefab paticle petal 1 pink.prefab
+3 kb                 assets/art/prefabs/library_common/printer.prefab
+445 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run.anim
+3 kb                 assets/art/purchased asset/halloween_asset/prefabs/candy07.prefab
+3 kb                 assets/art/prefabs/1f/newbookarchive_sofa2.prefab
+4 kb                 assets/art/ui/screenshot/savebutton.png
+2 kb                 assets/art/purchased asset/toyspack/prefabs/fish_01.prefab
+2 kb                 assets/art/purchased asset/toyspack/materials/toys_textureatlas_01.mat
+51 kb                assets/art/purchased asset/toyspack/models/dinosaur_01.fbx
+2 kb                 assets/art/purchased asset/toyspack/prefabs/rockinghorse_01.prefab
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+3 kb                 assets/art/purchased asset/halloween_asset/prefabs/candy02.prefab
+2 kb                 assets/art/purchased asset/3d lowpoly tree pack/texture/materials/tree03_leaves.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+1 mb                 assets/art/modelings/1f/multimedia_dvd_shelf.fbx
+2 kb                 assets/art/purchased asset/toyspack/prefabs/sortingcube_01.prefab
+5 kb                 assets/art/prefabs/1f/cnlounge_lamp3.prefab
+2 kb                 assets/art/purchased asset/toyspack/prefabs/sortingcube_01_block_cylinder.prefab
+610 kb               assets/art/prefabs/1f.prefab
+2 kb                 assets/art/prefabs/onlinecamera.prefab
+2 kb                 assets/art/purchased asset/toyspack/prefabs/boat_02.prefab
+5 kb                 assets/art/prefabs/1f/newbookarchive_wheelchair.prefab
+35 kb                assets/art/modelings/rooftop/pot2.fbx
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+3 kb                 assets/art/prefabs/info/floor_info_1_2.prefab
+43 kb                assets/art/materials/skybox_2.png
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+3 kb                 assets/art/prefabs/1f/multimedia_dvd_speaker.prefab
+36 kb                assets/art/modelings/rooftop/pergola.fbx
+2 kb                 assets/art/ui/screenshot/basicbutton.png
+69 kb                assets/art/modelings/info/loan_info1.fbx
+67 kb                assets/art/purchased asset/3d lowpoly tree pack/model/tree03_leaves.fbx
+1 mb                 assets/art/textures/texture_1stfloor_01.jpg
+2 kb                 assets/art/prefabs/books/whitebook.prefab
+1 mb                 assets/art/modelings/1f/newbookarchive_exhibition.fbx
+2 kb                 assets/art/purchased asset/toyspack/prefabs/sortingcube_01_block_star.prefab
+69 kb                assets/art/modelings/info/loan_info2.fbx
+3 kb                 assets/art/prefabs/1f/multimedia_dvd_shelf.prefab
+1 kb                 packages/zepeto.character.controller/runtime/_resources/camera/zepetocamera.prefab
+2 kb                 assets/art/prefabs/books/redbook.prefab
+36 kb                assets/art/modelings/rooftop/mugcup2.fbx
+2 kb                 assets/art/prefabs/rooftop/plate.prefab
+261 kb               assets/art/modelings/1f/cnlounge_cleanwall.fbx
+6 kb                 assets/art/prefabs/rooftop/box.prefab
+5 kb                 assets/art/prefabs/rooftop/lamp_black.prefab
+3 kb                 assets/art/prefabs/interact button.prefab
+516 kb               assets/art/textures/cafe_ver1.png
+4 kb                 assets/art/ui/screenshot/sharebutton.png
+12 kb                assets/art/ui/gesture_button.png
+2 kb                 assets/art/prefabs/cafe/cafetable_big.prefab
+2 kb                 assets/art/purchased asset/toyspack/prefabs/woodentrain_01_wagon_02.prefab
+262 kb               assets/art/modelings/1f/newbookarchive_desk.fbx
+2 kb                 assets/art/modelings/materials/lambert5.mat
+3 kb                 assets/art/prefabs/rooftop/chair3.prefab
+3 kb                 assets/art/prefabs/library_common/multimedia_keyboard.prefab
+2 kb                 assets/art/prefabs/rooftop/beer2.prefab
+310 kb               assets/art/modelings/1f/hall_sofa1.fbx
+189 kb               assets/art/modelings/stairs.fbx
+3 kb                 assets/art/prefabs/1f/multimedia_partition.prefab
+258 kb               assets/art/modelings/books/whitebook.fbx
+181 kb               assets/art/modelings/rooftop/bungee_info_02.fbx
+2 kb                 assets/art/purchased asset/toyspack/prefabs/sheep_01.prefab
+51 kb                assets/art/purchased asset/toyspack/models/doll_03.fbx
+65 kb                assets/art/modelings/library_common/multimedia_computer.fbx
+34 kb                assets/art/modelings/rooftop/beer2.fbx
+262 kb               assets/art/modelings/1f/multimedia_partition.fbx
+464 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_double.anim
+450 kb               assets/art/prefabs/worlds/spring_toy/library_toys.prefab
+2 kb                 assets/art/purchased asset/little_ghost_hq/material/ghost_female/ghostf_01.mat
+2 kb                 assets/art/purchased asset/spring/nanc cherry blossom petal particle/model/materials/0215-4.mat
+3 kb                 assets/art/prefabs/cafe_fence.prefab
+5 kb                 assets/art/prefabs/1f/newbookarchive_chair.prefab
+2 mb                 assets/art/modelings/cafe_fence.fbx
+5 kb                 assets/art/prefabs/1f/cnlounge_lamp4.prefab
+3 kb                 assets/art/purchased asset/halloween_asset/prefabs/candy05.prefab
+2 kb                 assets/art/materials/skybox.mat
+792 kb               assets/art/modelings/center_terrass_bottom.fbx
+2 kb                 assets/art/prefabs/books/yellowbook.prefab
+2 kb                 assets/art/materials/lights.mat
+2 kb                 assets/art/materials/texture_common_01.mat
+2 kb                 assets/art/prefabs/rooftop/beanpack3.prefab
+36 kb                assets/art/modelings/rooftop/plate.fbx
+5 mb                 assets/art/modelings/center_library.fbx
+2 kb                 assets/art/prefabs/rooftop/mugcup.prefab
+260 kb               assets/art/modelings/1f/cnlounge_lamp2.fbx
+2 kb                 assets/art/purchased asset/toyspack/prefabs/doll_02.prefab
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+95 kb                assets/art/modelings/library_common/printer.fbx
+2 kb                 assets/art/materials/default_material.mat
+3 kb                 assets/art/prefabs/234f/newbookarchive_desk_4.prefab
+2 kb                 assets/art/prefabs/rooftop/pergola.prefab
+10 kb                assets/art/purchased asset/little_ghost_hq/animation/little_ghost 2.controller
+3 kb                 assets/art/prefabs/1f/loan_monitor_black.prefab
+844 b                assets/art/purchased asset/spring/nanc cherry blossom petal particle/materials/material cherry blossom.mat
+142 kb               assets/art/modelings/garland_lights.fbx
+3 kb                 assets/art/prefabs/library_common/sterilizer.prefab
+3 kb                 assets/art/prefabs/1f/loan_desk.prefab
+10 kb                assets/art/textures/info_3f_2.png
+3 kb                 assets/art/prefabs/234f/small_sofa1.prefab
+267 kb               assets/art/modelings/1f/multimedia_dvd_desk.fbx
+2 kb                 assets/art/materials/blinn4.mat
+71 kb                assets/audio/clip/camerashuuteraudio.mp3
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action1.anim
+2 kb                 assets/art/prefabs/cafe/trash.prefab
+1 mb                 assets/art/textures/ver3.png
+1 mb                 assets/art/modelings/1f/hall_bench.fbx
+3 kb                 assets/art/prefabs/1f/cnlounge_desk2.prefab
+1 mb                 assets/art/animation/ani_sit.anim
+78 kb                assets/art/modelings/rooftop/grill.fbx
+1 kb                 assets/art/ui/screenshot/피드작성_페이지.png
+3 kb                 assets/art/prefabs/1f/multimedia_kiosk.prefab
+1 mb                 assets/art/modelings/2floor.fbx
+50 kb                assets/art/modelings/234f/datapc_clearwall.fbx
+60 kb                assets/art/modelings/rooftop/parasol.fbx
+33 kb                assets/art/purchased asset/3d lowpoly tree pack/model/tree03_trunk.fbx
+3 kb                 assets/art/prefabs/1f/cnlounge_wall.prefab
+757 kb               assets/art/purchased asset/3d lowpoly tree pack/texture/tree01_leaves.png
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+260 kb               assets/art/modelings/1f/cnlounge_wall.fbx
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+4 kb                 assets/art/prefabs/cafe/chair_white.prefab
+2 kb                 assets/art/materials/glow_portal 1.mat
+70 kb                assets/art/modelings/library_common/multimedia_keyboard.fbx
+3 kb                 assets/art/prefabs/takewithbutton.prefab
+76 kb                assets/art/modelings/info/multimedia_info02.fbx
+38 kb                assets/art/purchased asset/toyspack/models/fish_01.fbx
+155 kb               assets/art/textures/texture_common_01.jpg
+53 kb                assets/art/modelings/rooftop/chair2.fbx
+565 kb               assets/art/prefabs/2f.prefab
+2 kb                 assets/art/materials/white.mat
+491 kb               assets/art/modelings/cafe/window_table.fbx
+3 kb                 assets/art/prefabs/1f/gate.prefab
+3 kb                 assets/art/prefabs/1f/revolving_door.prefab
+2 kb                 assets/art/ui/screenshot/image.png
+3 kb                 assets/art/prefabs/1f/endtrance_door.prefab
+29 kb                assets/art/purchased asset/halloween_asset/meshes/candy07.fbx
+258 kb               assets/art/modelings/books/graybook.fbx
+23 kb                assets/art/purchased asset/spring/nanc cherry blossom petal particle/model/petal2_c_white.fbx
+2 kb                 assets/art/purchased asset/toyspack/prefabs/dinosaur_01.prefab
+2 kb                 assets/art/materials/texture_etc.mat
+2 kb                 assets/art/materials/center_terrass_texture.mat
+3 kb                 assets/art/prefabs/1f/toilet_door_woman.prefab
+13 kb                assets/art/prefabs/rooftop/anchorage_set.prefab
+1 mb                 assets/art/modelings/1f/newbookarchive_desk_high.fbx
+2 mb                 assets/art/purchased asset/3d lowpoly tree pack/texture/tree03_trunk.png
+2 kb                 assets/art/purchased asset/toyspack/prefabs/doll_03.prefab
+1 mb                 assets/art/modelings/celing_1f.fbx
+2 kb                 assets/art/prefabs/garland_lights.prefab
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+5 kb                 assets/art/prefabs/1f/hall_chair.prefab
+460 kb               assets/art/purchased asset/3d lowpoly tree pack/texture/tree01_trunk.png
+2 kb                 assets/art/prefabs/rooftop/tarp.prefab
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action2.anim
+5 kb                 assets/art/purchased asset/toyspack/prefabs/bucket_01.prefab
+4 kb                 assets/art/ui/screenshot/피드작성.png
+34 kb                assets/art/modelings/rooftop/table_big.fbx
+39 kb                assets/art/purchased asset/toyspack/models/rubberduck_01.fbx
+6 kb                 assets/art/prefabs/worlds/spring_toy/ajou_central_library_spring.prefab
+1 mb                 assets/art/purchased asset/little_ghost_hq/textures/props/skin_01/littleghost_for substance v2_props_albedotransparency.png
+2 kb                 assets/art/modelings/materials/lambert3.mat
+257 kb               assets/art/modelings/1f/cnlounge_lamp4.fbx
+69 kb                assets/art/modelings/library_common/bookloan.fbx
+2 kb                 assets/art/prefabs/rooftop/grill.prefab
+110 kb               assets/art/textures/rock_texture.jpg
+1 mb                 assets/art/textures/line_glow.png
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+70 kb                assets/art/modelings/info/floor_info_2_3.fbx
+3 kb                 assets/art/prefabs/234f/newbookarchive_desk_6.prefab
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_dash.anim
+3 kb                 assets/art/prefabs/info/loan_info2.prefab
+23 kb                assets/art/purchased asset/toyspack/models/boat_02.fbx
+14 kb                assets/art/purchased asset/spring/orchard trees/assets/prefabs/use/treewaxcherry-red3a.prefab
+3 kb                 assets/art/prefabs/1f/cnlounge_desk_person.prefab
+3 kb                 assets/art/prefabs/library_common/tray.prefab
+2 kb                 assets/art/prefabs/rooftop/light_bulbs.prefab
+489 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk_fast.anim
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+6 kb                 assets/art/textures/rooftop_terrass_ver2.png
+13 kb                assets/art/purchased asset/spring/orchard trees/assets/prefabs/use/treewaxcherry-red1a.prefab
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+2 kb                 assets/art/materials/1f_uv_ver2.mat
+7 kb                 assets/art/prefabs/center_terrass_chair.prefab
+3 kb                 assets/art/prefabs/234f/loan_desk_2nd.prefab
+72 kb                assets/art/purchased asset/toyspack/models/sheep_01.fbx
+2 kb                 assets/art/prefabs/info/info_3f 1.prefab
+493 kb               assets/art/modelings/cafe/cafe_chair.fbx
+2 kb                 assets/art/materials/paver.mat
+5 mb                 assets/art/purchased asset/little_ghost_hq/meshes/little_ghost v4.fbx
+261 kb               assets/art/modelings/1f/newbookarchive_sofa1.fbx
+4 kb                 assets/art/purchased asset/coreywilton/halloweenprops/prefabs/woodencross_01.prefab
+107 kb               assets/art/modelings/rooftop/bungee_info.fbx
+34 kb                assets/art/modelings/rooftop/pot1.fbx
+119 kb               assets/art/modelings/rooftop/garland.fbx
+1 mb                 assets/art/modelings/234f/bookself.fbx
+2 kb                 assets/art/purchased asset/coreywilton/halloweenprops/materials/m_woodencross_01.mat
+261 kb               assets/art/modelings/1f/newbookarchive_sofa2.fbx
+151 kb               assets/art/modelings/rooftop/anchorage_set.fbx
+34 kb                assets/art/modelings/rooftop/table_small.fbx
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+3 kb                 assets/art/prefabs/1f/loan_bookshelf.prefab
+515 kb               assets/art/purchased asset/3d lowpoly tree pack/model/tree01_leaves.fbx
+2 kb                 assets/art/purchased asset/toyspack/prefabs/sandcastle_01.prefab
+214 kb               assets/art/purchased asset/halloween_asset/textures/candy_albedo.png
+1 mb                 assets/art/modelings/234f/bookself_wood.fbx
+233 kb               assets/art/purchased asset/spring/orchard trees/assets/models/use/treewaxcherry-red2.fbx
+1 mb                 assets/art/modelings/celing_3f.fbx
+70 kb                assets/art/modelings/info/floor_info_1_2.fbx
+2 kb                 assets/art/materials/cafe_ver1.mat
+2 mb                 assets/art/modelings/terrass.fbx
+3 kb                 assets/art/prefabs/1f/hall_board.prefab
+2 kb                 assets/art/purchased asset/toyspack/prefabs/bee_01.prefab
+2 kb                 assets/art/purchased asset/3d lowpoly tree pack/texture/materials/tree01_leaves_pink.mat
+72 kb                assets/art/modelings/library_common/multimedia_mouse.fbx
+49 kb                assets/art/purchased asset/toyspack/models/robot_01.fbx
+287 kb               assets/art/prefabs/4f.prefab
+106 kb               assets/art/purchased asset/spring/nanc cherry blossom petal particle/textures/texture cherry blossom.png
+2 kb                 assets/art/prefabs/rooftop/pot2.prefab
+2 mb                 assets/art/textures/glow_blue.png
+2 kb                 assets/art/prefabs/rooftop/table_small.prefab
+3 kb                 assets/art/prefabs/234f/small_sofa3.prefab
+18 kb                assets/art/purchased asset/little_ghost_hq/textures/ghost_male/skin_01/littleghost_for substance v2_ghost1_albedotransparency.png
+1 mb                 assets/art/modelings/celing_2f.fbx
+277 kb               assets/art/modelings/1f/multimedia_door_open.fbx
+96 kb                assets/art/purchased asset/spring/orchard trees/assets/models/use/treewaxcherry-red4.fbx
+2 kb                 assets/art/prefabs/wall.prefab
+2 kb                 assets/art/materials/rooftop_terrass_ver1 1.mat
+1 mb                 assets/art/modelings/1f/newbookarchive_chair.fbx
+22 kb                assets/art/purchased asset/little_ghost_hq/textures/ghost_female/skin_01/littleghost_for substance v2_ghost_2_albedotransparency.png
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+3 kb                 assets/art/prefabs/1f/gate_desk.prefab
+2 kb                 assets/art/materials/blinn5.mat
+3 kb                 assets/art/prefabs/library_common/bookloan.prefab
+253 kb               assets/art/purchased asset/spring/orchard trees/assets/models/use/treewaxcherry-red3.fbx
+3 kb                 assets/art/prefabs/info/multimedia_info02.prefab
+3 kb                 assets/art/prefabs/234f/bookself.prefab
+1 mb                 assets/art/purchased asset/3d lowpoly tree pack/texture/tree03_leaves.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+2 kb                 assets/art/prefabs/rooftop/garland.prefab
+260 kb               assets/art/modelings/1f/gate_desk.fbx
+55 kb                assets/art/modelings/234f/cnlounge_hallwall.fbx
+2 kb                 assets/art/materials/lambert1.mat
+1 mb                 assets/art/modelings/celing_4f.fbx
+2 kb                 assets/art/materials/cafe_interior_ver1.mat
+2 kb                 assets/art/purchased asset/3d lowpoly tree pack/texture/materials/tree01_trunk.mat
+4 kb                 assets/art/ui/screenshot/back_button.png
+2 kb                 assets/art/purchased asset/toyspack/prefabs/teddybear_01.prefab
+10 kb                assets/art/ui/screenshot/screenshot_background.png
+3 kb                 assets/art/prefabs/1f/cnlounge_lamp2.prefab
+337 kb               assets/art/modelings/234f/new folder/big_sofa1.fbx
+102 kb               assets/art/purchased asset/toyspack/models/woodentrain_01.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_deep.anim
+257 kb               assets/art/modelings/1f/toilet_board_woman.fbx
+40 kb                assets/art/modelings/rooftop/kettle.fbx
+30 kb                assets/art/purchased asset/toyspack/models/rockinghorse_01.fbx
+26 kb                assets/art/textures/paver 1.jpg
+3 kb                 assets/art/ui/screenshot/shotbutton.png
+227 kb               assets/art/fbx/selfiestick_long.fbx
+258 kb               assets/art/modelings/books/redbook.fbx
+3 kb                 assets/art/prefabs/234f/datapc_desk.prefab
+43 kb                assets/art/modelings/rooftop/box.fbx
+499 kb               assets/art/modelings/cafe/trash.fbx
+865 b                assets/art/ui/screenshot/screenshottexture.rendertexture
+2 kb                 assets/art/purchased asset/toyspack/prefabs/sortingcube_01_block_triangle.prefab
+2 kb                 assets/art/ui/screenshot/1인칭버튼.png
+3 kb                 assets/art/prefabs/1f/toilet_board_etc.prefab
+1 mb                 assets/art/modelings/1f/newbookarchive_bookshelf.fbx
+5 kb                 assets/art/prefabs/1f/newbookarchive_chair1.prefab
+263 kb               assets/art/modelings/1f/hall_chair.fbx
+3 kb                 assets/art/prefabs/1f/newbookarchive_exhibition.prefab
+3 kb                 assets/art/prefabs/1f/multimedia_door_open.prefab
+259 kb               assets/art/modelings/1f/multimedia_dvd_monitor.fbx
+2 kb                 assets/art/prefabs/rooftop/kettle.prefab
+3 kb                 assets/art/ui/quickchat/chatbutton.png
+494 kb               assets/art/modelings/cafe/cafetable_small.fbx
+491 kb               assets/art/modelings/cafe/kiosk.fbx
+55 kb                assets/art/purchased asset/toyspack/models/doll_02.fbx
+330 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/falling.anim
+5 kb                 assets/art/ui/screenshot/selfie_button.png
+34 kb                assets/art/modelings/rooftop/beanpack2.fbx
+24 kb                assets/art/modelings/234f/texture_etc.png
+2 kb                 assets/art/prefabs/rooftop/beanpack4.prefab
+297 kb               assets/art/modelings/rooftop/light_bulbs.fbx
+467 kb               assets/art/textures/block 2.png
+2 kb                 assets/art/materials/blinn3.mat
+262 kb               assets/art/modelings/1f/cnlounge_lamp1.fbx
+491 kb               assets/art/modelings/cafe/cafe_desk.fbx
+1 mb                 assets/art/modelings/1f/loan_desk.fbx
+618 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_idle.anim
+1 mb                 assets/art/modelings/234f/magazine_bookself1.fbx
+2 kb                 assets/art/ui/screenshot/imageactive.png
+4 kb                 assets/art/prefabs/cafe/chair_black.prefab
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/stamp.anim
+125 kb               assets/art/modelings/rooftop/shelf_set.fbx
+3 kb                 assets/art/prefabs/1f/curation_desk.prefab
+3 kb                 assets/art/prefabs/rooftop/bungee_info_02.prefab
+2 kb                 assets/art/purchased asset/toyspack/prefabs/woodentrain_01_wagon_03.prefab
+40 kb                assets/art/purchased asset/toyspack/models/sandcastle_01.fbx
+87 kb                assets/art/modelings/rooftop/lamp_white.fbx
+498 kb               assets/art/modelings/cafe/chair_black.fbx
+1 mb                 assets/art/modelings/1floor.fbx
+35 kb                assets/art/materials/candle_light.png
+10 kb                assets/art/purchased asset/little_ghost_hq/prefabs/lg_02.prefab
+2 mb                 assets/art/purchased asset/little_ghost_hq/textures/props/skin_04/littleghost_for substance v2_props_albedotransparency.png
+258 kb               assets/art/textures/texture_1stfloor_02.jpg
+87 kb                assets/art/modelings/rooftop/lamp_black.fbx
+34 kb                assets/art/modelings/rooftop/beer1.fbx
+17 kb                assets/art/purchased asset/toyspack/prefabs/toystacker_01.prefab
+292 kb               assets/art/modelings/1f/toilet_door_man.fbx
+5 kb                 assets/art/prefabs/rooftop/lamp_white.prefab
+3 kb                 assets/art/purchased asset/halloween_asset/prefabs/candy01.prefab
+3 kb                 assets/art/prefabs/1f/cnlounge_lamp1.prefab
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+2 kb                 assets/art/purchased asset/3d lowpoly tree pack/texture/materials/tree01_leaves.mat
+3 kb                 assets/art/prefabs/234f/big_sofa1.prefab
+956 kb               assets/art/prefabs/worlds/spring_toy/terrass_toys.prefab
+3 kb                 assets/art/ui/screenshot/cameraresultexitbutton.png
+3 kb                 assets/art/ui/screenshot/3인칭버튼.png
+2 kb                 assets/art/materials/colortexture_001.mat
+2 kb                 assets/art/materials/glow_portal.mat
+2 kb                 assets/art/purchased asset/spring/orchard trees/assets/materials/use/bark-waxcherryred.mat
+2 kb                 assets/art/materials/lambert11.mat
+37 kb                assets/art/purchased asset/toyspack/models/bee_01.fbx
+1 mb                 assets/art/textures/1f_uv_ver2.png
+2 kb                 assets/art/purchased asset/toyspack/prefabs/slide_01.prefab
+10 kb                assets/art/purchased asset/little_ghost_hq/animation/little_ghost.controller
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk.anim
+498 kb               assets/art/modelings/cafe/chair_white.fbx
+2 kb                 assets/art/purchased asset/toyspack/prefabs/boat_01.prefab
+2 kb                 assets/art/materials/light_vfx.mat
+33 kb                assets/art/purchased asset/toyspack/models/sortingcube_01.fbx
+1 mb                 assets/art/modelings/234f/small_sofa1.fbx
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+2 kb                 assets/art/prefabs/rooftop/beanpack2.prefab
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+275 kb               assets/art/modelings/1f/cnlounge_lamp3.fbx
+1014 kb              packages/zepeto.character.controller/runtime/_resources/animations/base/v2/idle.anim
+2 kb                 assets/art/prefabs/books/greenbook.prefab
+2 kb                 assets/art/purchased asset/little_ghost_hq/material/ghost_male/ghostm_03.mat
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/fall_end.anim
+2 kb                 assets/art/purchased asset/little_ghost_hq/material/props/props_04.mat
+12 mb                assets/art/purchased asset/coreywilton/halloweenprops/textures/t_woodencross_01_albedotransparency.tga
+2 kb                 assets/art/materials/new material.mat
+3 kb                 assets/art/prefabs/1f/cnlounge_desk1.prefab
+2 kb                 assets/art/materials/rooftop_bottom.mat
+3 kb                 assets/art/prefabs/1f/multimedia_dvd_monitor.prefab
+3 kb                 assets/art/prefabs/1f/toilet_board_man.prefab
+30 kb                assets/art/purchased asset/toyspack/models/rocket_01.fbx
+2 kb                 assets/art/prefabs/rooftop/pot1.prefab
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+2 kb                 assets/art/purchased asset/toyspack/prefabs/pool_01.prefab
+13 kb                assets/art/purchased asset/spring/orchard trees/assets/prefabs/use/treewaxcherry-red4a.prefab
+50 kb                assets/art/purchased asset/toyspack/models/teddybear_01.fbx
+28 kb                assets/art/purchased asset/halloween_asset/meshes/candy01.fbx
+1 mb                 assets/art/textures/rooftop_bottom.jpg
+3 kb                 assets/art/prefabs/1f/newbookarchive_desk.prefab
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+2 kb                 assets/art/materials/rooftop_terrass_ver1.mat
+46 kb                assets/art/modelings/rooftop/tent.fbx
+290 kb               assets/art/modelings/1f/curation_desk.fbx
+35 kb                assets/art/purchased asset/coreywilton/halloweenprops/meshes/sm_woodencross_01.fbx
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+[resources]
+[streamingAssets]
